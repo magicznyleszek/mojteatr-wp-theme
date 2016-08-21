@@ -1,0 +1,98 @@
+/* PAGE GRID */
+
+.gce-page-grid .gce-calendar .gce-caption {
+padding-bottom: 1em;
+text-align:center;}
+
+.gce-page-grid .gce-calendar {
+border: none;
+color: #c2c2c2;
+margin-top: 1.618em;
+width:100%;}
+
+.gce-page-grid .gce-calendar th {
+background: #f2f2f2;
+border: 0.09em solid #fff;
+color: #c2c2c2;
+padding: 0.28em;
+width:14.29%;}
+
+.gce-page-grid .gce-calendar td {
+border: 0.09em solid #f2f2f2;
+height: auto;
+padding: 0.734em 0;
+vertical-align:middle;}
+
+.gce-page-grid .gce-calendar .gce-has-events {
+color:#333;
+cursor:pointer;}
+
+.gce-page-grid .gce-calendar .gce-event-info {display:none;}
+
+.gce-page-grid .gce-calendar .gce-day-number {font-size: 1.618em;}
+
+.gce-page-grid .gce-calendar .gce-today {
+background:#333;
+color: #fff;}
+
+.gce-page-grid .gce-calendar .gce-next, .gce-page-grid .gce-calendar .gce-prev {display: inline;}
+
+.gce-page-grid .gce-calendar .gce-change-month {
+-moz-border-radius: 0.618em;
+border-radius: 0.618em;
+background: #F2F2F2;
+padding: 0.28em 0.734em 0.454em;}
+
+.gce-page-grid .gce-calendar .gce-change-month:hover {
+background: #b22424;
+color: #fff;
+-webkit-transition-duration: 0.075s;
+-moz-transition-duration: 0.075s;
+transition-duration: 0.075s;}
+
+.gce-page-grid .gce-calendar .gce-month-title {
+display: inline;
+padding: 0 3%;
+width: auto;}
+
+.gce-page-grid .gce-calendar th abbr {border-bottom:none;}
+
+
+/* TOOLTIP */
+
+.qtip-wrapper p {text-align: left;}
+
+.qtip-wrapper {
+-moz-box-shadow: 0 0 0.454em #c2c2c2;
+-webkit-box-shadow: 0 0 0.454em #c2c2c2;
+box-shadow: 0 0 0.454em #c2c2c2;
+-moz-border-radius: 0.618em;
+border-radius: 0.618em;}
+
+.gce-event-info {
+background: #fff;
+border: 0.09em solid #f2f2f2;
+padding: 0.618em;
+max-width: 29.03em;}
+
+.gce-event-info .gce-tooltip-title {
+margin: 0;
+padding: 0.454em 0.618em;
+font-weight: normal;
+font-size: 1em;}
+
+.gce-event-info ul { /* Events list */
+margin: 0;
+padding: 0.454em;
+list-style-type:none;}
+
+.gce-event-info ul li {margin-top: 0.618em;}
+
+.gce-event-info ul li p {margin: 0.28em 0;}
+
+.gce-event-info ul li p span,
+.gce-event-info ul li div span {color:#c2c2c2;}
+
+.gce-event-info .gce-tooltip-event {
+background:none;
+font-weight:bold;}
