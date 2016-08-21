@@ -7,614 +7,910 @@ Author URI: http://leszekpietrzak.com
 Version: 1
 */
 
-/*
-	HTML5 Reset Wordpress Theme :: style.css
-	----------------------------------------------------------
-	We have learned much from/been inspired by/taken code where offered from:
-
-	Eric Meyer					:: http://ericmeyer.com
-	HTML5 Doctor				:: http://html5doctor.com
-	and the HTML5 Boilerplate	:: http://html5boilerplate.com
-
-	Special thanks: The Wordpress theme owes its start to an empty theme authored
-		by Chris Coyier & Jeff Starr: http://digwp.com
-
--------------------------------------------------------------------------------*/
-
-/* Let's default this puppy out
--------------------------------------------------------------------------------*/
+/* Let's default this puppy out */
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
-article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+article, aside, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+
 
 /* Responsive images and other embedded objects
    Note: keeping IMG here will cause problems if you're using foreground images as sprites, like, say for Google Maps custom placemarkers.
    There has been a report of problems with standard Google maps as well, but we haven't been able to duplicate or diagnose the issue. */
+
 img,
 object,
 embed {
-height: auto;
-max-width: 100%;}
+    height: auto;
+    max-width: 100%;
+}
+
 
 /* force a vertical scrollbar to prevent a jumpy page */
-html {overflow-y: scroll;}
+
+html {
+    overflow-y: scroll;
+}
+
 
 /* we use a lot of ULs that aren't bulleted.
 	don't forget to restore the bullets within content. */
-ul {list-style: none;}
 
-blockquote, q {quotes: none;}
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
 
 blockquote:before,
 blockquote:after,
 q:before,
-q:after {content: ''; content: none;}
-
-a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
-
-del {text-decoration: line-through;}
-
-abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
-
-/* tables still need cellspacing="0" in the markup */
-table {border-collapse: collapse; border-spacing: 0;}
-th {font-weight: bold; vertical-align: bottom;}
-td {font-weight: normal; vertical-align: top;}
-
-hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
-
-input, select {vertical-align: middle;}
-
-pre {
-	white-space: pre; /* CSS2 */
-	white-space: pre-wrap; /* CSS 2.1 */
-	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-	word-wrap: break-word; /* IE */
+q:after {
+    content: '';
+    content: none;
 }
 
-input[type="radio"] {vertical-align: text-bottom;}
-input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
-.ie6 input {vertical-align: text-bottom;}
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
 
-select, input, textarea {font: 99% sans-serif;}
+del {
+    text-decoration: line-through;
+}
 
-table {font-size: inherit; font: 100%;}
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+
+/* tables still need cellspacing="0" in the markup */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+td {
+    font-weight: normal;
+    vertical-align: top;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+pre {
+    white-space: pre;
+    /* CSS2 */
+    white-space: pre-wrap;
+    /* CSS 2.1 */
+    white-space: pre-line;
+    /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word;
+    /* IE */
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+    vertical-align: bottom;
+    *vertical-align: baseline;
+}
+
+.ie6 input {
+    vertical-align: text-bottom;
+}
+
+select,
+input,
+textarea {
+    font: 99% sans-serif;
+}
+
+table {
+    font-size: inherit;
+    font: 100%;
+}
+
 
 /* Accessible focus treatment
 	people.opera.com/patrickl/experiments/keyboard/test */
-a:hover, a:active {outline: none;}
 
-small {font-size: 85%;}
+a:hover,
+a:active {
+    outline: none;
+}
 
-strong, th {font-weight: bold;}
+small {
+    font-size: 85%;
+}
 
-td, td img {vertical-align: top;}
+strong,
+th {
+    font-weight: bold;
+}
+
+td,
+td img {
+    vertical-align: top;
+}
+
 
 /* Make sure sup and sub don't screw with your line-heights
 	gist.github.com/413930 */
-sub, sup {font-size: 75%; line-height: 0; position: relative;}
-sup {top: -0.5em;}
-sub {bottom: -0.25em;}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
 
 /* standardize any monospaced elements */
-pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, sans-serif;
+}
+
 
 /* hand cursor on clickable elements */
+
 .clickable,
 label,
 input[type=button],
 input[type=submit],
-button {cursor: pointer;}
+button {
+    cursor: pointer;
+}
+
 
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
-button, input, select, textarea {margin: 0;}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+}
+
 
 /* make buttons play nice in IE */
-button {width: auto; overflow: visible;}
+
+button {
+    width: auto;
+    overflow: visible;
+}
+
 
 /* scale images in IE7 more attractively */
-.ie7 img {-ms-interpolation-mode: bicubic;}
+
+.ie7 img {
+    -ms-interpolation-mode: bicubic;
+}
+
 
 /* prevent BG image flicker upon hover */
-.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+.ie6 html {
+    filter: expression(document.execCommand("BackgroundImageCache", false, true));
+}
+
 
 /* let's clear some floats */
-.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
-.clearfix:after { clear: both; }
-.clearfix { zoom: 1; }
+
+.clearfix:before,
+.clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
 
 
 /* Ok, this is where the fun starts.
 -------------------------------------------------------------------------------*/
 
 body {
-background: #fff;
-color: #333;
-font: 100% 'AntykwaPoltawskiegoRegular', serif;
-line-height: 1.6;}
+    background: #fff;
+    color: #333;
+    font: 100% 'AntykwaPoltawskiegoRegular', serif;
+    line-height: 1.6;
+}
 
 a {
-color: #b22424;
-text-decoration: none;}
+    color: #b22424;
+    text-decoration: none;
+}
 
 a:hover {
-color: #cc2929;
--webkit-transition-duration: 0.15s;
--moz-transition-duration: 0.15s;
-transition-duration: 0.15s;}
+    color: #cc2929;
+    -webkit-transition-duration: 0.15s;
+    -moz-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+}
 
-::-moz-selection{background: #333333; color: #fff; text-shadow: none;}
-::selection {background: #333333; color: #fff; text-shadow: none;}
+::-moz-selection {
+    background: #333333;
+    color: #fff;
+    text-shadow: none;
+}
 
-a:link {-webkit-tap-highlight-color: #fcd700;}
+::selection {
+    background: #333333;
+    color: #fff;
+    text-shadow: none;
+}
 
-ins {background-color: #fcd700; color: #000; text-decoration: none;}
-mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+a:link {
+    -webkit-tap-highlight-color: #fcd700;
+}
 
-#page-wrap {padding-bottom: 5.03em;}
+ins {
+    background-color: #fcd700;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background-color: #fcd700;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#page-wrap {
+    padding-bottom: 5.03em;
+}
 
 #center,
 #left,
-#sidebar {float: left;}
+#sidebar {
+    float: left;
+}
 
-#header {padding: 3.109em 0 1.618em 13%;}
+#header {
+    padding: 3.109em 0 1.618em 13%;
+}
 
 #header a {
-display: block;
-padding: 1em;}
+    display: block;
+    padding: 1em;
+}
 
 #header a img {
-width: 14%;
-max-width: 178px;}
+    width: 14%;
+    max-width: 178px;
+}
 
 #left {
-padding: 0 1.618em 5.03em 13%;
-max-width: 13.168em;
-min-width: 6.854em;
-width: 15%;
-text-align: center;}
+    padding: 0 1.618em 5.03em 13%;
+    max-width: 13.168em;
+    min-width: 6.854em;
+    width: 15%;
+    text-align: center;
+}
 
 #center {
-padding: 0 2.618em;
-width: 40%;
-max-width: 46.971em;}
+    padding: 0 2.618em;
+    width: 40%;
+    max-width: 46.971em;
+}
 
 #sidebar {
-padding: 0 1.618em;
-max-width: 13.168em;
-min-width: 6.854em;
-text-align: center;
-width: 13%;}
+    padding: 0 1.618em;
+    max-width: 13.168em;
+    min-width: 6.854em;
+    text-align: center;
+    width: 13%;
+}
 
-#sidebar div + div {margin-top: 1.618em;}
+#sidebar div+ div {
+    margin-top: 1.618em;
+}
 
 #sidebar h1 {
-	margin-bottom: 0.618em;
-	color: #b22424;
+    margin-bottom: 0.618em;
+    color: #b22424;
 }
 
 #sidebar .tickets ul li.menu-item a {
-	color: #fff;
+    color: #fff;
 }
 
 #sidebar .tickets ul li.menu-item {
-	background-color: #b22424;
+    background-color: #b22424;
 }
 
 #sidebar .tickets ul li.menu-item:hover {
-	background-color: #cc2929;
+    background-color: #cc2929;
 }
 
 #footer {
-clear: both;
-font-size: 0.734em;
-text-align: center;}
+    clear: both;
+    font-size: 0.734em;
+    text-align: center;
+}
+
 
 /* And here begins the Wordpress fun.
 -------------------------------------------------------------------------------*/
 
 h2 {
-font-size: 1em;
-padding: 0.618em 0;
-text-align: center;}
+    font-size: 1em;
+    padding: 0.618em 0;
+    text-align: center;
+}
 
 #center h2 {
-font-size: 1em;
-padding: 0 0 1.618em;
-text-align: left;}
+    font-size: 1em;
+    padding: 0 0 1.618em;
+    text-align: left;
+}
 
 #respond h2 {
-font-size: 1.188em;
-padding: 1.618em 0 0.618em;
-text-align: left;}
+    font-size: 1.188em;
+    padding: 1.618em 0 0.618em;
+    text-align: left;
+}
 
 h3 {
-border-top: 0.09em solid #c2c2c2;
-border-bottom: 0.09em solid #c2c2c2;
-font-size: 1.188em;
-margin: 1.618em 0 0.734em;
-padding: 0.454em;}
+    border-top: 0.09em solid #c2c2c2;
+    border-bottom: 0.09em solid #c2c2c2;
+    font-size: 1.188em;
+    margin: 1.618em 0 0.734em;
+    padding: 0.454em;
+}
 
 h1 {
-font-weight: normal;
-font-size: 1.618em;
-line-height: 100%;}
+    font-weight: normal;
+    font-size: 1.618em;
+    line-height: 100%;
+}
 
 h1 a,
 h1.entry-title {
-color: #333;
-display: block;}
+    color: #333;
+    display: block;
+}
 
 .sticky h1 {
-font-size: 1.188em;
-line-height: 118.8%;}
+    font-size: 1.188em;
+    line-height: 118.8%;
+}
 
 .sticky h1 a {
--moz-border-radius: 0.173em;
-border-radius: 0.173em;
-background: #b22424;
-color: #fff;
-padding: 0.554em 0.618em 0.454em;}
+    -moz-border-radius: 0.173em;
+    border-radius: 0.173em;
+    background: #b22424;
+    color: #fff;
+    padding: 0.554em 0.618em 0.454em;
+}
 
 .sticky h1 a:hover {
-background: #cc2929;
--webkit-transition-duration: 0.3s;
--moz-transition-duration: 0.3s;
-transition-duration: 0.3s;}
+    background: #cc2929;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
 
-.entry {padding: 1em 0.09em 0;}
+.entry {
+    padding: 1em 0.09em 0;
+}
 
 .entry ul {
-list-style: circle;
-padding: 0.618em 1.618em;}
+    list-style: circle;
+    padding: 0.618em 1.618em;
+}
 
 .postmetadata {
-color: #c2c2c2;
-font-size: 0.734em;
-padding: 1em 0.107em 0.618em;}
+    color: #c2c2c2;
+    font-size: 0.734em;
+    padding: 1em 0.107em 0.618em;
+}
 
 .postmetadata:hover {
-color: #333;
--webkit-transition-duration: 0.45s;
--moz-transition-duration: 0.45s;
-transition-duration: 0.45s;}
+    color: #333;
+    -webkit-transition-duration: 0.45s;
+    -moz-transition-duration: 0.45s;
+    transition-duration: 0.45s;
+}
 
-.postmetadata a {color: #c2c2c2;}
+.postmetadata a {
+    color: #c2c2c2;
+}
 
 .postmetadata:hover a {
-color: #b22424;
--webkit-transition-duration: 0.45s;
--moz-transition-duration: 0.45s;
-transition-duration: 0.45s;}
+    color: #b22424;
+    -webkit-transition-duration: 0.45s;
+    -moz-transition-duration: 0.45s;
+    transition-duration: 0.45s;
+}
 
-.postmetadata:hover a:hover {color: #cc2929;}
+.postmetadata:hover a:hover {
+    color: #cc2929;
+}
 
-.post + .post {margin-top: 1.618em;}
+.post+ .post {
+    margin-top: 1.618em;
+}
 
-p + p {margin-top: 0.618em;}
+p+ p {
+    margin-top: 0.618em;
+}
 
-p {text-align: left;}
+p {
+    text-align: left;
+}
 
 p iframe,
 p img {
-border: 0.09em solid #c2c2c2;
-margin-top: 0.618em;
-padding: 0.734em;}
+    border: 0.09em solid #c2c2c2;
+    margin-top: 0.618em;
+    padding: 0.734em;
+}
 
 p iframe {
-min-width: 13.168em;
-max-width: 21.306em;
-width: 60%;
-height: 11.089em;}
+    min-width: 13.168em;
+    max-width: 21.306em;
+    width: 60%;
+    height: 11.089em;
+}
 
 p img {
-min-width: 13.168em;
-max-width: 29.03em;
-width: 60%;}
+    min-width: 13.168em;
+    max-width: 29.03em;
+    width: 60%;
+}
 
 p .signature {
-display: block;
-color: #666;
-font-size: 0.734em;
-padding-left: 1.188em;}
+    display: block;
+    color: #666;
+    font-size: 0.734em;
+    padding-left: 1.188em;
+}
 
 .menu-item {
-background: #f2f2f2;
-text-align: center;}
+    background: #f2f2f2;
+    text-align: center;
+}
 
 .menu-item:first-child {
--moz-border-radius-topleft: 0.618em;
-border-top-left-radius: 0.618em;
--moz-border-radius-topright: 0.618em;
-border-top-right-radius: 0.618em;}
+    -moz-border-radius-topleft: 0.618em;
+    border-top-left-radius: 0.618em;
+    -moz-border-radius-topright: 0.618em;
+    border-top-right-radius: 0.618em;
+}
 
-.menu-item + .menu-item {margin-top: 1px;}
+.menu-item+ .menu-item {
+    margin-top: 1px;
+}
 
 .menu-item:last-child {
--moz-border-radius-bottomleft: 0.618em;
-border-bottom-left-radius: 0.618em;
--moz-border-radius-bottomright: 0.618em;
-border-bottom-right-radius: 0.618em;}
+    -moz-border-radius-bottomleft: 0.618em;
+    border-bottom-left-radius: 0.618em;
+    -moz-border-radius-bottomright: 0.618em;
+    border-bottom-right-radius: 0.618em;
+}
 
 .menu-item a {
-color: #666;
-display: block;
-padding: 0.734em;}
+    color: #666;
+    display: block;
+    padding: 0.734em;
+}
 
 .menu-item:hover {
-background: #b22424;
--webkit-transition-duration: 0.075s;
--moz-transition-duration: 0.075s;
-transition-duration: 0.075s;}
+    background: #b22424;
+    -webkit-transition-duration: 0.075s;
+    -moz-transition-duration: 0.075s;
+    transition-duration: 0.075s;
+}
 
 .menu-item:hover a {
-color: #fff;
--webkit-transition-duration: 0.15s;
--moz-transition-duration: 0.15s;
-transition-duration: 0.15s;}
+    color: #fff;
+    -webkit-transition-duration: 0.15s;
+    -moz-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+}
 
-.current-menu-item {background: #b22424;}
+.current-menu-item {
+    background: #b22424;
+}
 
-.current-menu-item a {color: #fff;}
+.current-menu-item a {
+    color: #fff;
+}
 
 .current-menu-item:hover {
-background: #cc2929;
--webkit-transition-duration: 0.3s;
--moz-transition-duration: 0.3s;
-transition-duration: 0.3s;}
+    background: #cc2929;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
 
 .widget_mailchimpsf_widget {
-margin: 2.618em auto;
-max-width: 8.139em;
-min-width: 6.854em;}
+    margin: 2.618em auto;
+    max-width: 8.139em;
+    min-width: 6.854em;
+}
 
 #mc_display_rewards {
-font-size: 0.734em;
-margin-top: 0.618em;}
+    font-size: 0.734em;
+    margin-top: 0.618em;
+}
 
 .widget_mailchimpsf_widget .mc_input,
-#searchform input {width: 85%;}
+#searchform input {
+    width: 85%;
+}
 
 .widget_mailchimpsf_widget .button,
-#searchform #searchsubmit {width: 95%;}
+#searchform #searchsubmit {
+    width: 95%;
+}
 
-label.mc_var_label {display: none;}
+label.mc_var_label {
+    display: none;
+}
 
-#mc_signup br {display: none;}
+#mc_signup br {
+    display: none;
+}
 
-.navigation {width: 29.03em;}
+.navigation {
+    width: 29.03em;
+}
 
 .next-posts {}
+
 .prev-posts {}
 
 #searchform {
-max-width: 8.139em;
-min-width: 6.854em;
-margin: 0 auto;}
+    max-width: 8.139em;
+    min-width: 6.854em;
+    margin: 0 auto;
+}
 
 input,
 textarea#comment {
--moz-border-radius: 0.618em;
-border-radius: 0.618em;
-color: #666;
-font-size: 0.734em;
-font-family: 'AntykwaPoltawskiegoRegular', serif;}
+    -moz-border-radius: 0.618em;
+    border-radius: 0.618em;
+    color: #666;
+    font-size: 0.734em;
+    font-family: 'AntykwaPoltawskiegoRegular', serif;
+}
 
 input[type=text]:hover,
 input[type=text]:focus,
 textarea#comment:hover,
 textarea#comment:focus {
-border-color: #666;
--webkit-transition-duration: 0.3s;
--moz-transition-duration: 0.3s;
-transition-duration: 0.3s;}
+    border-color: #666;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
 
 input[type=text],
 textarea#comment {
-background: #fff;
-border: 0.09em solid #c2c2c2;
-padding: 0.28em 0.454em;}
+    background: #fff;
+    border: 0.09em solid #c2c2c2;
+    padding: 0.28em 0.454em;
+}
 
 #searchsubmit,
 .button,
 #submit {
-background: #f2f2f2;
-border: 0;
-margin-top: 0.236em;
-padding: 0.382em 0.734em;}
+    background: #f2f2f2;
+    border: 0;
+    margin-top: 0.236em;
+    padding: 0.382em 0.734em;
+}
 
 #searchsubmit:hover,
 .button:hover,
 #submit:hover {
-background: #b22424;
--webkit-transition-duration: 0.075s;
--moz-transition-duration: 0.075s;
-transition-duration: 0.075s;}
+    background: #b22424;
+    -webkit-transition-duration: 0.075s;
+    -moz-transition-duration: 0.075s;
+    transition-duration: 0.075s;
+}
 
 #searchsubmit:hover,
 .button:hover,
 #submit:hover {
-color: #fff;
--webkit-transition-duration: 0.15s;
--moz-transition-duration: 0.15s;
-transition-duration: 0.15s;}
+    color: #fff;
+    -webkit-transition-duration: 0.15s;
+    -moz-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+}
 
 #sidebar .menu-item {
--moz-border-radius: 0.618em;
-border-radius: 0.618em;
-font-size: 0.734em;
-margin: 0.09em;
-display: inline-block;}
+    -moz-border-radius: 0.618em;
+    border-radius: 0.618em;
+    font-size: 0.734em;
+    margin: 0.09em;
+    display: inline-block;
+}
 
-#sidebar .menu-item a {padding: 0.382em 0.734em}
+#sidebar .menu-item a {
+    padding: 0.382em 0.734em
+}
 
 #submit {
-min-width: 11.089em;
-max-width: 13.168em;
-width: 50%;}
+    min-width: 11.089em;
+    max-width: 13.168em;
+    width: 50%;
+}
 
 textarea#comment {
-margin-top: 0.382em;
-padding: 0.618em;
-min-width: 11.089em;
-max-width: 29.03em;
-width: 80%;}
+    margin-top: 0.382em;
+    padding: 0.618em;
+    min-width: 11.089em;
+    max-width: 29.03em;
+    width: 80%;
+}
 
-#commentform div + div {padding-top: 0.107em;}
+#commentform div+ div {
+    padding-top: 0.107em;
+}
 
 #commentform label {
-display: inline-block;
-margin-left: 0.454em;}
+    display: inline-block;
+    margin-left: 0.454em;
+}
 
-ol.commentlist {list-style: none;}
-ol.commentlist li.comment {border-bottom: 1px dotted #666; padding: 10px;}
-ol.commentlist li.comment div.vcard cite.fn {font-style: normal;}
-ol.commentlist li.comment div.vcard img.avatar {float:right; margin: 0 0 10px 10px;}
-ol.commentlist li.comment div.comment-meta {font-size: 10px;}
-ol.commentlist li.comment div.comment-meta a {color: #ccc;}
-ol.commentlist li.comment div.reply {font-size: 11px;}
-ol.commentlist li.comment div.reply a {font-weight: bold;}
-ol.commentlist li.comment ul.children {list-style: none; margin: 10px 0 0;}
-ol.commentlist li.comment ul.children li.depth-2 {border-left: 5px solid #555; margin: 0 0 10px 10px;}
-ol.commentlist li.comment ul.children li.depth-3 {border-left: 5px solid #999; margin: 0 0 10px 10px;}
-ol.commentlist li.comment ul.children li.depth-4 {border-left: 5px solid #bbb; margin: 0 0 10px 10px;}
-ol.commentlist li.even {background: #fff;}
-ol.commentlist li.odd {background: #f6f6f6;}
-ol.commentlist li.parent {border-left: 5px solid #111;}
+ol.commentlist {
+    list-style: none;
+}
+
+ol.commentlist li.comment {
+    border-bottom: 1px dotted #666;
+    padding: 10px;
+}
+
+ol.commentlist li.comment div.vcard cite.fn {
+    font-style: normal;
+}
+
+ol.commentlist li.comment div.vcard img.avatar {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+ol.commentlist li.comment div.comment-meta {
+    font-size: 10px;
+}
+
+ol.commentlist li.comment div.comment-meta a {
+    color: #ccc;
+}
+
+ol.commentlist li.comment div.reply {
+    font-size: 11px;
+}
+
+ol.commentlist li.comment div.reply a {
+    font-weight: bold;
+}
+
+ol.commentlist li.comment ul.children {
+    list-style: none;
+    margin: 10px 0 0;
+}
+
+ol.commentlist li.comment ul.children li.depth-2 {
+    border-left: 5px solid #555;
+    margin: 0 0 10px 10px;
+}
+
+ol.commentlist li.comment ul.children li.depth-3 {
+    border-left: 5px solid #999;
+    margin: 0 0 10px 10px;
+}
+
+ol.commentlist li.comment ul.children li.depth-4 {
+    border-left: 5px solid #bbb;
+    margin: 0 0 10px 10px;
+}
+
+ol.commentlist li.even {
+    background: #fff;
+}
+
+ol.commentlist li.odd {
+    background: #f6f6f6;
+}
+
+ol.commentlist li.parent {
+    border-left: 5px solid #111;
+}
 
 
 /* Print styles!
 -------------------------------------------------------------------------------*/
-@media print {
-}
+
+@media print {}
 
 
 /* Media queries!
 -------------------------------------------------------------------------------*/
 
 @media all and (min-width: 1250px) {
-
-p {text-align: justify;}
-
+    p {
+        text-align: justify;
+    }
 }
 
 @media all and (max-width: 900px) {
-
-#header {
-padding: 1.618em 0 2.618em;
-text-align: center;}
-
-#header a img {width: 25%;}
-
-#center {
-width: 50%;}
-
-#sidebar {
-margin-top: 2.618em;
-padding: 0;
-clear: both;
-width: 100%;
-max-width: none;}
-
-.kontakt,
-.menu-sidebar-container {
-width: 25%;
-display: inline-block;
-margin: 0 3%;
-vertical-align: top;}
-
-#searchform {
-border-top: 0.09em solid #c2c2c2;
-border-bottom: 0.09em solid #c2c2c2;
-padding: 1em 0;
-max-width: none;}
-
-#searchform input {
-max-width: 8.139em;
-min-width: 6.854em;
-margin: 0 auto;}
-
+    #header {
+        padding: 1.618em 0 2.618em;
+        text-align: center;
+    }
+    #header a img {
+        width: 25%;
+    }
+    #center {
+        width: 50%;
+    }
+    #sidebar {
+        margin-top: 2.618em;
+        padding: 0;
+        clear: both;
+        width: 100%;
+        max-width: none;
+    }
+    .kontakt,
+    .menu-sidebar-container {
+        width: 25%;
+        display: inline-block;
+        margin: 0 3%;
+        vertical-align: top;
+    }
+    #searchform {
+        border-top: 0.09em solid #c2c2c2;
+        border-bottom: 0.09em solid #c2c2c2;
+        padding: 1em 0;
+        max-width: none;
+    }
+    #searchform input {
+        max-width: 8.139em;
+        min-width: 6.854em;
+        margin: 0 auto;
+    }
 }
 
 @media all and (max-width: 640px) {
-
-#header {
-padding: 1.188em 0 0.618em;
-text-align: center;}
-
-#header a {padding: 0.618em;}
-
-#header a img {
-width: 25%;
-min-width: 6.854em;}
-
-#center,
-#left {
-float: none;
-margin: 0;
-padding: 1.188em 2.618em 0;
-max-width: none;
-width: auto;}
-
-#sidebar {margin-top: 2.618em;}
-
-h1 {font-size: 1.188em;}
-
-.sticky h1 {font-size: 1em;}
-
-p {text-align: justify;}
-
-.menu-item {
--moz-border-radius: 0.618em !important;
-border-radius: 0.618em !important;
-margin: 1px;
-display: inline-block;}
-
-.menu-item a {padding: 0.382em 0.734em;}
-
-.widget_mailchimpsf_widget {
-margin: 1.618em auto;
-max-width: none;}
-
-.mc_form_inside div {display: inline;}
-
-#mc_display_rewards {display: block;}
-
-.widget_mailchimpsf_widget input {
-display: inline-block;
-max-width: 8.139em;
-min-width: 6.854em;}
-
-#commentform label {
-display: block;
-margin-left: 0.454em;}
-
+    #header {
+        padding: 1.188em 0 0.618em;
+        text-align: center;
+    }
+    #header a {
+        padding: 0.618em;
+    }
+    #header a img {
+        width: 25%;
+        min-width: 6.854em;
+    }
+    #center,
+    #left {
+        float: none;
+        margin: 0;
+        padding: 1.188em 2.618em 0;
+        max-width: none;
+        width: auto;
+    }
+    #sidebar {
+        margin-top: 2.618em;
+    }
+    h1 {
+        font-size: 1.188em;
+    }
+    .sticky h1 {
+        font-size: 1em;
+    }
+    p {
+        text-align: justify;
+    }
+    .menu-item {
+        -moz-border-radius: 0.618em !important;
+        border-radius: 0.618em !important;
+        margin: 1px;
+        display: inline-block;
+    }
+    .menu-item a {
+        padding: 0.382em 0.734em;
+    }
+    .widget_mailchimpsf_widget {
+        margin: 1.618em auto;
+        max-width: none;
+    }
+    .mc_form_inside div {
+        display: inline;
+    }
+    #mc_display_rewards {
+        display: block;
+    }
+    .widget_mailchimpsf_widget input {
+        display: inline-block;
+        max-width: 8.139em;
+        min-width: 6.854em;
+    }
+    #commentform label {
+        display: block;
+        margin-left: 0.454em;
+    }
 }
 
 @media all and (max-width: 480px) {
-
-#center,
-#left {padding: 1.188em 1.188em 0;}
-
-.kontakt,
-.menu-sidebar-container {
-width: auto;
-display: block;
-margin: 5%;}
-
+    #center,
+    #left {
+        padding: 1.188em 1.188em 0;
+    }
+    .kontakt,
+    .menu-sidebar-container {
+        width: auto;
+        display: block;
+        margin: 5%;
+    }
 }
 
 @media all and (max-width: 420px) {
-
-p {text-align: left;}
-
+    p {
+        text-align: left;
+    }
 }
