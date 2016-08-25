@@ -7,7 +7,10 @@ Author URI: http://leszekpietrzak.com
 Version: 1
 */
 
+
+/*----------------------------------------------------------------------------*/
 /* Let's default this puppy out */
+/*----------------------------------------------------------------------------*/
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
     margin: 0;
@@ -23,11 +26,6 @@ article, aside, figure, footer, header, hgroup, nav, section {
     display: block;
 }
 
-
-/* Responsive images and other embedded objects
-   Note: keeping IMG here will cause problems if you're using foreground images as sprites, like, say for Google Maps custom placemarkers.
-   There has been a report of problems with standard Google maps as well, but we haven't been able to duplicate or diagnose the issue. */
-
 img,
 object,
 embed {
@@ -35,16 +33,10 @@ embed {
     max-width: 100%;
 }
 
-
 /* force a vertical scrollbar to prevent a jumpy page */
-
 html {
     overflow-y: scroll;
 }
-
-
-/* we use a lot of ULs that aren't bulleted.
-	don't forget to restore the bullets within content. */
 
 ul {
     list-style: none;
@@ -81,10 +73,8 @@ dfn[title] {
     cursor: help;
 }
 
-
-/* tables still need cellspacing="0" in the markup */
-
 table {
+    /* tables still need cellspacing="0" in the markup */
     border-collapse: collapse;
     border-spacing: 0;
 }
@@ -133,10 +123,6 @@ input[type="checkbox"] {
     *vertical-align: baseline;
 }
 
-.ie6 input {
-    vertical-align: text-bottom;
-}
-
 select,
 input,
 textarea {
@@ -147,10 +133,6 @@ table {
     font-size: inherit;
     font: 100%;
 }
-
-
-/* Accessible focus treatment
-	people.opera.com/patrickl/experiments/keyboard/test */
 
 a:hover,
 a:active {
@@ -171,10 +153,7 @@ td img {
     vertical-align: top;
 }
 
-
-/* Make sure sup and sub don't screw with your line-heights
-	gist.github.com/413930 */
-
+/* Make sure sup and sub don't screw with your line-heights */
 sub,
 sup {
     font-size: 75%;
@@ -190,9 +169,7 @@ sub {
     bottom: -0.25em;
 }
 
-
 /* standardize any monospaced elements */
-
 pre,
 code,
 kbd,
@@ -200,9 +177,7 @@ samp {
     font-family: monospace, sans-serif;
 }
 
-
 /* hand cursor on clickable elements */
-
 .clickable,
 label,
 input[type=button],
@@ -211,9 +186,7 @@ button {
     cursor: pointer;
 }
 
-
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
-
 button,
 input,
 select,
@@ -221,31 +194,13 @@ textarea {
     margin: 0;
 }
 
-
 /* make buttons play nice in IE */
-
 button {
     width: auto;
     overflow: visible;
 }
 
-
-/* scale images in IE7 more attractively */
-
-.ie7 img {
-    -ms-interpolation-mode: bicubic;
-}
-
-
-/* prevent BG image flicker upon hover */
-
-.ie6 html {
-    filter: expression(document.execCommand("BackgroundImageCache", false, true));
-}
-
-
 /* let's clear some floats */
-
 .clearfix:before,
 .clearfix:after {
     content: "\0020";
@@ -263,8 +218,9 @@ button {
 }
 
 
+/*----------------------------------------------------------------------------*/
 /* Ok, this is where the fun starts.
--------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
 
 body {
     background: #fff;
@@ -360,7 +316,7 @@ mark {
     width: 13%;
 }
 
-#sidebar div+ div {
+#sidebar div + div {
     margin-top: 1.618em;
 }
 
@@ -388,8 +344,9 @@ mark {
 }
 
 
+/*----------------------------------------------------------------------------*/
 /* And here begins the Wordpress fun.
--------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
 
 h2 {
     font-size: 1em;
@@ -486,11 +443,11 @@ h1.entry-title {
     color: #cc2929;
 }
 
-.post+ .post {
+.post + .post {
     margin-top: 1.618em;
 }
 
-p+ p {
+p + p {
     margin-top: 0.618em;
 }
 
@@ -781,14 +738,9 @@ ol.commentlist li.parent {
 }
 
 
-/* Print styles!
--------------------------------------------------------------------------------*/
-
-@media print {}
-
-
-/* Media queries!
--------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* media queries
+/*----------------------------------------------------------------------------*/
 
 @media all and (min-width: 1250px) {
     p {
