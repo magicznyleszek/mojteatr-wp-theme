@@ -4,13 +4,11 @@
     add_theme_support('automatic-feed-links');
 
     // Load jQuery
-    if ( !function_exists('core_mods') ) {
+    if (!function_exists('core_mods')) {
         function core_mods() {
-            if ( !is_admin() ) {
-                wp_deregister_script('jquery');
-                wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"), false);
-                wp_enqueue_script('jquery');
-            }
+            wp_deregister_script('jquery');
+            wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"), false);
+            wp_enqueue_script('jquery');
         }
         core_mods();
     }
@@ -37,4 +35,30 @@
 
     add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video')); // Add 3.1 post format theme support.
 
+    // automagically rewrite title for 'termin' pod
+    function admin_footer_hook(){
+        ?>
+        <script type="text/javascript">
+            if(jQuery('#post_type').val() === 'termin'){
+                jQTitle = jQuery('#title');
+                jQTitle.prop('disabled', true);
+                jQTitle.blur();
+                titleVal = jQTitle.val();
+
+                if (titleVal == '') {
+                    jQTitle.val('Title will be auto-generated');
+                };
+
+                // Add an additional CSS Class called 'pods-auto-title' in Pods Admin for all Pods Fields who will be used for the Auto-Title
+                jQuery('.pods-auto-title').change(function() {
+                    // example for dropdown-field
+                    var dateField = jQuery('#pods-form-ui-pods-meta-data-wystawienia').val();
+                    var titleField = jQuery('#pods-form-ui-pods-meta-spektakl option:selected').text();
+                    jQTitle.val(dateField + ' -- ' + titleField);
+                });
+            }
+        </script>
+        <?php
+    }
+    add_action( 'admin_footer-post.php', 'admin_footer_hook' );
 ?>
