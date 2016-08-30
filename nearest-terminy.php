@@ -1,15 +1,13 @@
 <?php
-/*
-Template Name: Custom Index Terminy
-*/
-    get_header();
+    $NEAREST_TERMINY_ENABLED = false;
 
     // get data
     $mypod = pods('termin');
     $data_dzis = date('Y-m-d');
     $params = array(
         'data-wystawienia DESC',
-        'where'=> 'DATE(data-wystawienia.meta_value) >= "'.$data_dzis.'"'
+        'where'=> 'DATE(data-wystawienia.meta_value) >= "'.$data_dzis.'"',
+        'limit'=> 2
     );
     $mypod->find($params);
 
@@ -17,10 +15,12 @@ Template Name: Custom Index Terminy
     $date_formatter->setPattern('d MMM y HH:mm');
 ?>
 
-    <?php include(TEMPLATEPATH . '/menu.php' ); ?>
-
-    <div id="center">
-        <h1>Aktualne terminy spektakli</h1>
+<?php
+    // display only if there is something to show
+    if ($mypod->total() > 0 && $NEAREST_TERMINY_ENABLED):
+?>
+    <section>
+        <h1>Najbliższe terminy spektakli</h1>
 
         <table>
             <thead>
@@ -61,8 +61,5 @@ Template Name: Custom Index Terminy
                 <?php endwhile; ?>
             </tbody>
         </table>
-    </div>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+    </section>
+<?php endif; ?>

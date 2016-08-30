@@ -3,16 +3,16 @@
 Template Name: Custom Index Aktorzy
 */
     get_header();
+
+    // get data
+    $mypod = pods('aktor');
+    $mypod->find('nazwisko ASC');
 ?>
 
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
 
     <div id="center">
         <h1>Aktorzy</h1>
-        <?php
-            $mypod = pods('aktor');
-            $mypod->find('nazwisko ASC');
-        ?>
 
         <?php while($mypod->fetch()) : ?>
 

@@ -3,6 +3,17 @@
 Template Name: Custom Index Spektakle
 */
     get_header();
+
+    // get data
+    $mypod = pods('spektakl');
+    $params = array(
+        'title ASC',
+        'orderby'=>'archiwalne.meta_value'
+    );
+    $mypod->find($params);
+
+    $date_formatter = new IntlDateFormatter('pl_PL', IntlDateFormatter::SHORT, IntlDateFormatter::SHORT);
+    $date_formatter->setPattern('d MMMM y');
 ?>
 
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
@@ -10,17 +21,7 @@ Template Name: Custom Index Spektakle
     <div id="center">
         <h1>Spektakle</h1>
 
-        <?php
-            // get data
-            $mypod = pods('spektakl');
-            $params = array(
-                'title ASC',
-                'orderby'=>'archiwalne.meta_value'
-            );
-            $mypod->find($params);
-            $prev_archiwalne = null;
-        ?>
-
+        <?php $prev_archiwalne = null; ?>
         <?php while($mypod->fetch()) : ?>
             <?php
                 // set variables
@@ -35,6 +36,8 @@ Template Name: Custom Index Spektakle
 
                 $pod_czas_trwania= $mypod->field('czas-trwania');
                 $pod_data_premiery= $mypod->field('data-premiery');
+                $data_premiery_pretty = $date_formatter->format(date_create($pod_data_premiery));
+
                 $pod_aktorzy= $mypod->field('aktorzy');
                 $pod_archiwalne= $mypod->field('archiwalne');
                 $pod_zdjecie= $mypod->field('zdjecie');
@@ -94,7 +97,7 @@ Template Name: Custom Index Spektakle
                     </li>
                     <li>
                         <strong>Data premiery:</strong>
-                        <?php echo $pod_data_premiery; ?>
+                        <?php echo $data_premiery_pretty; ?>
                     </li>
                 </ul>
 
