@@ -1,5 +1,5 @@
 <?php
-    $NEAREST_TERMINY_ENABLED = true;
+    $NEAREST_TERMINY_ENABLED = false;
 
     // get data
     $mypod = pods('termin');
