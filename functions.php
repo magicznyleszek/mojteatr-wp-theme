@@ -35,39 +35,41 @@
 
     add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video')); // Add 3.1 post format theme support.
 
-    // automagically rewrite title for 'termin' pod
-    function admin_footer_hook(){
-        ?>
-        <script type="text/javascript">
-            if(jQuery('#post_type').val() === 'termin') {
-                // get the title and make it appear disabled
-                // can't disable via attribute, as it makes PHP omit the value
-                jQTitle = jQuery('#title');
-                jQTitle.css({'pointer-events': 'none', 'color': 'silver'});
-                jQTitle.blur();
+    // makes termin title from data-wystawienia and spektakl->tytul
+    function save_termin_title($data, $postarr) {
+        $termin_slug = 'termin';
+        $spektakl_slug = 'spektakl';
+        $data_wystawienia_field_name = 'pods_meta_data-wystawienia';
+        $spektakl_field_name = 'pods_meta_spektakl';
+        $tytul_field_name = 'tytul';
 
-                // sets the title to the combined value
-                var updateTitle = function () {
-                    var dateField = jQuery('#pods-form-ui-pods-meta-data-wystawienia').val();
-                    var titleField = jQuery('#pods-form-ui-pods-meta-spektakl option:selected').text();
-                    jQTitle.val(dateField + ' -- ' + titleField);
-                }
+        if ($data['post_type'] == $termin_slug) {
+            // find spektakl data and it's tytul value
+            $spektakl_pod_id = $postarr[$spektakl_field_name];
+            $spektakl_pod = pods($spektakl_slug, $spektakl_pod_id);
+            $spektakl_tytul = $spektakl_pod->display($tytul_field_name);
 
-                // show message on the first go?
-                titleVal = jQTitle.val();
-                if (titleVal == '') {
-                    // jQTitle.val('Tytuł generuje się automatycznie');
-                    updateTitle();
-                };
+            $data_wystawienia = $postarr[$data_wystawienia_field_name];
 
-                // add an additional CSS class 'pods-auto-title'
-                // in Pods Admin for all Pods Fields concerned with updateTitle:
-                // - data-wystawienia
-                // - spektakl
-                jQuery('.pods-auto-title').change(updateTitle);
-            }
-        </script>
-        <?php
+            $data['post_title'] = $spektakl_tytul.' @ '.$data_wystawienia;
+        }
+        return $data;
     }
-    add_action( 'admin_footer-post.php', 'admin_footer_hook' );
+
+    // makes aktor title from imie and nazwisko
+    function save_aktor_title($data, $postarr) {
+        $aktor_slug = 'aktor';
+        $imie_field_name = 'pods_meta_imie';
+        $nazwisko_field_name = 'pods_meta_nazwisko';
+
+        if ($data['post_type'] == $aktor_slug) {
+            $imie = $postarr[$imie_field_name];
+            $nazwisko = $postarr[$nazwisko_field_name];
+
+            $data['post_title'] = $imie.' '.$nazwisko;
+        }
+        return $data;
+    }
+    add_filter('wp_insert_post_data', 'save_termin_title', '99', 2);
+    add_filter('wp_insert_post_data', 'save_aktor_title', '99', 2);
 ?>
