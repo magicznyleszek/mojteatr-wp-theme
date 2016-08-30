@@ -39,23 +39,32 @@
     function admin_footer_hook(){
         ?>
         <script type="text/javascript">
-            if(jQuery('#post_type').val() === 'termin'){
+            if(jQuery('#post_type').val() === 'termin') {
+                // get the title and make it appear disabled
+                // can't disable via attribute, as it makes PHP omit the value
                 jQTitle = jQuery('#title');
-                jQTitle.prop('disabled', true);
+                jQTitle.css({'pointer-events': 'none', 'color': 'silver'});
                 jQTitle.blur();
-                titleVal = jQTitle.val();
 
-                if (titleVal == '') {
-                    jQTitle.val('Title will be auto-generated');
-                };
-
-                // Add an additional CSS Class called 'pods-auto-title' in Pods Admin for all Pods Fields who will be used for the Auto-Title
-                jQuery('.pods-auto-title').change(function() {
-                    // example for dropdown-field
+                // sets the title to the combined value
+                var updateTitle = function () {
                     var dateField = jQuery('#pods-form-ui-pods-meta-data-wystawienia').val();
                     var titleField = jQuery('#pods-form-ui-pods-meta-spektakl option:selected').text();
                     jQTitle.val(dateField + ' -- ' + titleField);
-                });
+                }
+
+                // show message on the first go?
+                titleVal = jQTitle.val();
+                if (titleVal == '') {
+                    // jQTitle.val('Tytuł generuje się automatycznie');
+                    updateTitle();
+                };
+
+                // add an additional CSS class 'pods-auto-title'
+                // in Pods Admin for all Pods Fields concerned with updateTitle:
+                // - data-wystawienia
+                // - spektakl
+                jQuery('.pods-auto-title').change(updateTitle);
             }
         </script>
         <?php
