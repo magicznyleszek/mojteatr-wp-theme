@@ -72,7 +72,7 @@
     }
 
     // makes spektakl title from tytul
-    function save_aktor_title($data, $postarr) {
+    function save_spektakl_title($data, $postarr) {
         $spektakl_slug = 'spektakl';
         $tytul_field_name = 'pods_meta_tytul';
 
@@ -83,4 +83,5 @@
     }
     add_filter('wp_insert_post_data', 'save_termin_title', '99', 2);
     add_filter('wp_insert_post_data', 'save_aktor_title', '99', 2);
+    add_filter('wp_insert_post_data', 'save_spektakl_title', '99', 2);
 ?>
