@@ -12,8 +12,11 @@ Template Name: Custom Index Spektakle
     );
     $mypod->find($params);
 
-    $date_formatter = new IntlDateFormatter('pl_PL', IntlDateFormatter::SHORT, IntlDateFormatter::SHORT);
-    $date_formatter->setPattern('d MMMM y');
+    setlocale(LC_TIME, 'pl_PL');
+    $pretty_date_format = '%d %B %G';
+    function pretty_date($date_format, $date_string) {
+        return strftime($date_format, strtotime($date_string));
+    }
 ?>
 
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
@@ -36,7 +39,7 @@ Template Name: Custom Index Spektakle
 
                 $pod_czas_trwania= $mypod->field('czas-trwania');
                 $pod_data_premiery= $mypod->field('data-premiery');
-                $data_premiery_pretty = $date_formatter->format(date_create($pod_data_premiery));
+                $data_premiery_pretty = pretty_date($pretty_date_format, $pod_data_premiery);
 
                 $pod_aktorzy= $mypod->field('aktorzy');
                 $pod_archiwalne= $mypod->field('archiwalne');
@@ -91,10 +94,13 @@ Template Name: Custom Index Spektakle
                             <?php echo $pod_scenariusz; ?>
                         </li>
                     <?php endif; ?>
+                    <?php if($pod_czas_trwania > 0): ?>
                     <li>
                         <strong>Czas trwania:</strong>
                         <?php echo $pod_czas_trwania; ?>
+                        <span>minut</span>
                     </li>
+                    <?php endif; ?>
                     <li>
                         <strong>Data premiery:</strong>
                         <?php echo $data_premiery_pretty; ?>

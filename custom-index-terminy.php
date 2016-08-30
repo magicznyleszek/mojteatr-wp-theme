@@ -13,8 +13,11 @@ Template Name: Custom Index Terminy
     );
     $mypod->find($params);
 
-    $date_formatter = new IntlDateFormatter('pl_PL', IntlDateFormatter::SHORT, IntlDateFormatter::SHORT);
-    $date_formatter->setPattern('d MMM y HH:mm');
+    setlocale(LC_TIME, 'pl_PL');
+    $pretty_date_format = '%d %b %G %H:%M';
+    function pretty_date($date_format, $date_string) {
+        return strftime($date_format, strtotime($date_string));
+    }
 ?>
 
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
@@ -34,7 +37,7 @@ Template Name: Custom Index Terminy
                     <?php
                         // set variables
                         $pod_data_wystawienia= $mypod->field('data-wystawienia');
-                        $data_wystawienia_pretty = $date_formatter->format(date_create($pod_data_wystawienia));
+                        $data_wystawienia_pretty = pretty_date($pretty_date_format, $pod_data_wystawienia);
 
                         $pod_komentarz= $mypod->field('komentarz');
 
