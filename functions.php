@@ -70,6 +70,17 @@
         }
         return $data;
     }
+
+    // makes spektakl title from tytul
+    function save_aktor_title($data, $postarr) {
+        $spektakl_slug = 'spektakl';
+        $tytul_field_name = 'pods_meta_tytul';
+
+        if ($data['post_type'] == $spektakl_slug) {
+            $data['post_title'] = $postarr[$tytul_field_name];
+        }
+        return $data;
+    }
     add_filter('wp_insert_post_data', 'save_termin_title', '99', 2);
     add_filter('wp_insert_post_data', 'save_aktor_title', '99', 2);
 ?>
