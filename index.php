@@ -28,7 +28,7 @@
 
     <?php endif; ?>
 
-    <?php include (TEMPLATEPATH . '/_/inc/nav.php' ); ?>
+    <?php include (TEMPLATEPATH . '/partials/nav_pagination.php' ); ?>
 
     </div>
 

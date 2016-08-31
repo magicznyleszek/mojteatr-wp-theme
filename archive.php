@@ -31,7 +31,7 @@
 
             <?php } ?>
 
-            <?php include (TEMPLATEPATH . '/_/inc/nav.php' ); ?>
+            <?php include (TEMPLATEPATH . '/partials/nav_pagination.php' ); ?>
 
             <?php while (have_posts()) : the_post(); ?>
 
@@ -49,7 +49,7 @@
 
             <?php endwhile; ?>
 
-            <?php include (TEMPLATEPATH . '/_/inc/nav.php' ); ?>
+            <?php include (TEMPLATEPATH . '/partials/nav_pagination.php' ); ?>
 
     <?php else : ?>
 

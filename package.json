@@ -1,0 +1,36 @@
+{
+  "name": "wp-theme-mojteatr",
+  "private": true,
+  "description": "A WP theme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smutnyleszek/mojteatr-wp-theme.git"
+  },
+  "author": "Leszek Pietrzak",
+  "license": null,
+  "bugs": {
+    "url": "https://github.com/smutnyleszek/mojteatr-wp-theme/issues",
+    "email": "smutnyleszek@gmail.com"
+  },
+  "homepage": "https://mojteatr.pl",
+  "devDependencies": {
+    "postcss": "^5.0.19",
+    "postcss-cli": "^2.5.1",
+    "postcss-cssnext": "^2.4.0",
+    "postcss-import": "^8.0.2",
+    "npm-watch": "^0.1.5"
+  },
+  "watch": {
+    "_buildStyles": {
+      "patterns": [
+        "src/styles"
+      ],
+      "extensions": "css",
+      "quiet": false
+    }
+  },
+  "scripts": {
+    "build": "npm run _buildStyles",
+    "_buildStyles": "postcss -u postcss-import -u postcss-cssnext -o ./style.css src/styles/main.css"
+  }
+}

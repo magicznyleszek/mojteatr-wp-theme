@@ -1,0 +1,7 @@
+# assets
+node_modules
+
+# OS generated
+.DS_Store
+ehthumbs.db
+Thumbs.db

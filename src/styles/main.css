@@ -1,0 +1,16 @@
+@import "setup/wp-theme-info.css";
+@import "setup/reset.css";
+
+/* new stuff */
+@import "atoms.css";
+@import "setup/root.css";
+
+/* old stuff */
+@import "old/layout.css";
+@import "old/menu.css";
+@import "old/mailchimp.css";
+@import "old/headers.css";
+@import "old/buttons.css";
+@import "old/post.css";
+@import "old/comments.css";
+@import "old/media-queries.css";

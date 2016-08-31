@@ -1,0 +1,124 @@
+@media all and (min-width: 1250px) {
+    p {
+        text-align: justify;
+    }
+}
+
+@media all and (max-width: 900px) {
+    #header {
+        padding: 1.618em 0 2.618em;
+        text-align: center;
+    }
+    #header a img {
+        width: 25%;
+    }
+    #center {
+        width: 50%;
+    }
+    #sidebar {
+        margin-top: 2.618em;
+        padding: 0;
+        clear: both;
+        width: 100%;
+        max-width: none;
+    }
+    .kontakt,
+    .menu-sidebar-container {
+        width: 25%;
+        display: inline-block;
+        margin: 0 3%;
+        vertical-align: top;
+    }
+    #searchform {
+        border-top: 0.09em solid var(--a-c-silver);
+        border-bottom: 0.09em solid var(--a-c-silver);
+        padding: 1em 0;
+        max-width: none;
+    }
+    #searchform input {
+        max-width: 8.139em;
+        min-width: 6.854em;
+        margin: 0 auto;
+    }
+}
+
+@media all and (max-width: 640px) {
+    #header {
+        padding: 1.188em 0 0.618em;
+        text-align: center;
+    }
+    #header a {
+        padding: 0.618em;
+    }
+    #header a img {
+        width: 25%;
+        min-width: 6.854em;
+    }
+    #center,
+    #left {
+        float: none;
+        margin: 0;
+        padding: 1.188em 2.618em 0;
+        max-width: none;
+        width: auto;
+    }
+    #sidebar {
+        margin-top: 2.618em;
+    }
+    h1 {
+        font-size: 1.188em;
+    }
+    .sticky h1 {
+        font-size: 1em;
+    }
+    p {
+        text-align: justify;
+    }
+    .menu-item {
+        -moz-border-radius: 0.618em !important;
+        border-radius: 0.618em !important;
+        margin: 1px;
+        display: inline-block;
+    }
+    .menu-item a {
+        padding: 0.382em 0.734em;
+    }
+    .widget_mailchimpsf_widget {
+        margin: 1.618em auto;
+        max-width: none;
+    }
+    .mc_form_inside div {
+        display: inline;
+    }
+    #mc_display_rewards {
+        display: block;
+    }
+    .widget_mailchimpsf_widget input {
+        display: inline-block;
+        max-width: 8.139em;
+        min-width: 6.854em;
+    }
+    #commentform label {
+        display: block;
+        margin-left: 0.454em;
+    }
+}
+
+@media all and (max-width: 480px) {
+    #center,
+    #left {
+        padding: 1.188em 1.188em 0;
+    }
+    .kontakt,
+    .menu-sidebar-container {
+        width: auto;
+        display: block;
+        margin: 5%;
+    }
+}
+
+@media all and (max-width: 420px) {
+    p {
+        text-align: left;
+    }
+}

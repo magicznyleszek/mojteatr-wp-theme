@@ -1,0 +1,88 @@
+#submit {
+    min-width: 11.089em;
+    max-width: 13.168em;
+    width: 50%;
+}
+
+textarea#comment {
+    margin-top: 0.382em;
+    padding: 0.618em;
+    min-width: 11.089em;
+    max-width: 29.03em;
+    width: 80%;
+}
+
+#commentform div+ div {
+    padding-top: 0.107em;
+}
+
+#commentform label {
+    display: inline-block;
+    margin-left: 0.454em;
+}
+
+ol.commentlist {
+    list-style: none;
+}
+
+ol.commentlist li.comment {
+    border-bottom: 1px dotted var(--a-c-dimGray);
+    padding: 10px;
+}
+
+ol.commentlist li.comment div.vcard cite.fn {
+    font-style: normal;
+}
+
+ol.commentlist li.comment div.vcard img.avatar {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+ol.commentlist li.comment div.comment-meta {
+    font-size: 10px;
+}
+
+ol.commentlist li.comment div.comment-meta a {
+    color: #ccc;
+}
+
+ol.commentlist li.comment div.reply {
+    font-size: 11px;
+}
+
+ol.commentlist li.comment div.reply a {
+    font-weight: bold;
+}
+
+ol.commentlist li.comment ul.children {
+    list-style: none;
+    margin: 10px 0 0;
+}
+
+ol.commentlist li.comment ul.children li.depth-2 {
+    border-left: 5px solid var(--a-c-mortar);
+    margin: 0 0 10px 10px;
+}
+
+ol.commentlist li.comment ul.children li.depth-3 {
+    border-left: 5px solid var(--a-c-nobel);
+    margin: 0 0 10px 10px;
+}
+
+ol.commentlist li.comment ul.children li.depth-4 {
+    border-left: 5px solid var(--a-c-silverAlt);
+    margin: 0 0 10px 10px;
+}
+
+ol.commentlist li.even {
+    background: var(--a-c-white);
+}
+
+ol.commentlist li.odd {
+    background: #f6f6f6;
+}
+
+ol.commentlist li.parent {
+    border-left: 5px solid var(--a-c-nero);
+}

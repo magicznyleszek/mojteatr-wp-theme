@@ -1,0 +1,49 @@
+/* -----------------------------------------------------------------------------
+root stuff and normalizations
+----------------------------------------------------------------------------- */
+
+@import "_config.css";
+
+body {
+    background-color: var(--a-c-white);
+    min-height: 100%;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    line-height: var(--rootLineHeight);
+    color: var(--a-c-charcoal);
+    font-family: var(--rootFontFamily);
+    font-size: var(--rootFontSize);
+    font-weight: var(--rootFontWeight);
+}
+
+a {
+    text-decoration: none;
+    color: var(--a-c-fireBrick);
+}
+
+a:hover {
+    color: var(--a-c-persianRed);
+    transition-duration: 0.15s;
+}
+
+::selection,
+::-moz-selection {
+    background: var(--a-c-charcoal);
+    text-shadow: none;
+    color: var(--a-c-white);
+}
+
+a:link {
+    -webkit-tap-highlight-color: var(--a-c-schoolBusYellow);
+}
+
+ins {
+    background-color: var(--a-c-schoolBusYellow);
+    text-decoration: none;
+}
+
+mark {
+    background-color: var(--a-c-schoolBusYellow);
+    font-weight: bold;
+    font-style: italic;
+}

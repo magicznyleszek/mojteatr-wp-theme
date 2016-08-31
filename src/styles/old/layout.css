@@ -1,0 +1,86 @@
+#page-wrap {
+    padding-bottom: 5.03em;
+}
+
+#center,
+#left,
+#sidebar {
+    float: left;
+}
+
+#header {
+    padding: 3.109em 0 1.618em 13%;
+}
+
+#header a {
+    display: block;
+    padding: 1em;
+}
+
+#header a img {
+    width: 14%;
+    max-width: 178px;
+}
+
+#left {
+    padding: 0 1.618em 5.03em 13%;
+    max-width: 13.168em;
+    min-width: 6.854em;
+    width: 15%;
+    text-align: center;
+}
+
+#center {
+    padding: 0 2.618em;
+    width: 40%;
+    max-width: 46.971em;
+}
+
+#sidebar {
+    padding: 0 1.618em;
+    width: 13%;
+    min-width: 6.854em;
+    max-width: 13.168em;
+    text-align: center;
+}
+
+#sidebar div + div {
+    margin-top: 1.618em;
+}
+
+#sidebar h1 {
+    margin-bottom: 0.618em;
+    color: var(--a-c-fireBrick);
+}
+
+#sidebar .tickets ul li.menu-item a {
+    color: var(--a-c-white);
+}
+
+#sidebar .tickets ul li.menu-item {
+    background-color: var(--a-c-fireBrick);
+}
+
+#sidebar .tickets ul li.menu-item:hover {
+    background-color: var(--a-c-persianRed);
+}
+
+#footer {
+    clear: both;
+    text-align: center;
+    font-size: 0.734em;
+}
+
+.navigation {
+    width: 29.03em;
+}
+
+.next-posts {}
+
+.prev-posts {}
+
+#searchform {
+    max-width: 8.139em;
+    min-width: 6.854em;
+    margin: 0 auto;
+}

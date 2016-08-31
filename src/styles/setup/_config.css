@@ -1,0 +1,10 @@
+/* -----------------------------------------------------------------------------
+basics configuration
+----------------------------------------------------------------------------- */
+
+:root {
+    /* root typography with font sizes for different screens scaling */
+    --rootFontWeight: 400;
+    --rootLineHeight: 1.6;
+    --rootFontFamily: var(--a-font-antykwaPoltawskiego);
+}

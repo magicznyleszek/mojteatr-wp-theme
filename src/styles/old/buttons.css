@@ -1,0 +1,52 @@
+input,
+textarea#comment {
+    -moz-border-radius: 0.618em;
+    border-radius: 0.618em;
+    color: var(--a-c-dimGray);
+    font-size: 0.734em;
+    font-family: "AntykwaPoltawskiegoRegular", serif;
+}
+
+input[type=text]:hover,
+input[type=text]:focus,
+textarea#comment:hover,
+textarea#comment:focus {
+    border-color: var(--a-c-dimGray);
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+input[type=text],
+textarea#comment {
+    background: var(--a-c-white);
+    border: 0.09em solid var(--a-c-silver);
+    padding: 0.28em 0.454em;
+}
+
+#searchsubmit,
+.button,
+#submit {
+    background: var(--a-c-whiteSmoke);
+    border: 0;
+    margin-top: 0.236em;
+    padding: 0.382em 0.734em;
+}
+
+#searchsubmit:hover,
+.button:hover,
+#submit:hover {
+    background: var(--a-c-fireBrick);
+    -webkit-transition-duration: 0.075s;
+    -moz-transition-duration: 0.075s;
+    transition-duration: 0.075s;
+}
+
+#searchsubmit:hover,
+.button:hover,
+#submit:hover {
+    color: var(--a-c-white);
+    -webkit-transition-duration: 0.15s;
+    -moz-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+}

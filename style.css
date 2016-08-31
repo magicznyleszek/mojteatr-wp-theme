@@ -6,169 +6,202 @@ Author: Leszek Pietrzak
 Author URI: http://leszekpietrzak.com
 Version: 1
 */
-
-
-/*----------------------------------------------------------------------------*/
-/* Let's default this puppy out */
-/*----------------------------------------------------------------------------*/
-
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
+/* -----------------------------------------------------------------------------
+Let's default this puppy out
+----------------------------------------------------------------------------- */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+menu,
+time,
+mark,
+audio,
+video {
     margin: 0;
-    padding: 0;
-    border: 0;
     outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
+    border: 0;
     background: transparent;
+    padding: 0;
+    vertical-align: baseline;
+    font-size: 100%;
 }
-
-article, aside, figure, footer, header, hgroup, nav, section {
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
     display: block;
 }
-
 img,
 object,
 embed {
-    height: auto;
     max-width: 100%;
+    height: auto;
 }
-
 /* force a vertical scrollbar to prevent a jumpy page */
 html {
     overflow-y: scroll;
 }
-
 ul {
     list-style: none;
 }
-
 blockquote,
 q {
     quotes: none;
 }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
 }
-
 a {
     margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
     background: transparent;
+    padding: 0;
+    vertical-align: baseline;
+    font-size: 100%;
 }
-
 del {
     text-decoration: line-through;
 }
-
 abbr[title],
 dfn[title] {
     border-bottom: 1px dotted #000;
     cursor: help;
 }
-
 table {
     /* tables still need cellspacing="0" in the markup */
     border-collapse: collapse;
     border-spacing: 0;
 }
-
 th {
-    font-weight: bold;
     vertical-align: bottom;
+    font-weight: bold;
 }
-
 td {
-    font-weight: normal;
     vertical-align: top;
+    font-weight: normal;
 }
-
 hr {
     display: block;
-    height: 1px;
+    margin: 1em 0;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
     padding: 0;
+    height: 1px;
 }
-
 input,
 select {
     vertical-align: middle;
 }
-
 pre {
     white-space: pre;
-    /* CSS2 */
-    white-space: pre-wrap;
-    /* CSS 2.1 */
-    white-space: pre-line;
-    /* CSS 3 (and 2.1 as well, actually) */
-    word-wrap: break-word;
-    /* IE */
 }
-
 input[type="radio"] {
     vertical-align: text-bottom;
 }
-
 input[type="checkbox"] {
     vertical-align: bottom;
-    *vertical-align: baseline;
 }
-
 select,
 input,
 textarea {
     font: 99% sans-serif;
 }
-
 table {
-    font-size: inherit;
     font: 100%;
+    font-size: inherit;
 }
-
 a:hover,
 a:active {
     outline: none;
 }
-
 small {
     font-size: 85%;
 }
-
 strong,
 th {
     font-weight: bold;
 }
-
 td,
 td img {
     vertical-align: top;
 }
-
 /* Make sure sup and sub don't screw with your line-heights */
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
     position: relative;
+    line-height: 0;
+    font-size: 75%;
 }
-
 sup {
     top: -0.5em;
 }
-
 sub {
     bottom: -0.25em;
 }
-
 /* standardize any monospaced elements */
 pre,
 code,
@@ -176,16 +209,14 @@ kbd,
 samp {
     font-family: monospace, sans-serif;
 }
-
 /* hand cursor on clickable elements */
 .clickable,
 label,
-input[type=button],
-input[type=submit],
+input[type="button"],
+input[type="submit"],
 button {
     cursor: pointer;
 }
-
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
 button,
 input,
@@ -193,107 +224,107 @@ select,
 textarea {
     margin: 0;
 }
-
 /* make buttons play nice in IE */
 button {
     width: auto;
     overflow: visible;
 }
-
 /* let's clear some floats */
-.clearfix:before,
-.clearfix:after {
-    content: "\0020";
+.clearfix::before,
+.clearfix::after {
     display: block;
     height: 0;
     overflow: hidden;
+    content: "\0020";
 }
-
-.clearfix:after {
+.clearfix::after {
     clear: both;
 }
-
 .clearfix {
     zoom: 1;
 }
+/* new stuff */
+/* -----------------------------------------------------------------------------
+atoms - a palette of all possible variables used throughout the project
+----------------------------------------------------------------------------- */
+:root {
+    /* colors */
 
-
-/*----------------------------------------------------------------------------*/
-/* Ok, this is where the fun starts.
-/*----------------------------------------------------------------------------*/
-
+    /* font families */
+}
+/* -----------------------------------------------------------------------------
+root stuff and normalizations
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+basics configuration
+----------------------------------------------------------------------------- */
+:root {
+    /* root typography with font sizes for different screens scaling */
+}
 body {
-    background: #fff;
-    color: #333;
-    font: 100% 'AntykwaPoltawskiegoRegular', serif;
+    background-color: rgb(255, 255, 255);
+    min-height: 100%;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
     line-height: 1.6;
+    color: rgb(51, 51, 51);
+    font-family: "AntykwaPoltawskiegoRegular", serif;
+    font-size: var(--rootFontSize);
+    font-weight: 400;
 }
-
 a {
-    color: #b22424;
     text-decoration: none;
+    color: rgb(179, 36, 36);
 }
-
 a:hover {
-    color: #cc2929;
+    color: rgb(204, 41, 41);
     -webkit-transition-duration: 0.15s;
-    -moz-transition-duration: 0.15s;
-    transition-duration: 0.15s;
+            transition-duration: 0.15s;
 }
-
+::-moz-selection,
 ::-moz-selection {
-    background: #333333;
-    color: #fff;
+    background: rgb(51, 51, 51);
     text-shadow: none;
+    color: rgb(255, 255, 255);
 }
-
-::selection {
-    background: #333333;
-    color: #fff;
+::selection,
+::-moz-selection {
+    background: rgb(51, 51, 51);
     text-shadow: none;
+    color: rgb(255, 255, 255);
 }
-
 a:link {
-    -webkit-tap-highlight-color: #fcd700;
+    -webkit-tap-highlight-color: rgb(252, 215, 0);
 }
-
 ins {
-    background-color: #fcd700;
-    color: #000;
+    background-color: rgb(252, 215, 0);
     text-decoration: none;
 }
-
 mark {
-    background-color: #fcd700;
-    color: #000;
-    font-style: italic;
+    background-color: rgb(252, 215, 0);
     font-weight: bold;
+    font-style: italic;
 }
-
+/* old stuff */
 #page-wrap {
     padding-bottom: 5.03em;
 }
-
 #center,
 #left,
 #sidebar {
     float: left;
 }
-
 #header {
     padding: 3.109em 0 1.618em 13%;
 }
-
 #header a {
     display: block;
     padding: 1em;
 }
-
 #header a img {
     width: 14%;
     max-width: 178px;
 }
-
 #left {
     padding: 0 1.618em 5.03em 13%;
     max-width: 13.168em;
@@ -301,359 +332,277 @@ mark {
     width: 15%;
     text-align: center;
 }
-
 #center {
     padding: 0 2.618em;
     width: 40%;
     max-width: 46.971em;
 }
-
 #sidebar {
     padding: 0 1.618em;
-    max-width: 13.168em;
-    min-width: 6.854em;
-    text-align: center;
     width: 13%;
+    min-width: 6.854em;
+    max-width: 13.168em;
+    text-align: center;
 }
-
 #sidebar div + div {
     margin-top: 1.618em;
 }
-
 #sidebar h1 {
     margin-bottom: 0.618em;
-    color: #b22424;
+    color: rgb(179, 36, 36);
 }
-
 #sidebar .tickets ul li.menu-item a {
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
-
 #sidebar .tickets ul li.menu-item {
-    background-color: #b22424;
+    background-color: rgb(179, 36, 36);
 }
-
 #sidebar .tickets ul li.menu-item:hover {
-    background-color: #cc2929;
+    background-color: rgb(204, 41, 41);
 }
-
 #footer {
     clear: both;
+    text-align: center;
     font-size: 0.734em;
+}
+.navigation {
+    width: 29.03em;
+}
+.next-posts {}
+.prev-posts {}
+#searchform {
+    max-width: 8.139em;
+    min-width: 6.854em;
+    margin: 0 auto;
+}
+.menu-item {
+    background: rgb(242, 242, 242);
     text-align: center;
 }
-
-
-/*----------------------------------------------------------------------------*/
-/* And here begins the Wordpress fun.
-/*----------------------------------------------------------------------------*/
-
+.menu-item:first-child {
+    border-top-left-radius: 0.618em;
+    border-top-right-radius: 0.618em;
+}
+.menu-item+ .menu-item {
+    margin-top: 1px;
+}
+.menu-item:last-child {
+    border-bottom-left-radius: 0.618em;
+    border-bottom-right-radius: 0.618em;
+}
+.menu-item a {
+    color: rgb(102, 102, 102);
+    display: block;
+    padding: 0.734em;
+}
+.menu-item:hover {
+    background: rgb(179, 36, 36);
+    -webkit-transition-duration: 0.075s;
+    transition-duration: 0.075s;
+}
+.menu-item:hover a {
+    color: rgb(255, 255, 255);
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+}
+.current-menu-item {
+    background: rgb(179, 36, 36);
+}
+.current-menu-item a {
+    color: rgb(255, 255, 255);
+}
+.current-menu-item:hover {
+    background: rgb(204, 41, 41);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+#sidebar .menu-item {
+    border-radius: 0.618em;
+    font-size: 0.734em;
+    margin: 0.09em;
+    display: inline-block;
+}
+#sidebar .menu-item a {
+    padding: 0.382em 0.734em
+}
+.widget_mailchimpsf_widget {
+    margin: 2.618em auto;
+    max-width: 8.139em;
+    min-width: 6.854em;
+}
+#mc_display_rewards {
+    font-size: 0.734em;
+    margin-top: 0.618em;
+}
+.widget_mailchimpsf_widget .mc_input,
+#searchform input {
+    width: 85%;
+}
+.widget_mailchimpsf_widget .button,
+#searchform #searchsubmit {
+    width: 95%;
+}
+label.mc_var_label {
+    display: none;
+}
+#mc_signup br {
+    display: none;
+}
 h2 {
     font-size: 1em;
     padding: 0.618em 0;
     text-align: center;
 }
-
 #center h2 {
     font-size: 1em;
     padding: 0 0 1.618em;
     text-align: left;
 }
-
 #respond h2 {
     font-size: 1.188em;
     padding: 1.618em 0 0.618em;
     text-align: left;
 }
-
 h3 {
-    border-top: 0.09em solid #c2c2c2;
-    border-bottom: 0.09em solid #c2c2c2;
+    border-top: 0.09em solid rgb(194, 194, 194);
+    border-bottom: 0.09em solid rgb(194, 194, 194);
     font-size: 1.188em;
     margin: 1.618em 0 0.734em;
     padding: 0.454em;
 }
-
 h1 {
     font-weight: normal;
     font-size: 1.618em;
     line-height: 100%;
 }
-
 h1 a,
 h1.entry-title {
-    color: #333;
+    color: rgb(51, 51, 51);
     display: block;
 }
-
 .sticky h1 {
     font-size: 1.188em;
     line-height: 118.8%;
 }
-
 .sticky h1 a {
-    -moz-border-radius: 0.173em;
     border-radius: 0.173em;
-    background: #b22424;
-    color: #fff;
+    background: rgb(179, 36, 36);
+    color: rgb(255, 255, 255);
     padding: 0.554em 0.618em 0.454em;
 }
-
 .sticky h1 a:hover {
-    background: #cc2929;
+    background: rgb(204, 41, 41);
     -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
-
+input,
+textarea#comment {
+    border-radius: 0.618em;
+    color: rgb(102, 102, 102);
+    font-size: 0.734em;
+    font-family: "AntykwaPoltawskiegoRegular", serif;
+}
+input[type=text]:hover,
+input[type=text]:focus,
+textarea#comment:hover,
+textarea#comment:focus {
+    border-color: rgb(102, 102, 102);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+input[type=text],
+textarea#comment {
+    background: rgb(255, 255, 255);
+    border: 0.09em solid rgb(194, 194, 194);
+    padding: 0.28em 0.454em;
+}
+#searchsubmit,
+.button,
+#submit {
+    background: rgb(242, 242, 242);
+    border: 0;
+    margin-top: 0.236em;
+    padding: 0.382em 0.734em;
+}
+#searchsubmit:hover,
+.button:hover,
+#submit:hover {
+    background: rgb(179, 36, 36);
+    -webkit-transition-duration: 0.075s;
+    transition-duration: 0.075s;
+}
+#searchsubmit:hover,
+.button:hover,
+#submit:hover {
+    color: rgb(255, 255, 255);
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+}
 .entry {
     padding: 1em 0.09em 0;
 }
-
 .entry ul {
     list-style: circle;
     padding: 0.618em 1.618em;
 }
-
 .postmetadata {
-    color: #c2c2c2;
+    color: rgb(194, 194, 194);
     font-size: 0.734em;
     padding: 1em 0.107em 0.618em;
 }
-
 .postmetadata:hover {
-    color: #333;
+    color: rgb(51, 51, 51);
     -webkit-transition-duration: 0.45s;
-    -moz-transition-duration: 0.45s;
     transition-duration: 0.45s;
 }
-
 .postmetadata a {
-    color: #c2c2c2;
+    color: rgb(194, 194, 194);
 }
-
 .postmetadata:hover a {
-    color: #b22424;
+    color: rgb(179, 36, 36);
     -webkit-transition-duration: 0.45s;
-    -moz-transition-duration: 0.45s;
     transition-duration: 0.45s;
 }
-
 .postmetadata:hover a:hover {
-    color: #cc2929;
+    color: rgb(204, 41, 41);
 }
-
 .post + .post {
     margin-top: 1.618em;
 }
-
 p + p {
     margin-top: 0.618em;
 }
-
 p {
     text-align: left;
 }
-
 p iframe,
 p img {
-    border: 0.09em solid #c2c2c2;
+    border: 0.09em solid rgb(194, 194, 194);
     margin-top: 0.618em;
     padding: 0.734em;
 }
-
 p iframe {
     min-width: 13.168em;
     max-width: 21.306em;
     width: 60%;
     height: 11.089em;
 }
-
 p img {
     min-width: 13.168em;
     max-width: 29.03em;
     width: 60%;
 }
-
 p .signature {
     display: block;
-    color: #666;
+    color: rgb(102, 102, 102);
     font-size: 0.734em;
     padding-left: 1.188em;
 }
-
-.menu-item {
-    background: #f2f2f2;
-    text-align: center;
-}
-
-.menu-item:first-child {
-    -moz-border-radius-topleft: 0.618em;
-    border-top-left-radius: 0.618em;
-    -moz-border-radius-topright: 0.618em;
-    border-top-right-radius: 0.618em;
-}
-
-.menu-item+ .menu-item {
-    margin-top: 1px;
-}
-
-.menu-item:last-child {
-    -moz-border-radius-bottomleft: 0.618em;
-    border-bottom-left-radius: 0.618em;
-    -moz-border-radius-bottomright: 0.618em;
-    border-bottom-right-radius: 0.618em;
-}
-
-.menu-item a {
-    color: #666;
-    display: block;
-    padding: 0.734em;
-}
-
-.menu-item:hover {
-    background: #b22424;
-    -webkit-transition-duration: 0.075s;
-    -moz-transition-duration: 0.075s;
-    transition-duration: 0.075s;
-}
-
-.menu-item:hover a {
-    color: #fff;
-    -webkit-transition-duration: 0.15s;
-    -moz-transition-duration: 0.15s;
-    transition-duration: 0.15s;
-}
-
-.current-menu-item {
-    background: #b22424;
-}
-
-.current-menu-item a {
-    color: #fff;
-}
-
-.current-menu-item:hover {
-    background: #cc2929;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-
-.widget_mailchimpsf_widget {
-    margin: 2.618em auto;
-    max-width: 8.139em;
-    min-width: 6.854em;
-}
-
-#mc_display_rewards {
-    font-size: 0.734em;
-    margin-top: 0.618em;
-}
-
-.widget_mailchimpsf_widget .mc_input,
-#searchform input {
-    width: 85%;
-}
-
-.widget_mailchimpsf_widget .button,
-#searchform #searchsubmit {
-    width: 95%;
-}
-
-label.mc_var_label {
-    display: none;
-}
-
-#mc_signup br {
-    display: none;
-}
-
-.navigation {
-    width: 29.03em;
-}
-
-.next-posts {}
-
-.prev-posts {}
-
-#searchform {
-    max-width: 8.139em;
-    min-width: 6.854em;
-    margin: 0 auto;
-}
-
-input,
-textarea#comment {
-    -moz-border-radius: 0.618em;
-    border-radius: 0.618em;
-    color: #666;
-    font-size: 0.734em;
-    font-family: 'AntykwaPoltawskiegoRegular', serif;
-}
-
-input[type=text]:hover,
-input[type=text]:focus,
-textarea#comment:hover,
-textarea#comment:focus {
-    border-color: #666;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-
-input[type=text],
-textarea#comment {
-    background: #fff;
-    border: 0.09em solid #c2c2c2;
-    padding: 0.28em 0.454em;
-}
-
-#searchsubmit,
-.button,
-#submit {
-    background: #f2f2f2;
-    border: 0;
-    margin-top: 0.236em;
-    padding: 0.382em 0.734em;
-}
-
-#searchsubmit:hover,
-.button:hover,
-#submit:hover {
-    background: #b22424;
-    -webkit-transition-duration: 0.075s;
-    -moz-transition-duration: 0.075s;
-    transition-duration: 0.075s;
-}
-
-#searchsubmit:hover,
-.button:hover,
-#submit:hover {
-    color: #fff;
-    -webkit-transition-duration: 0.15s;
-    -moz-transition-duration: 0.15s;
-    transition-duration: 0.15s;
-}
-
-#sidebar .menu-item {
-    -moz-border-radius: 0.618em;
-    border-radius: 0.618em;
-    font-size: 0.734em;
-    margin: 0.09em;
-    display: inline-block;
-}
-
-#sidebar .menu-item a {
-    padding: 0.382em 0.734em
-}
-
 #submit {
     min-width: 11.089em;
     max-width: 13.168em;
     width: 50%;
 }
-
 textarea#comment {
     margin-top: 0.382em;
     padding: 0.618em;
@@ -661,93 +610,69 @@ textarea#comment {
     max-width: 29.03em;
     width: 80%;
 }
-
 #commentform div+ div {
     padding-top: 0.107em;
 }
-
 #commentform label {
     display: inline-block;
     margin-left: 0.454em;
 }
-
 ol.commentlist {
     list-style: none;
 }
-
 ol.commentlist li.comment {
-    border-bottom: 1px dotted #666;
+    border-bottom: 1px dotted rgb(102, 102, 102);
     padding: 10px;
 }
-
 ol.commentlist li.comment div.vcard cite.fn {
     font-style: normal;
 }
-
 ol.commentlist li.comment div.vcard img.avatar {
     float: right;
     margin: 0 0 10px 10px;
 }
-
 ol.commentlist li.comment div.comment-meta {
     font-size: 10px;
 }
-
 ol.commentlist li.comment div.comment-meta a {
     color: #ccc;
 }
-
 ol.commentlist li.comment div.reply {
     font-size: 11px;
 }
-
 ol.commentlist li.comment div.reply a {
     font-weight: bold;
 }
-
 ol.commentlist li.comment ul.children {
     list-style: none;
     margin: 10px 0 0;
 }
-
 ol.commentlist li.comment ul.children li.depth-2 {
-    border-left: 5px solid #555;
+    border-left: 5px solid rgb(84, 84, 84);
     margin: 0 0 10px 10px;
 }
-
 ol.commentlist li.comment ul.children li.depth-3 {
-    border-left: 5px solid #999;
+    border-left: 5px solid rgb(153, 153, 153);
     margin: 0 0 10px 10px;
 }
-
 ol.commentlist li.comment ul.children li.depth-4 {
-    border-left: 5px solid #bbb;
+    border-left: 5px solid rgb(186, 186, 186);
     margin: 0 0 10px 10px;
 }
-
 ol.commentlist li.even {
-    background: #fff;
+    background: rgb(255, 255, 255);
 }
-
 ol.commentlist li.odd {
     background: #f6f6f6;
 }
-
 ol.commentlist li.parent {
-    border-left: 5px solid #111;
+    border-left: 5px solid rgb(20, 20, 20);
 }
-
-
-/*----------------------------------------------------------------------------*/
-/* media queries
-/*----------------------------------------------------------------------------*/
-
 @media all and (min-width: 1250px) {
     p {
         text-align: justify;
     }
 }
-
 @media all and (max-width: 900px) {
     #header {
         padding: 1.618em 0 2.618em;
@@ -774,8 +699,8 @@ ol.commentlist li.parent {
         vertical-align: top;
     }
     #searchform {
-        border-top: 0.09em solid #c2c2c2;
-        border-bottom: 0.09em solid #c2c2c2;
+        border-top: 0.09em solid rgb(194, 194, 194);
+        border-bottom: 0.09em solid rgb(194, 194, 194);
         padding: 1em 0;
         max-width: none;
     }
@@ -785,7 +710,6 @@ ol.commentlist li.parent {
         margin: 0 auto;
     }
 }
-
 @media all and (max-width: 640px) {
     #header {
         padding: 1.188em 0 0.618em;
@@ -819,7 +743,6 @@ ol.commentlist li.parent {
         text-align: justify;
     }
     .menu-item {
-        -moz-border-radius: 0.618em !important;
         border-radius: 0.618em !important;
         margin: 1px;
         display: inline-block;
@@ -847,7 +770,6 @@ ol.commentlist li.parent {
         margin-left: 0.454em;
     }
 }
-
 @media all and (max-width: 480px) {
     #center,
     #left {
@@ -860,7 +782,6 @@ ol.commentlist li.parent {
         margin: 5%;
     }
 }
-
 @media all and (max-width: 420px) {
     p {
         text-align: left;
