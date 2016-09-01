@@ -26,6 +26,13 @@
             $pod_czas_trwania= $mypod->field('czas-trwania');
             $pod_data_premiery= $mypod->field('data-premiery');
 
+            setlocale(LC_TIME, 'pl_PL');
+            $pretty_date_format = '%d %B %G';
+            function pretty_date($date_format, $date_string) {
+                return utf8_encode(strftime($date_format, strtotime($date_string)));
+            }
+            $data_premiery_pretty = pretty_date($pretty_date_format, $pod_data_premiery);
+
             $pod_aktorzy= $mypod->field('aktorzy');
 
             $pod_archiwalne= $mypod->field('archiwalne');
@@ -108,7 +115,7 @@
                 </li>
                 <li>
                     <strong>Data premiery:</strong>
-                    <?php echo $pod_data_premiery; ?>
+                    <?php echo $data_premiery_pretty; ?>
                 </li>
             </ul>
 
