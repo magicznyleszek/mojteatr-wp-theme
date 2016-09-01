@@ -6,7 +6,11 @@ Template Name: Custom Index Aktorzy
 
     // get data
     $mypod = pods('aktor');
-    $mypod->find('nazwisko ASC');
+    $params = array(
+        'nazwisko ASC',
+        'orderby'=>array('wyrozniony.meta_value' => 'DESC', 'nazwisko' => 'ASC')
+    );
+    $mypod->find($params);
 ?>
 
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
