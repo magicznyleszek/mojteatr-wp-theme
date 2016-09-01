@@ -26,10 +26,10 @@
             $pod_czas_trwania= $mypod->field('czas-trwania');
             $pod_data_premiery= $mypod->field('data-premiery');
 
-            setlocale(LC_TIME, 'pl_PL');
+            setlocale(LC_TIME, 'pl_PL.UTF-8');
             $pretty_date_format = '%d %B %G';
             function pretty_date($date_format, $date_string) {
-                return utf8_encode(strftime($date_format, strtotime($date_string)));
+                return strftime($date_format, strtotime($date_string));
             }
             $data_premiery_pretty = pretty_date($pretty_date_format, $pod_data_premiery);
 

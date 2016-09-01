@@ -11,10 +11,10 @@
     );
     $mypod->find($params);
 
-    setlocale(LC_TIME, 'pl_PL');
+    setlocale(LC_TIME, 'pl_PL.UTF-8');
     $pretty_date_format = '%d %b %G %H:%M';
     function pretty_date($date_format, $date_string) {
-        return utf8_encode(strftime($date_format, strtotime($date_string)));
+        return strftime($date_format, strtotime($date_string));
     }
 ?>
 
