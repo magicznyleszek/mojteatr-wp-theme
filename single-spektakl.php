@@ -45,25 +45,37 @@
             $has_zdjecie = $pod_zdjecie_large[0] != '';
 
             $pod_recenzje= array();
-            $pod_recenzja_1= $mypod->field('recenzja-1');
-            if ($pod_recenzja_1 != '') {
-                array_push($pod_recenzje, $pod_recenzja_1);
+            $pod_recenzja_1_tytul= $mypod->field('recenzja-1-tytul');
+            $pod_recenzja_1_url= $mypod->field('recenzja-1-url');
+            if ($pod_recenzja_1_tytul != '' && $pod_recenzja_1_url != '') {
+               $obj = new stdClass();
+               $obj->title = $pod_recenzja_1_tytul;
+               $obj->url = $pod_recenzja_1_url;
+                array_push($pod_recenzje, $obj);
             }
-            $pod_recenzja_2= $mypod->field('recenzja-2');
-            if ($pod_recenzja_2 != '') {
-                array_push($pod_recenzje, $pod_recenzja_2);
+            $pod_recenzja_2_tytul= $mypod->field('recenzja-2-tytul');
+            $pod_recenzja_2_url= $mypod->field('recenzja-2-url');
+            if ($pod_recenzja_2_tytul != '' && $pod_recenzja_2_url != '') {
+               $obj = new stdClass();
+               $obj->title = $pod_recenzja_2_tytul;
+               $obj->url = $pod_recenzja_2_url;
+                array_push($pod_recenzje, $obj);
             }
-            $pod_recenzja_3= $mypod->field('recenzja-3');
-            if ($pod_recenzja_3 != '') {
-                array_push($pod_recenzje, $pod_recenzja_3);
+            $pod_recenzja_3_tytul= $mypod->field('recenzja-3-tytul');
+            $pod_recenzja_3_url= $mypod->field('recenzja-3-url');
+            if ($pod_recenzja_3_tytul != '' && $pod_recenzja_3_url != '') {
+               $obj = new stdClass();
+               $obj->title = $pod_recenzja_3_tytul;
+               $obj->url = $pod_recenzja_3_url;
+                array_push($pod_recenzje, $obj);
             }
-            $pod_recenzja_4= $mypod->field('recenzja-4');
-            if ($pod_recenzja_4 != '') {
-                array_push($pod_recenzje, $pod_recenzja_4);
-            }
-            $pod_recenzja_5= $mypod->field('recenzja-5');
-            if ($pod_recenzja_5 != '') {
-                array_push($pod_recenzje, $pod_recenzja_5);
+            $pod_recenzja_4_tytul= $mypod->field('recenzja-4-tytul');
+            $pod_recenzja_4_url= $mypod->field('recenzja-4-url');
+            if ($pod_recenzja_4_tytul != '' && $pod_recenzja_4_url != '') {
+               $obj = new stdClass();
+               $obj->title = $pod_recenzja_4_tytul;
+               $obj->url = $pod_recenzja_4_url;
+                array_push($pod_recenzje, $obj);
             }
 
             $pod_galeria= $mypod->field('galeria');
@@ -149,8 +161,8 @@
                     foreach($pod_recenzje as $pod_recenzja) {
                 ?>
                     <li>
-                        <a href="<?php echo $pod_recenzja; ?>">
-                            <?php echo $pod_recenzja; ?>
+                        <a href="<?php echo $pod_recenzja->url; ?>">
+                            <?php echo $pod_recenzja->title; ?>
                         </a>
                     </li>
                 <?php } ?>
