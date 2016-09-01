@@ -77,11 +77,12 @@
         $tytul_field_name = 'pods_meta_tytul';
 
         if ($data['post_type'] == $spektakl_slug) {
-            $data['post_title'] = $postarr[$tytul_field_name];
+            $tytul = $postarr[$tytul_field_name];
+            $data['post_title'] = $tytul.'';
         }
         return $data;
     }
-    add_filter('wp_insert_post_data', 'save_termin_title', '99', 2);
-    add_filter('wp_insert_post_data', 'save_aktor_title', '99', 2);
+    add_filter('wp_insert_post_data', 'save_termin_title', '97', 2);
+    add_filter('wp_insert_post_data', 'save_aktor_title', '98', 2);
     add_filter('wp_insert_post_data', 'save_spektakl_title', '99', 2);
 ?>
