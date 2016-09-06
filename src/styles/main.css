@@ -4,6 +4,10 @@
 /* new stuff */
 @import "atoms.css";
 @import "setup/root.css";
+@import "organisms/button.css";
+@import "organisms/section.css";
+@import "organisms/ticketsPlease.css";
+@import "organisms/headerBordered.css";
 
 /* old stuff */
 @import "old/layout.css";

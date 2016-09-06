@@ -31,6 +31,7 @@
   },
   "scripts": {
     "build": "npm run _buildStyles",
+    "watch": "npm-watch",
     "_buildStyles": "postcss -u postcss-import -u postcss-cssnext -o ./style.css src/styles/main.css"
   }
 }

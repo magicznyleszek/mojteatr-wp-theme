@@ -1,0 +1,78 @@
+/* -----------------------------------------------------------------------------
+button organism
+----------------------------------------------------------------------------- */
+
+@import "_config.css";
+
+[i-o-button] {
+    display: inline-block;
+    margin: 0.125rem 0;
+    outline: 0;
+    border: 0;
+    border-radius: var(--global-br);
+    background-color: var(--a-c-whiteSmoke);
+    background-image: none;
+    padding: 0.125rem 0.5rem 0.25rem;
+    height: calc(var(--leading-s) - 0.25rem);
+    box-sizing: border-box;
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    line-height: calc(var(--leading-s) - 0.5rem);
+    white-space: nowrap;
+    color: var(--a-c-dimGray);
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+[i-o-button]:hover {
+    background-color: var(--a-c-fireBrick);
+    color: var(--a-c-white);
+}
+
+[i-o-button]:active {
+    background-color: var(--a-c-persianRed);
+    color: var(--a-c-white);
+}
+
+/* -----------------------------------------------------------------------------
+button colors
+----------------------------------------------------------------------------- */
+
+[i-o-button~="fireBrick"] {
+    background-color: var(--a-c-fireBrick);
+    color: var(--a-c-white);
+}
+
+[i-o-button~="fireBrick"]:hover {
+    background-color: var(--a-c-persianRed);
+    color: var(--a-c-white);
+}
+
+[i-o-button~="fireBrick"]:active {
+    background-color: var(--a-c-alizarin);
+    color: var(--a-c-white);
+}
+
+/* -----------------------------------------------------------------------------
+button sizes
+----------------------------------------------------------------------------- */
+
+[i-o-button~="double"] {
+    padding-right: calc(0.5rem * 2);
+    padding-left: calc(0.5rem * 2);
+
+    height: calc(var(--leading-s) * 2 - 0.25rem);
+    line-height: calc((var(--leading-s) - 0.125rem) * 2);
+
+    font-size: calc(0.75rem * 2);
+}
+
+[i-o-button~="full"] {
+    display: block;
+    width: 100%;
+}

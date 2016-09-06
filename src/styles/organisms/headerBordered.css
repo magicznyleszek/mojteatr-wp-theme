@@ -1,0 +1,13 @@
+[i-headerBordered] {
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: var(--a-c-silver);
+}
+
+[i-headerBordered]:not(:first-child) {
+    margin-top: var(--leading-s);
+}
+
+[i-headerBordered]:not(:last-child) {
+    margin-bottom: var(--leading-s);
+}

@@ -3,21 +3,18 @@
 }
 
 .entry ul {
-    list-style: circle;
     padding: 0.618em 1.618em;
+    list-style: circle;
 }
 
 .postmetadata {
+    padding: 1em 0.107em 0.618em;
     color: var(--a-c-silver);
     font-size: 0.734em;
-    padding: 1em 0.107em 0.618em;
 }
 
 .postmetadata:hover {
     color: var(--a-c-charcoal);
-    -webkit-transition-duration: 0.45s;
-    -moz-transition-duration: 0.45s;
-    transition-duration: 0.45s;
 }
 
 .postmetadata a {
@@ -26,9 +23,6 @@
 
 .postmetadata:hover a {
     color: var(--a-c-fireBrick);
-    -webkit-transition-duration: 0.45s;
-    -moz-transition-duration: 0.45s;
-    transition-duration: 0.45s;
 }
 
 .postmetadata:hover a:hover {
@@ -49,27 +43,27 @@ p {
 
 p iframe,
 p img {
-    border: 0.09em solid var(--a-c-silver);
     margin-top: 0.618em;
+    border: 0.09em solid var(--a-c-silver);
     padding: 0.734em;
 }
 
 p iframe {
+    width: 60%;
     min-width: 13.168em;
     max-width: 21.306em;
-    width: 60%;
     height: 11.089em;
 }
 
 p img {
+    width: 60%;
     min-width: 13.168em;
     max-width: 29.03em;
-    width: 60%;
 }
 
 p .signature {
     display: block;
+    padding-left: 1.188em;
     color: var(--a-c-dimGray);
     font-size: 0.734em;
-    padding-left: 1.188em;
 }

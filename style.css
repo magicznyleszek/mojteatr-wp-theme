@@ -1,15 +1,15 @@
-/*
+
+
+@import "_config.css";/*
 Theme Name: Mój Teatr Theme
 Theme URI: http://leszekpietrzak.com
 Description: A custom theme based on *HTML5 Reset Wordpress Theme*.
 Author: Leszek Pietrzak
 Author URI: http://leszekpietrzak.com
 Version: 1
-*/
-/* -----------------------------------------------------------------------------
+*//* -----------------------------------------------------------------------------
 Let's default this puppy out
------------------------------------------------------------------------------ */
-html,
+----------------------------------------------------------------------------- */html,
 body,
 div,
 span,
@@ -82,8 +82,7 @@ video {
     padding: 0;
     vertical-align: baseline;
     font-size: 100%;
-}
-article,
+}article,
 aside,
 figure,
 footer,
@@ -92,588 +91,550 @@ hgroup,
 nav,
 section {
     display: block;
-}
-img,
+}img,
 object,
 embed {
     max-width: 100%;
     height: auto;
-}
-/* force a vertical scrollbar to prevent a jumpy page */
-html {
+}/* force a vertical scrollbar to prevent a jumpy page */html {
     overflow-y: scroll;
-}
-ul {
+}ul {
     list-style: none;
-}
-blockquote,
+}blockquote,
 q {
     quotes: none;
-}
-blockquote::before,
+}blockquote::before,
 blockquote::after,
 q::before,
 q::after {
     content: "";
-}
-a {
+}a {
     margin: 0;
     background: transparent;
     padding: 0;
     vertical-align: baseline;
     font-size: 100%;
-}
-del {
+}del {
     text-decoration: line-through;
-}
-abbr[title],
+}abbr[title],
 dfn[title] {
     border-bottom: 1px dotted #000;
     cursor: help;
-}
-table {
+}table {
     /* tables still need cellspacing="0" in the markup */
     border-collapse: collapse;
     border-spacing: 0;
-}
-th {
+}th {
     vertical-align: bottom;
     font-weight: bold;
-}
-td {
+}td {
     vertical-align: top;
     font-weight: normal;
-}
-hr {
+}hr {
     display: block;
     margin: 1em 0;
     border: 0;
     border-top: 1px solid #ccc;
     padding: 0;
     height: 1px;
-}
-input,
+}input,
 select {
     vertical-align: middle;
-}
-pre {
+}pre {
     white-space: pre;
-}
-input[type="radio"] {
+}input[type="radio"] {
     vertical-align: text-bottom;
-}
-input[type="checkbox"] {
+}input[type="checkbox"] {
     vertical-align: bottom;
-}
-select,
+}select,
 input,
 textarea {
     font: 99% sans-serif;
-}
-table {
+}table {
     font: 100%;
     font-size: inherit;
-}
-a:hover,
+}a:hover,
 a:active {
     outline: none;
-}
-small {
+}small {
     font-size: 85%;
-}
-strong,
+}strong,
 th {
     font-weight: bold;
-}
-td,
+}td,
 td img {
     vertical-align: top;
-}
-/* Make sure sup and sub don't screw with your line-heights */
-sub,
+}/* Make sure sup and sub don't screw with your line-heights */sub,
 sup {
     position: relative;
     line-height: 0;
     font-size: 75%;
-}
-sup {
+}sup {
     top: -0.5em;
-}
-sub {
+}sub {
     bottom: -0.25em;
-}
-/* standardize any monospaced elements */
-pre,
+}/* standardize any monospaced elements */pre,
 code,
 kbd,
 samp {
     font-family: monospace, sans-serif;
-}
-/* hand cursor on clickable elements */
-.clickable,
+}/* hand cursor on clickable elements */.clickable,
 label,
 input[type="button"],
 input[type="submit"],
 button {
     cursor: pointer;
-}
-/* Webkit browsers add a 2px margin outside the chrome of form elements */
-button,
+}/* Webkit browsers add a 2px margin outside the chrome of form elements */button,
 input,
 select,
 textarea {
     margin: 0;
-}
-/* make buttons play nice in IE */
-button {
+}/* make buttons play nice in IE */button {
     width: auto;
     overflow: visible;
-}
-/* let's clear some floats */
-.clearfix::before,
+}/* let's clear some floats */.clearfix::before,
 .clearfix::after {
     display: block;
     height: 0;
     overflow: hidden;
     content: "\0020";
-}
-.clearfix::after {
+}.clearfix::after {
     clear: both;
-}
-.clearfix {
+}.clearfix {
     zoom: 1;
-}
-/* new stuff */
-/* -----------------------------------------------------------------------------
+}/* new stuff *//* -----------------------------------------------------------------------------
 atoms - a palette of all possible variables used throughout the project
------------------------------------------------------------------------------ */
-:root {
+----------------------------------------------------------------------------- */:root {
     /* colors */
 
     /* font families */
-}
-/* -----------------------------------------------------------------------------
+}/* -----------------------------------------------------------------------------
 root stuff and normalizations
------------------------------------------------------------------------------ */
-/* -----------------------------------------------------------------------------
+----------------------------------------------------------------------------- *//* -----------------------------------------------------------------------------
 basics configuration
------------------------------------------------------------------------------ */
-:root {
+----------------------------------------------------------------------------- */:root {
     /* root typography with font sizes for different screens scaling */
-}
-body {
+}body {
     background-color: rgb(255, 255, 255);
     min-height: 100%;
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
-    line-height: 1.6;
+    line-height: 1.5;
     color: rgb(51, 51, 51);
     font-family: "AntykwaPoltawskiegoRegular", serif;
-    font-size: var(--rootFontSize);
+    font-size: 16px;
     font-weight: 400;
-}
-a {
+}a {
     text-decoration: none;
     color: rgb(179, 36, 36);
-}
-a:hover {
+}a:hover {
     color: rgb(204, 41, 41);
     -webkit-transition-duration: 0.15s;
             transition-duration: 0.15s;
-}
-::-moz-selection,
+}::-moz-selection,
 ::-moz-selection {
     background: rgb(51, 51, 51);
     text-shadow: none;
     color: rgb(255, 255, 255);
-}
-::selection,
+}::selection,
 ::-moz-selection {
     background: rgb(51, 51, 51);
     text-shadow: none;
     color: rgb(255, 255, 255);
-}
-a:link {
+}a:link {
     -webkit-tap-highlight-color: rgb(252, 215, 0);
-}
-ins {
+}ins {
     background-color: rgb(252, 215, 0);
     text-decoration: none;
-}
-mark {
+}mark {
     background-color: rgb(252, 215, 0);
     font-weight: bold;
     font-style: italic;
-}
-/* old stuff */
-#page-wrap {
+}/* -----------------------------------------------------------------------------
+button organism
+----------------------------------------------------------------------------- */[i-o-button] {
+    display: inline-block;
+    margin: 2px 0;
+    margin: 0.125rem 0;
+    outline: 0;
+    border: 0;
+    border-radius: 0.25rem;
+    background-color: rgb(242, 242, 242);
+    background-image: none;
+    padding: 2px 8px 4px;
+    padding: 0.125rem 0.5rem 0.25rem;
+    height: 20px;
+    height: 1.25rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    line-height: 16px;
+    line-height: 1rem;
+    white-space: nowrap;
+    color: rgb(102, 102, 102);
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    cursor: pointer;
+}[i-o-button]:hover {
+    background-color: rgb(179, 36, 36);
+    color: rgb(255, 255, 255);
+}[i-o-button]:active {
+    background-color: rgb(204, 41, 41);
+    color: rgb(255, 255, 255);
+}/* -----------------------------------------------------------------------------
+button colors
+----------------------------------------------------------------------------- */[i-o-button~="fireBrick"] {
+    background-color: rgb(179, 36, 36);
+    color: rgb(255, 255, 255);
+}[i-o-button~="fireBrick"]:hover {
+    background-color: rgb(204, 41, 41);
+    color: rgb(255, 255, 255);
+}[i-o-button~="fireBrick"]:active {
+    background-color: rgb(230, 46, 46);
+    color: rgb(255, 255, 255);
+}/* -----------------------------------------------------------------------------
+button sizes
+----------------------------------------------------------------------------- */[i-o-button~="double"] {
+    padding-right: 16px;
+    padding-right: 1rem;
+    padding-left: 16px;
+    padding-left: 1rem;
+
+    height: 44px;
+    height: 2.75rem;
+    line-height: 44px;
+    line-height: 2.75rem;
+
+    font-size: 24px;
+    font-size: 1.5rem;
+}[i-o-button~="full"] {
+    display: block;
+    width: 100%;
+}/* -----------------------------------------------------------------------------
+section organism
+----------------------------------------------------------------------------- */[i-o-section]:not(:last-child) {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}[i-o-section~="main"]:not(:last-child) {
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
+}[i-o-ticketsPlease] {
+    display: inline-block;
+    border-radius: 0.25rem;
+    background-color: currentColor;
+    padding: 16px;
+    padding: 1rem;
+    text-align: center;
+    color: rgb(179, 36, 36);
+}[i-o-ticketsPlease]:hover {
+    color: rgb(204, 41, 41);
+}[i-o-ticketsPlease]:active {
+    color: rgb(230, 46, 46);
+}[i-o-ticketsPlease-title] {
+    display: block;
+    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    font-size: 2rem;
+}[i-o-ticketsPlease-action] {
+    display: inline-block;
+    border-radius: 0.25rem;
+    background-color: rgb(255, 255, 255);
+    padding: 2px 8px 4px;
+    padding: 0.125rem 0.5rem 0.25rem;
+    height: 20px;
+    height: 1.25rem;
+    text-transform: uppercase;
+    line-height: 22px;
+    line-height: 1.375rem;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 400;
+}[i-headerBordered] {
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: rgb(194, 194, 194);
+}[i-headerBordered]:not(:first-child) {
+    margin-top: 24px;
+    margin-top: 1.5rem;
+}[i-headerBordered]:not(:last-child) {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}/* old stuff */#page-wrap {
     padding-bottom: 5.03em;
-}
-#center,
+}#center,
 #left,
 #sidebar {
     float: left;
-}
-#header {
+}#header {
     padding: 3.109em 0 1.618em 13%;
-}
-#header a {
+}#header a {
     display: block;
     padding: 1em;
-}
-#header a img {
+}#header a img {
     width: 14%;
     max-width: 178px;
-}
-#left {
+}#left {
     padding: 0 1.618em 5.03em 13%;
-    max-width: 13.168em;
-    min-width: 6.854em;
     width: 15%;
+    min-width: 6.854em;
+    max-width: 13.168em;
     text-align: center;
-}
-#center {
+}#center {
     padding: 0 2.618em;
     width: 40%;
     max-width: 46.971em;
-}
-#sidebar {
+}#sidebar {
     padding: 0 1.618em;
     width: 13%;
     min-width: 6.854em;
     max-width: 13.168em;
     text-align: center;
-}
-#sidebar div + div {
+}#sidebar div + div {
     margin-top: 1.618em;
-}
-#sidebar h1 {
-    margin-bottom: 0.618em;
-    color: rgb(179, 36, 36);
-}
-#sidebar .tickets ul li.menu-item a {
+}#sidebar .tickets .menu-item a {
     color: rgb(255, 255, 255);
-}
-#sidebar .tickets ul li.menu-item {
+}#sidebar .tickets .menu-item {
     background-color: rgb(179, 36, 36);
-}
-#sidebar .tickets ul li.menu-item:hover {
+}#sidebar .tickets .menu-item:hover {
     background-color: rgb(204, 41, 41);
-}
-#footer {
+}#footer {
     clear: both;
     text-align: center;
     font-size: 0.734em;
-}
-.navigation {
+}.navigation {
     width: 29.03em;
-}
-.next-posts {}
-.prev-posts {}
-#searchform {
-    max-width: 8.139em;
-    min-width: 6.854em;
+}#searchform {
     margin: 0 auto;
-}
-.menu-item {
+    min-width: 6.854em;
+    max-width: 8.139em;
+}.menu-item {
     background: rgb(242, 242, 242);
     text-align: center;
-}
-.menu-item:first-child {
+}.menu-item:first-child {
     border-top-left-radius: 0.618em;
     border-top-right-radius: 0.618em;
-}
-.menu-item+ .menu-item {
+}.menu-item + .menu-item {
     margin-top: 1px;
-}
-.menu-item:last-child {
+}.menu-item:last-child {
     border-bottom-left-radius: 0.618em;
     border-bottom-right-radius: 0.618em;
-}
-.menu-item a {
-    color: rgb(102, 102, 102);
+}.menu-item a {
     display: block;
     padding: 0.734em;
-}
-.menu-item:hover {
+    color: rgb(102, 102, 102);
+}.menu-item:hover {
     background: rgb(179, 36, 36);
-    -webkit-transition-duration: 0.075s;
-    transition-duration: 0.075s;
-}
-.menu-item:hover a {
+}.menu-item:hover a {
     color: rgb(255, 255, 255);
-    -webkit-transition-duration: 0.15s;
-    transition-duration: 0.15s;
-}
-.current-menu-item {
+}.current-menu-item {
     background: rgb(179, 36, 36);
-}
-.current-menu-item a {
+}.current-menu-item a {
     color: rgb(255, 255, 255);
-}
-.current-menu-item:hover {
+}.current-menu-item:hover {
     background: rgb(204, 41, 41);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-#sidebar .menu-item {
+}#sidebar .menu-item {
+    display: inline-block;
+    margin: 0.09em;
     border-radius: 0.618em;
     font-size: 0.734em;
-    margin: 0.09em;
-    display: inline-block;
-}
-#sidebar .menu-item a {
-    padding: 0.382em 0.734em
-}
-.widget_mailchimpsf_widget {
+}#sidebar .menu-item a {
+    padding: 0.382em 0.734em;
+}.widget_mailchimpsf_widget {
     margin: 2.618em auto;
     max-width: 8.139em;
     min-width: 6.854em;
-}
-#mc_display_rewards {
+}#mc_display_rewards {
     font-size: 0.734em;
     margin-top: 0.618em;
-}
-.widget_mailchimpsf_widget .mc_input,
+}.widget_mailchimpsf_widget .mc_input,
 #searchform input {
     width: 85%;
-}
-.widget_mailchimpsf_widget .button,
-#searchform #searchsubmit {
+}.widget_mailchimpsf_widget .button {
     width: 95%;
-}
-label.mc_var_label {
+}label.mc_var_label {
     display: none;
-}
-#mc_signup br {
+}#mc_signup br {
     display: none;
-}
-h2 {
-    font-size: 1em;
-    padding: 0.618em 0;
-    text-align: center;
-}
-#center h2 {
-    font-size: 1em;
-    padding: 0 0 1.618em;
-    text-align: left;
-}
-#respond h2 {
-    font-size: 1.188em;
-    padding: 1.618em 0 0.618em;
-    text-align: left;
-}
-h3 {
-    border-top: 0.09em solid rgb(194, 194, 194);
-    border-bottom: 0.09em solid rgb(194, 194, 194);
-    font-size: 1.188em;
-    margin: 1.618em 0 0.734em;
-    padding: 0.454em;
-}
-h1 {
-    font-weight: normal;
-    font-size: 1.618em;
-    line-height: 100%;
-}
-h1 a,
+}h1 {
+    line-height: 24px;
+    line-height: 1.5rem;
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 400;
+}#sidebar h1 {
+    color: rgb(179, 36, 36);
+}h1 a,
 h1.entry-title {
-    color: rgb(51, 51, 51);
     display: block;
-}
-.sticky h1 {
-    font-size: 1.188em;
+    color: rgb(51, 51, 51);
+}.sticky h1 {
     line-height: 118.8%;
-}
-.sticky h1 a {
+    font-size: 1.188em;
+}.sticky h1 a {
     border-radius: 0.173em;
     background: rgb(179, 36, 36);
-    color: rgb(255, 255, 255);
     padding: 0.554em 0.618em 0.454em;
-}
-.sticky h1 a:hover {
+    color: rgb(255, 255, 255);
+}.sticky h1 a:hover {
     background: rgb(204, 41, 41);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-input,
+}h2 {
+    text-align: center;
+    line-height: 48px;
+    line-height: 3rem;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-style: italic;
+}#sidebar h2 {
+    line-height: inherit;
+    font-size: 16px;
+    font-size: 1rem;
+    font-style: normal;
+}h3 {
+    margin: 1.618em 0 0.734em;
+    border-top: 0.09em solid rgb(194, 194, 194);
+    border-bottom: 0.09em solid rgb(194, 194, 194);
+    padding: 0.454em;
+    font-size: 1.188em;
+}input,
 textarea#comment {
     border-radius: 0.618em;
     color: rgb(102, 102, 102);
     font-size: 0.734em;
     font-family: "AntykwaPoltawskiegoRegular", serif;
-}
-input[type=text]:hover,
+}input[type=text]:hover,
 input[type=text]:focus,
 textarea#comment:hover,
 textarea#comment:focus {
     border-color: rgb(102, 102, 102);
     -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-input[type=text],
+            transition-duration: 0.3s;
+}input[type=text],
 textarea#comment {
     background: rgb(255, 255, 255);
     border: 0.09em solid rgb(194, 194, 194);
     padding: 0.28em 0.454em;
-}
-#searchsubmit,
-.button,
+}.button,
 #submit {
     background: rgb(242, 242, 242);
     border: 0;
     margin-top: 0.236em;
     padding: 0.382em 0.734em;
-}
-#searchsubmit:hover,
-.button:hover,
+}.button:hover,
 #submit:hover {
     background: rgb(179, 36, 36);
     -webkit-transition-duration: 0.075s;
-    transition-duration: 0.075s;
-}
-#searchsubmit:hover,
-.button:hover,
+            transition-duration: 0.075s;
+}.button:hover,
 #submit:hover {
     color: rgb(255, 255, 255);
     -webkit-transition-duration: 0.15s;
-    transition-duration: 0.15s;
-}
-.entry {
+            transition-duration: 0.15s;
+}.entry {
     padding: 1em 0.09em 0;
-}
-.entry ul {
-    list-style: circle;
+}.entry ul {
     padding: 0.618em 1.618em;
-}
-.postmetadata {
+    list-style: circle;
+}.postmetadata {
+    padding: 1em 0.107em 0.618em;
     color: rgb(194, 194, 194);
     font-size: 0.734em;
-    padding: 1em 0.107em 0.618em;
-}
-.postmetadata:hover {
+}.postmetadata:hover {
     color: rgb(51, 51, 51);
-    -webkit-transition-duration: 0.45s;
-    transition-duration: 0.45s;
-}
-.postmetadata a {
+}.postmetadata a {
     color: rgb(194, 194, 194);
-}
-.postmetadata:hover a {
+}.postmetadata:hover a {
     color: rgb(179, 36, 36);
-    -webkit-transition-duration: 0.45s;
-    transition-duration: 0.45s;
-}
-.postmetadata:hover a:hover {
+}.postmetadata:hover a:hover {
     color: rgb(204, 41, 41);
-}
-.post + .post {
+}.post + .post {
     margin-top: 1.618em;
-}
-p + p {
+}p + p {
     margin-top: 0.618em;
-}
-p {
+}p {
     text-align: left;
-}
-p iframe,
+}p iframe,
 p img {
-    border: 0.09em solid rgb(194, 194, 194);
     margin-top: 0.618em;
+    border: 0.09em solid rgb(194, 194, 194);
     padding: 0.734em;
-}
-p iframe {
+}p iframe {
+    width: 60%;
     min-width: 13.168em;
     max-width: 21.306em;
-    width: 60%;
     height: 11.089em;
-}
-p img {
+}p img {
+    width: 60%;
     min-width: 13.168em;
     max-width: 29.03em;
-    width: 60%;
-}
-p .signature {
+}p .signature {
     display: block;
+    padding-left: 1.188em;
     color: rgb(102, 102, 102);
     font-size: 0.734em;
-    padding-left: 1.188em;
-}
-#submit {
+}#submit {
     min-width: 11.089em;
     max-width: 13.168em;
     width: 50%;
-}
-textarea#comment {
+}textarea#comment {
     margin-top: 0.382em;
     padding: 0.618em;
     min-width: 11.089em;
     max-width: 29.03em;
     width: 80%;
-}
-#commentform div+ div {
+}#commentform div+ div {
     padding-top: 0.107em;
-}
-#commentform label {
+}#commentform label {
     display: inline-block;
     margin-left: 0.454em;
-}
-ol.commentlist {
+}ol.commentlist {
     list-style: none;
-}
-ol.commentlist li.comment {
+}ol.commentlist li.comment {
     border-bottom: 1px dotted rgb(102, 102, 102);
     padding: 10px;
-}
-ol.commentlist li.comment div.vcard cite.fn {
+}ol.commentlist li.comment div.vcard cite.fn {
     font-style: normal;
-}
-ol.commentlist li.comment div.vcard img.avatar {
+}ol.commentlist li.comment div.vcard img.avatar {
     float: right;
     margin: 0 0 10px 10px;
-}
-ol.commentlist li.comment div.comment-meta {
+}ol.commentlist li.comment div.comment-meta {
     font-size: 10px;
-}
-ol.commentlist li.comment div.comment-meta a {
+}ol.commentlist li.comment div.comment-meta a {
     color: #ccc;
-}
-ol.commentlist li.comment div.reply {
+}ol.commentlist li.comment div.reply {
     font-size: 11px;
-}
-ol.commentlist li.comment div.reply a {
+}ol.commentlist li.comment div.reply a {
     font-weight: bold;
-}
-ol.commentlist li.comment ul.children {
+}ol.commentlist li.comment ul.children {
     list-style: none;
     margin: 10px 0 0;
-}
-ol.commentlist li.comment ul.children li.depth-2 {
+}ol.commentlist li.comment ul.children li.depth-2 {
     border-left: 5px solid rgb(84, 84, 84);
     margin: 0 0 10px 10px;
-}
-ol.commentlist li.comment ul.children li.depth-3 {
+}ol.commentlist li.comment ul.children li.depth-3 {
     border-left: 5px solid rgb(153, 153, 153);
     margin: 0 0 10px 10px;
-}
-ol.commentlist li.comment ul.children li.depth-4 {
+}ol.commentlist li.comment ul.children li.depth-4 {
     border-left: 5px solid rgb(186, 186, 186);
     margin: 0 0 10px 10px;
-}
-ol.commentlist li.even {
+}ol.commentlist li.even {
     background: rgb(255, 255, 255);
-}
-ol.commentlist li.odd {
+}ol.commentlist li.odd {
     background: #f6f6f6;
-}
-ol.commentlist li.parent {
+}ol.commentlist li.parent {
     border-left: 5px solid rgb(20, 20, 20);
-}
-@media all and (min-width: 1250px) {
+}@media all and (min-width: 1250px) {
     p {
         text-align: justify;
     }
-}
-@media all and (max-width: 900px) {
+}@media all and (max-width: 900px) {
     #header {
         padding: 1.618em 0 2.618em;
         text-align: center;
@@ -709,8 +670,7 @@ ol.commentlist li.parent {
         min-width: 6.854em;
         margin: 0 auto;
     }
-}
-@media all and (max-width: 640px) {
+}@media all and (max-width: 640px) {
     #header {
         padding: 1.188em 0 0.618em;
         text-align: center;
@@ -769,8 +729,7 @@ ol.commentlist li.parent {
         display: block;
         margin-left: 0.454em;
     }
-}
-@media all and (max-width: 480px) {
+}@media all and (max-width: 480px) {
     #center,
     #left {
         padding: 1.188em 1.188em 0;
@@ -781,8 +740,7 @@ ol.commentlist li.parent {
         display: block;
         margin: 5%;
     }
-}
-@media all and (max-width: 420px) {
+}@media all and (max-width: 420px) {
     p {
         text-align: left;
     }

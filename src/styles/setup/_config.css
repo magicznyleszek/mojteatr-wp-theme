@@ -4,7 +4,11 @@ basics configuration
 
 :root {
     /* root typography with font sizes for different screens scaling */
+    --rootFontSize: 16px;
     --rootFontWeight: 400;
-    --rootLineHeight: 1.6;
+    --rootLineHeight: 1.5;
     --rootFontFamily: var(--a-font-antykwaPoltawskiego);
+    --leading-s: calc(var(--rootLineHeight) * 1rem);
+
+    --global-br: 0.25rem;
 }

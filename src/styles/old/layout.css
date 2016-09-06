@@ -24,9 +24,9 @@
 
 #left {
     padding: 0 1.618em 5.03em 13%;
-    max-width: 13.168em;
-    min-width: 6.854em;
     width: 15%;
+    min-width: 6.854em;
+    max-width: 13.168em;
     text-align: center;
 }
 
@@ -48,20 +48,15 @@
     margin-top: 1.618em;
 }
 
-#sidebar h1 {
-    margin-bottom: 0.618em;
-    color: var(--a-c-fireBrick);
-}
-
-#sidebar .tickets ul li.menu-item a {
+#sidebar .tickets .menu-item a {
     color: var(--a-c-white);
 }
 
-#sidebar .tickets ul li.menu-item {
+#sidebar .tickets .menu-item {
     background-color: var(--a-c-fireBrick);
 }
 
-#sidebar .tickets ul li.menu-item:hover {
+#sidebar .tickets .menu-item:hover {
     background-color: var(--a-c-persianRed);
 }
 
@@ -75,12 +70,8 @@
     width: 29.03em;
 }
 
-.next-posts {}
-
-.prev-posts {}
-
 #searchform {
-    max-width: 8.139em;
-    min-width: 6.854em;
     margin: 0 auto;
+    min-width: 6.854em;
+    max-width: 8.139em;
 }

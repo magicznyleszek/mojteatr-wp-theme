@@ -1,6 +1,5 @@
 input,
 textarea#comment {
-    -moz-border-radius: 0.618em;
     border-radius: 0.618em;
     color: var(--a-c-dimGray);
     font-size: 0.734em;
@@ -12,8 +11,6 @@ input[type=text]:focus,
 textarea#comment:hover,
 textarea#comment:focus {
     border-color: var(--a-c-dimGray);
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
 
@@ -24,7 +21,6 @@ textarea#comment {
     padding: 0.28em 0.454em;
 }
 
-#searchsubmit,
 .button,
 #submit {
     background: var(--a-c-whiteSmoke);
@@ -33,20 +29,14 @@ textarea#comment {
     padding: 0.382em 0.734em;
 }
 
-#searchsubmit:hover,
 .button:hover,
 #submit:hover {
     background: var(--a-c-fireBrick);
-    -webkit-transition-duration: 0.075s;
-    -moz-transition-duration: 0.075s;
     transition-duration: 0.075s;
 }
 
-#searchsubmit:hover,
 .button:hover,
 #submit:hover {
     color: var(--a-c-white);
-    -webkit-transition-duration: 0.15s;
-    -moz-transition-duration: 0.15s;
     transition-duration: 0.15s;
 }

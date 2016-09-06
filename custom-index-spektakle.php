@@ -54,9 +54,9 @@ Template Name: Custom Index Spektakle
             <?php
                 // display subtitle of archiwalne group
                 if ($prev_archiwalne == null || $prev_archiwalne != 0 && $pod_archiwalne == 0) {
-                    echo "<h2>Aktualne</h2>";
+                    echo "<h2 i-headerBordered>Aktualne</h2>";
                 } elseif ($prev_archiwalne == null || $prev_archiwalne != 1 && $pod_archiwalne == 1) {
-                    echo "<h2>Archiwalne</h2>";
+                    echo "<h2 i-headerBordered>Archiwalne</h2>";
                 }
             ?>
 

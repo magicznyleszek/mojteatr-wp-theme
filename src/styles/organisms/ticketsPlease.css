@@ -1,0 +1,36 @@
+[i-o-ticketsPlease] {
+    display: inline-block;
+    border-radius: var(--global-br);
+    background-color: currentColor;
+    padding: 1rem;
+    text-align: center;
+    color: var(--a-c-fireBrick);
+}
+
+[i-o-ticketsPlease]:hover {
+    color: var(--a-c-persianRed);
+}
+
+[i-o-ticketsPlease]:active {
+    color: var(--a-c-alizarin);
+}
+
+[i-o-ticketsPlease-title] {
+    display: block;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    color: var(--a-c-white);
+    font-size: 2rem;
+}
+
+[i-o-ticketsPlease-action] {
+    display: inline-block;
+    border-radius: var(--global-br);
+    background-color: var(--a-c-white);
+    padding: 0.125rem 0.5rem 0.25rem;
+    height: calc(var(--leading-s) - 0.25rem);
+    text-transform: uppercase;
+    line-height: calc(var(--leading-s) - 0.125rem);
+    font-size: 0.75rem;
+    font-weight: 400;
+}
