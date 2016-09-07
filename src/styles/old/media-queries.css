@@ -74,30 +74,6 @@
     p {
         text-align: justify;
     }
-    .menu-item {
-        -moz-border-radius: 0.618em !important;
-        border-radius: 0.618em !important;
-        margin: 1px;
-        display: inline-block;
-    }
-    .menu-item a {
-        padding: 0.382em 0.734em;
-    }
-    .widget_mailchimpsf_widget {
-        margin: 1.618em auto;
-        max-width: none;
-    }
-    .mc_form_inside div {
-        display: inline;
-    }
-    #mc_display_rewards {
-        display: block;
-    }
-    .widget_mailchimpsf_widget input {
-        display: inline-block;
-        max-width: 8.139em;
-        min-width: 6.854em;
-    }
     #commentform label {
         display: block;
         margin-left: 0.454em;

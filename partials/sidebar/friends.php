@@ -9,7 +9,7 @@
     }
 ?>
 
-<div i-o-section class="menu-sidebar-container">
+<div i-o-section>
     <h2>Przyjaciele</h2>
     <?php
         if ($has_menu) {
@@ -21,4 +21,8 @@
 
         }
     ?>
+</div>
+
+<div i-o-section>
+    <a i-o-button="double" href="<?php echo get_page_link(918); ?>">Partnerzy</a>
 </div>

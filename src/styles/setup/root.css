@@ -23,7 +23,10 @@ a {
 
 a:hover {
     color: var(--a-c-persianRed);
-    transition-duration: 0.15s;
+}
+
+a:active {
+    color: var(--a-c-alizarin);
 }
 
 ::selection,

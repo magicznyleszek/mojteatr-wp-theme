@@ -1,55 +1,65 @@
+/* -----------------------------------------------------------------------------
+WP menu styles
+----------------------------------------------------------------------------- */
+
 .menu-item {
     background: var(--a-c-whiteSmoke);
     text-align: center;
+    color: var(--a-c-dimGray);
 }
 
 .menu-item:first-child {
-    border-top-left-radius: 0.618em;
-    border-top-right-radius: 0.618em;
-}
-
-.menu-item + .menu-item {
-    margin-top: 1px;
+    border-top-left-radius: var(--global-br);
+    border-top-right-radius: var(--global-br);
 }
 
 .menu-item:last-child {
-    border-bottom-left-radius: 0.618em;
-    border-bottom-right-radius: 0.618em;
+    border-bottom-left-radius: var(--global-br);
+    border-bottom-right-radius: var(--global-br);
 }
 
 .menu-item a {
     display: block;
-    padding: 0.734em;
-    color: var(--a-c-dimGray);
+    padding: 0.75rem;
+    color: inherit;
 }
 
-.menu-item:hover {
-    background: var(--a-c-fireBrick);
-}
-
-.menu-item:hover a {
-    color: var(--a-c-white);
-}
-
+.menu-item:hover,
 .current-menu-item {
     background: var(--a-c-fireBrick);
-}
-
-.current-menu-item a {
     color: var(--a-c-white);
 }
 
+.menu-item:active,
 .current-menu-item:hover {
     background: var(--a-c-persianRed);
+    color: var(--a-c-white);
 }
 
-#sidebar .menu-item {
-    display: inline-block;
-    margin: 0.09em;
-    border-radius: 0.618em;
-    font-size: 0.734em;
+.current-menu-item:active {
+    background: var(--a-c-alizarin);
+    color: var(--a-c-white);
 }
 
-#sidebar .menu-item a {
-    padding: 0.382em 0.734em;
+/* -----------------------------------------------------------------------------
+media queries
+----------------------------------------------------------------------------- */
+
+@media all and (max-width: 640px) {
+    .menu-item {
+        display: inline-block;
+        margin-top: 5px;
+        border-radius: var(--global-br);
+    }
+
+    .menu-item a {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+}
+
+@media all and (min-width: 641px) {
+    .menu-item:not(:first-child) {
+        margin-top: 1px;
+    }
 }

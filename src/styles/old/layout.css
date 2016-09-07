@@ -17,6 +17,14 @@
     padding: 1em;
 }
 
+#header a:hover {
+    opacity: 0.9;
+}
+
+#header a:active {
+    opacity: 0.8;
+}
+
 #header a img {
     width: 14%;
     max-width: 178px;
