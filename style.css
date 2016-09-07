@@ -243,6 +243,409 @@ button {
 .clearfix {
     zoom: 1;
 }
+/* old stuff */
+/* -----------------------------------------------------------------------------
+WP layout
+----------------------------------------------------------------------------- */
+#page-wrap {
+    margin: 0 auto;
+    padding: 48px 24px 72px;
+    padding: 3rem 1.5rem 4.5rem;
+    max-width: 1000px;
+}
+#center,
+#left,
+#sidebar {
+    float: left;
+    box-sizing: border-box;
+}
+#left {
+    width: 20%;
+    text-align: center;
+}
+#center {
+    padding-right: 48px;
+    padding-right: 3rem;
+    padding-left: 48px;
+    padding-left: 3rem;
+    width: 60%;
+}
+#sidebar {
+    width: 20%;
+    text-align: center;
+}
+#footer {
+    clear: both;
+    padding-top: 72px;
+    padding-top: 4.5rem;
+    text-align: center;
+    color: rgb(194, 194, 194);
+}
+.navigation {
+    width: 100%;
+}
+#searchform {
+    margin: 0 auto;
+}
+#searchform input {
+    width: 100%;
+    box-sizing: border-box;
+}
+/* -----------------------------------------------------------------------------
+media queries
+----------------------------------------------------------------------------- */
+@media all and (max-width: 900px) {
+    #header {
+        padding: 1.618em 0 2.618em;
+        text-align: center;
+    }
+    #center {
+        width: 50%;
+    }
+    #sidebar {
+        margin-top: 2.618em;
+        padding: 0;
+        clear: both;
+        width: 100%;
+        max-width: none;
+    }
+}
+@media all and (max-width: 640px) {
+    #header {
+        padding: 1.188em 0 0.618em;
+        text-align: center;
+    }
+    #center,
+    #left {
+        float: none;
+        margin: 0;
+        padding: 1.188em 2.618em 0;
+        max-width: none;
+        width: auto;
+    }
+    #sidebar {
+        margin-top: 2.618em;
+    }
+}
+@media all and (max-width: 480px) {
+    #center,
+    #left {
+        padding: 1.188em 1.188em 0;
+    }
+}
+/* -----------------------------------------------------------------------------
+WP menu styles
+----------------------------------------------------------------------------- */
+.menu-item {
+    background: rgb(242, 242, 242);
+    text-align: center;
+    color: rgb(102, 102, 102);
+}
+.menu-item:first-child {
+    border-top-left-radius: 4px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 4px;
+    border-top-right-radius: 0.25rem;
+}
+.menu-item:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 0.25rem;
+}
+.menu-item a {
+    display: block;
+    padding: 12px;
+    padding: 0.75rem;
+    color: inherit;
+}
+.menu-item:hover,
+.current-menu-item {
+    background: rgb(179, 36, 36);
+    color: rgb(255, 255, 255);
+}
+.menu-item:active,
+.current-menu-item:hover {
+    background: rgb(204, 41, 41);
+    color: rgb(255, 255, 255);
+}
+.current-menu-item:active {
+    background: rgb(230, 46, 46);
+    color: rgb(255, 255, 255);
+}
+/* -----------------------------------------------------------------------------
+media queries
+----------------------------------------------------------------------------- */
+@media all and (max-width: 640px) {
+    .menu-item {
+        display: inline-block;
+        margin-top: 5px;
+        border-radius: 0.25rem;
+    }
+
+    .menu-item a {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+}
+@media all and (min-width: 641px) {
+    .menu-item:not(:first-child) {
+        margin-top: 1px;
+    }
+}
+h1 {
+    line-height: 24px;
+    line-height: 1.5rem;
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+#sidebar h1 {
+    color: rgb(179, 36, 36);
+}
+h1 a,
+h1.entry-title {
+    display: block;
+    color: rgb(51, 51, 51);
+}
+.sticky h1 {
+    line-height: 118.8%;
+    font-size: 1.188em;
+}
+.sticky h1 a {
+    border-radius: 0.25rem;
+    background: rgb(179, 36, 36);
+    padding: 0.554em 0.618em 0.454em;
+    color: rgb(255, 255, 255);
+}
+.sticky h1 a:hover {
+    background: rgb(204, 41, 41);
+}
+h2 {
+    text-align: center;
+    line-height: 48px;
+    line-height: 3rem;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+#sidebar h2 {
+    line-height: inherit;
+    font-size: 16px;
+    font-size: 1rem;
+    font-style: normal;
+}
+h3 {
+    margin: 1.618em 0 0.734em;
+    border-top: 0.09em solid rgb(194, 194, 194);
+    border-bottom: 0.09em solid rgb(194, 194, 194);
+    padding: 0.454em;
+    font-size: 1.188em;
+}
+input,
+textarea#comment {
+    border-radius: 0.25rem;
+    color: rgb(102, 102, 102);
+    font-size: 0.734em;
+    font-family: "AntykwaPoltawskiegoRegular", serif;
+}
+input[type=text]:hover,
+input[type=text]:focus,
+textarea#comment:hover,
+textarea#comment:focus {
+    border-color: rgb(102, 102, 102);
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+}
+input[type=text],
+textarea#comment {
+    background: rgb(255, 255, 255);
+    border: 0.09em solid rgb(194, 194, 194);
+    padding: 0.28em 0.454em;
+}
+.button,
+#submit {
+    background: rgb(242, 242, 242);
+    border: 0;
+    margin-top: 0.236em;
+    padding: 0.382em 0.734em;
+}
+.button:hover,
+#submit:hover {
+    background: rgb(179, 36, 36);
+    -webkit-transition-duration: 0.075s;
+            transition-duration: 0.075s;
+}
+.button:hover,
+#submit:hover {
+    color: rgb(255, 255, 255);
+    -webkit-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+}
+.entry {
+    padding: 1em 0.09em 0;
+}
+.entry ul {
+    padding: 0.618em 1.618em;
+    list-style: circle;
+}
+.postmetadata {
+    padding: 1em 0.107em 0.618em;
+    color: rgb(194, 194, 194);
+    font-size: 0.734em;
+}
+.postmetadata:hover {
+    color: rgb(51, 51, 51);
+}
+.postmetadata a {
+    color: rgb(194, 194, 194);
+}
+.postmetadata:hover a {
+    color: rgb(179, 36, 36);
+}
+.postmetadata:hover a:hover {
+    color: rgb(204, 41, 41);
+}
+.post + .post {
+    margin-top: 1.618em;
+}
+p + p {
+    margin-top: 0.618em;
+}
+p {
+    text-align: left;
+}
+p iframe,
+p img {
+    margin-top: 0.618em;
+    border: 0.09em solid rgb(194, 194, 194);
+    padding: 0.734em;
+}
+p iframe {
+    width: 60%;
+    min-width: 13.168em;
+    max-width: 21.306em;
+    height: 11.089em;
+}
+p img {
+    width: 60%;
+    min-width: 13.168em;
+    max-width: 29.03em;
+}
+p .signature {
+    display: block;
+    padding-left: 1.188em;
+    color: rgb(102, 102, 102);
+    font-size: 0.734em;
+}
+#submit {
+    min-width: 11.089em;
+    max-width: 13.168em;
+    width: 50%;
+}
+textarea#comment {
+    margin-top: 0.382em;
+    padding: 0.618em;
+    min-width: 11.089em;
+    max-width: 29.03em;
+    width: 80%;
+}
+#commentform div+ div {
+    padding-top: 0.107em;
+}
+#commentform label {
+    display: inline-block;
+    margin-left: 0.454em;
+}
+ol.commentlist {
+    list-style: none;
+}
+ol.commentlist li.comment {
+    border-bottom: 1px dotted rgb(102, 102, 102);
+    padding: 10px;
+}
+ol.commentlist li.comment div.vcard cite.fn {
+    font-style: normal;
+}
+ol.commentlist li.comment div.vcard img.avatar {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+ol.commentlist li.comment div.comment-meta {
+    font-size: 10px;
+}
+ol.commentlist li.comment div.comment-meta a {
+    color: #ccc;
+}
+ol.commentlist li.comment div.reply {
+    font-size: 11px;
+}
+ol.commentlist li.comment div.reply a {
+    font-weight: bold;
+}
+ol.commentlist li.comment ul.children {
+    list-style: none;
+    margin: 10px 0 0;
+}
+ol.commentlist li.comment ul.children li.depth-2 {
+    border-left: 5px solid rgb(84, 84, 84);
+    margin: 0 0 10px 10px;
+}
+ol.commentlist li.comment ul.children li.depth-3 {
+    border-left: 5px solid rgb(153, 153, 153);
+    margin: 0 0 10px 10px;
+}
+ol.commentlist li.comment ul.children li.depth-4 {
+    border-left: 5px solid rgb(186, 186, 186);
+    margin: 0 0 10px 10px;
+}
+ol.commentlist li.even {
+    background: rgb(255, 255, 255);
+}
+ol.commentlist li.odd {
+    background: #f6f6f6;
+}
+ol.commentlist li.parent {
+    border-left: 5px solid rgb(51, 51, 51);
+}
+@media all and (min-width: 1250px) {
+    p {
+        text-align: justify;
+    }
+}
+@media all and (max-width: 900px) {
+    #searchform {
+        border-top: 0.09em solid rgb(194, 194, 194);
+        border-bottom: 0.09em solid rgb(194, 194, 194);
+        padding: 1em 0;
+        max-width: none;
+    }
+    #searchform input {
+        max-width: 8.139em;
+        min-width: 6.854em;
+        margin: 0 auto;
+    }
+}
+@media all and (max-width: 640px) {
+    h1 {
+        font-size: 1.188em;
+    }
+    .sticky h1 {
+        font-size: 1em;
+    }
+    p {
+        text-align: justify;
+    }
+    #commentform label {
+        display: block;
+        margin-left: 0.454em;
+    }
+}
+@media all and (max-width: 420px) {
+    p {
+        text-align: left;
+    }
+}
 /* new stuff */
 /* -----------------------------------------------------------------------------
 atoms - a palette of all possible variables used throughout the project
@@ -437,476 +840,111 @@ headerBordered organism
 [i-o-headerBordered] {
     border-width: 1px 0;
     border-style: solid;
-    border-color: rgb(194, 194, 194);
-}
-[i-o-headerBordered]:not(:first-child) {
-    margin-top: 24px;
-    margin-top: 1.5rem;
-}
-[i-o-headerBordered]:not(:last-child) {
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem;
-}
-/* old stuff */
-#page-wrap {
-    padding-bottom: 5.03em;
-}
-#center,
-#left,
-#sidebar {
-    float: left;
-}
-#header {
-    padding: 3.109em 0 1.618em 13%;
-}
-#header a {
-    display: block;
-    padding: 1em;
-}
-#header a:hover {
-    opacity: 0.9;
-}
-#header a:active {
-    opacity: 0.8;
-}
-#header a img {
-    width: 14%;
-    max-width: 178px;
-}
-#left {
-    padding: 0 1.618em 5.03em 13%;
-    width: 15%;
-    min-width: 6.854em;
-    max-width: 13.168em;
-    text-align: center;
-}
-#center {
-    padding: 0 2.618em;
-    width: 40%;
-    max-width: 46.971em;
-}
-#sidebar {
-    padding: 0 1.618em;
-    width: 13%;
-    min-width: 6.854em;
-    max-width: 13.168em;
-    text-align: center;
-}
-#sidebar div + div {
-    margin-top: 1.618em;
-}
-#sidebar .tickets .menu-item a {
-    color: rgb(255, 255, 255);
-}
-#sidebar .tickets .menu-item {
-    background-color: rgb(179, 36, 36);
-}
-#sidebar .tickets .menu-item:hover {
-    background-color: rgb(204, 41, 41);
-}
-#footer {
-    clear: both;
-    text-align: center;
-    font-size: 0.734em;
-}
-.navigation {
-    width: 29.03em;
-}
-#searchform {
-    margin: 0 auto;
-    min-width: 6.854em;
-    max-width: 8.139em;
-}
-/* -----------------------------------------------------------------------------
-WP menu styles
------------------------------------------------------------------------------ */
-.menu-item {
-    background: rgb(242, 242, 242);
-    text-align: center;
-    color: rgb(102, 102, 102);
-}
-.menu-item:first-child {
-    border-top-left-radius: 4px;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 4px;
-    border-top-right-radius: 0.25rem;
-}
-.menu-item:last-child {
-    border-bottom-left-radius: 4px;
-    border-bottom-left-radius: 0.25rem;
-    border-bottom-right-radius: 4px;
-    border-bottom-right-radius: 0.25rem;
-}
-.menu-item a {
-    display: block;
-    padding: 12px;
-    padding: 0.75rem;
-    color: inherit;
-}
-.menu-item:hover,
-.current-menu-item {
-    background: rgb(179, 36, 36);
-    color: rgb(255, 255, 255);
-}
-.menu-item:active,
-.current-menu-item:hover {
-    background: rgb(204, 41, 41);
-    color: rgb(255, 255, 255);
-}
-.current-menu-item:active {
-    background: rgb(230, 46, 46);
-    color: rgb(255, 255, 255);
-}
-/* -----------------------------------------------------------------------------
-media queries
------------------------------------------------------------------------------ */
-@media all and (max-width: 640px) {
-    .menu-item {
-        display: inline-block;
-        margin-top: 5px;
-        border-radius: 0.25rem;
-    }
-
-    .menu-item a {
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
-    }
-}
-@media all and (min-width: 641px) {
-    .menu-item:not(:first-child) {
-        margin-top: 1px;
-    }
-}
-.widget_mailchimpsf_widget {
-    margin: 2.618em auto;
-    max-width: 8.139em;
-    min-width: 6.854em;
-}
-#mc_display_rewards {
-    font-size: 0.734em;
-    margin-top: 0.618em;
-}
-.widget_mailchimpsf_widget .mc_input,
-#searchform input {
-    width: 85%;
-}
-.widget_mailchimpsf_widget .button {
-    width: 95%;
-}
-label.mc_var_label {
-    display: none;
-}
-#mc_signup br {
-    display: none;
-}
-h1 {
-    line-height: 24px;
-    line-height: 1.5rem;
-    font-size: 32px;
-    font-size: 2rem;
+    border-color: currentColor;
     font-weight: 400;
 }
-#sidebar h1 {
-    color: rgb(179, 36, 36);
+[i-o-headerBordered]:not(:last-child) {
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
 }
-h1 a,
-h1.entry-title {
+/* -----------------------------------------------------------------------------
+summary organism
+----------------------------------------------------------------------------- */
+[i-o-summary] {
+    position: relative;
+    padding-left: 166px;
+    min-height: 150px;
+}
+[i-o-summary-title] {
+    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
+    line-height: 30px;
+    line-height: 1.875rem;
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+[i-o-summary] a:not(:hover) {
+    color: inherit;
+}
+/* -----------------------------------------------------------------------------
+photo part
+----------------------------------------------------------------------------- */
+[i-o-summary-photo] {
     display: block;
-    color: rgb(51, 51, 51);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(242, 242, 242);
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    color: inherit;
 }
-.sticky h1 {
-    line-height: 118.8%;
-    font-size: 1.188em;
+[i-o-summary-photo]:hover {
+    opacity: 0.9;
+    color: inherit;
 }
-.sticky h1 a {
-    border-radius: 0.173em;
-    background: rgb(179, 36, 36);
-    padding: 0.554em 0.618em 0.454em;
-    color: rgb(255, 255, 255);
+[i-o-summary-photo]:active {
+    opacity: 0.8;
+    color: inherit;
 }
-.sticky h1 a:hover {
-    background: rgb(204, 41, 41);
+[i-o-summary-photo] img {
+    display: block;
 }
-h2 {
-    text-align: center;
-    line-height: 48px;
-    line-height: 3rem;
-    font-size: 24px;
-    font-size: 1.5rem;
+/* fallback abbr for no photo */
+[i-o-summary-photo] span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.1;
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: 700;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+/* -----------------------------------------------------------------------------
+meta table part
+----------------------------------------------------------------------------- */
+[i-o-summary-meta] {
+    width: 100%;
+}
+[i-o-summary-meta] th {
+    line-height: 24px;
+    line-height: 1.5rem;
+    white-space: nowrap;
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 400;
     font-style: italic;
 }
-#sidebar h2 {
-    line-height: inherit;
-    font-size: 16px;
-    font-size: 1rem;
-    font-style: normal;
-}
-h3 {
-    margin: 1.618em 0 0.734em;
-    border-top: 0.09em solid rgb(194, 194, 194);
-    border-bottom: 0.09em solid rgb(194, 194, 194);
-    padding: 0.454em;
-    font-size: 1.188em;
-}
-input,
-textarea#comment {
-    border-radius: 0.618em;
-    color: rgb(102, 102, 102);
-    font-size: 0.734em;
-    font-family: "AntykwaPoltawskiegoRegular", serif;
-}
-input[type=text]:hover,
-input[type=text]:focus,
-textarea#comment:hover,
-textarea#comment:focus {
-    border-color: rgb(102, 102, 102);
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-}
-input[type=text],
-textarea#comment {
-    background: rgb(255, 255, 255);
-    border: 0.09em solid rgb(194, 194, 194);
-    padding: 0.28em 0.454em;
-}
-.button,
-#submit {
-    background: rgb(242, 242, 242);
-    border: 0;
-    margin-top: 0.236em;
-    padding: 0.382em 0.734em;
-}
-.button:hover,
-#submit:hover {
-    background: rgb(179, 36, 36);
-    -webkit-transition-duration: 0.075s;
-            transition-duration: 0.075s;
-}
-.button:hover,
-#submit:hover {
-    color: rgb(255, 255, 255);
-    -webkit-transition-duration: 0.15s;
-            transition-duration: 0.15s;
-}
-.entry {
-    padding: 1em 0.09em 0;
-}
-.entry ul {
-    padding: 0.618em 1.618em;
-    list-style: circle;
-}
-.postmetadata {
-    padding: 1em 0.107em 0.618em;
-    color: rgb(194, 194, 194);
-    font-size: 0.734em;
-}
-.postmetadata:hover {
-    color: rgb(51, 51, 51);
-}
-.postmetadata a {
-    color: rgb(194, 194, 194);
-}
-.postmetadata:hover a {
-    color: rgb(179, 36, 36);
-}
-.postmetadata:hover a:hover {
-    color: rgb(204, 41, 41);
-}
-.post + .post {
-    margin-top: 1.618em;
-}
-p + p {
-    margin-top: 0.618em;
-}
-p {
+[i-o-summary-meta] th,
+[i-o-summary-meta] td {
+    vertical-align: top;
     text-align: left;
 }
-p iframe,
-p img {
-    margin-top: 0.618em;
-    border: 0.09em solid rgb(194, 194, 194);
-    padding: 0.734em;
+[i-o-summary-meta] td {
+    padding-left: 4px;
+    padding-left: 0.25rem;
+
+    /* make it take as much space as possible */
+    width: 100%;
 }
-p iframe {
-    width: 60%;
-    min-width: 13.168em;
-    max-width: 21.306em;
-    height: 11.089em;
-}
-p img {
-    width: 60%;
-    min-width: 13.168em;
-    max-width: 29.03em;
-}
-p .signature {
+/* -----------------------------------------------------------------------------
+logo organism
+----------------------------------------------------------------------------- */
+[i-o-logo] {
     display: block;
-    padding-left: 1.188em;
-    color: rgb(102, 102, 102);
-    font-size: 0.734em;
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
+    text-align: center;
 }
-#submit {
-    min-width: 11.089em;
-    max-width: 13.168em;
-    width: 50%;
+[i-o-logo]:hover {
+    opacity: 0.9;
 }
-textarea#comment {
-    margin-top: 0.382em;
-    padding: 0.618em;
-    min-width: 11.089em;
-    max-width: 29.03em;
-    width: 80%;
-}
-#commentform div+ div {
-    padding-top: 0.107em;
-}
-#commentform label {
-    display: inline-block;
-    margin-left: 0.454em;
-}
-ol.commentlist {
-    list-style: none;
-}
-ol.commentlist li.comment {
-    border-bottom: 1px dotted rgb(102, 102, 102);
-    padding: 10px;
-}
-ol.commentlist li.comment div.vcard cite.fn {
-    font-style: normal;
-}
-ol.commentlist li.comment div.vcard img.avatar {
-    float: right;
-    margin: 0 0 10px 10px;
-}
-ol.commentlist li.comment div.comment-meta {
-    font-size: 10px;
-}
-ol.commentlist li.comment div.comment-meta a {
-    color: #ccc;
-}
-ol.commentlist li.comment div.reply {
-    font-size: 11px;
-}
-ol.commentlist li.comment div.reply a {
-    font-weight: bold;
-}
-ol.commentlist li.comment ul.children {
-    list-style: none;
-    margin: 10px 0 0;
-}
-ol.commentlist li.comment ul.children li.depth-2 {
-    border-left: 5px solid rgb(84, 84, 84);
-    margin: 0 0 10px 10px;
-}
-ol.commentlist li.comment ul.children li.depth-3 {
-    border-left: 5px solid rgb(153, 153, 153);
-    margin: 0 0 10px 10px;
-}
-ol.commentlist li.comment ul.children li.depth-4 {
-    border-left: 5px solid rgb(186, 186, 186);
-    margin: 0 0 10px 10px;
-}
-ol.commentlist li.even {
-    background: rgb(255, 255, 255);
-}
-ol.commentlist li.odd {
-    background: #f6f6f6;
-}
-ol.commentlist li.parent {
-    border-left: 5px solid rgb(20, 20, 20);
-}
-@media all and (min-width: 1250px) {
-    p {
-        text-align: justify;
-    }
-}
-@media all and (max-width: 900px) {
-    #header {
-        padding: 1.618em 0 2.618em;
-        text-align: center;
-    }
-    #header a img {
-        width: 25%;
-    }
-    #center {
-        width: 50%;
-    }
-    #sidebar {
-        margin-top: 2.618em;
-        padding: 0;
-        clear: both;
-        width: 100%;
-        max-width: none;
-    }
-    .kontakt,
-    .menu-sidebar-container {
-        width: 25%;
-        display: inline-block;
-        margin: 0 3%;
-        vertical-align: top;
-    }
-    #searchform {
-        border-top: 0.09em solid rgb(194, 194, 194);
-        border-bottom: 0.09em solid rgb(194, 194, 194);
-        padding: 1em 0;
-        max-width: none;
-    }
-    #searchform input {
-        max-width: 8.139em;
-        min-width: 6.854em;
-        margin: 0 auto;
-    }
-}
-@media all and (max-width: 640px) {
-    #header {
-        padding: 1.188em 0 0.618em;
-        text-align: center;
-    }
-    #header a {
-        padding: 0.618em;
-    }
-    #header a img {
-        width: 25%;
-        min-width: 6.854em;
-    }
-    #center,
-    #left {
-        float: none;
-        margin: 0;
-        padding: 1.188em 2.618em 0;
-        max-width: none;
-        width: auto;
-    }
-    #sidebar {
-        margin-top: 2.618em;
-    }
-    h1 {
-        font-size: 1.188em;
-    }
-    .sticky h1 {
-        font-size: 1em;
-    }
-    p {
-        text-align: justify;
-    }
-    #commentform label {
-        display: block;
-        margin-left: 0.454em;
-    }
-}
-@media all and (max-width: 480px) {
-    #center,
-    #left {
-        padding: 1.188em 1.188em 0;
-    }
-    .kontakt,
-    .menu-sidebar-container {
-        width: auto;
-        display: block;
-        margin: 5%;
-    }
-}
-@media all and (max-width: 420px) {
-    p {
-        text-align: left;
-    }
+[i-o-logo]:active {
+    opacity: 0.8;
 }

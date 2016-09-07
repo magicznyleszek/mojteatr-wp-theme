@@ -1,4 +1,6 @@
-    <footer id="footer"></footer>
+    <footer id="footer">
+        &copy; Mój Teatr
+    </footer>
 
     </div>
 

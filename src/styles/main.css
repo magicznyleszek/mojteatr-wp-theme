@@ -1,6 +1,15 @@
 @import "setup/wp-theme-info.css";
 @import "setup/reset.css";
 
+/* old stuff */
+@import "old/layout.css";
+@import "old/menu.css";
+@import "old/headers.css";
+@import "old/buttons.css";
+@import "old/post.css";
+@import "old/comments.css";
+@import "old/media-queries.css";
+
 /* new stuff */
 @import "atoms.css";
 @import "setup/root.css";
@@ -8,13 +17,5 @@
 @import "organisms/section.css";
 @import "organisms/ticketsPlease.css";
 @import "organisms/headerBordered.css";
-
-/* old stuff */
-@import "old/layout.css";
-@import "old/menu.css";
-@import "old/mailchimp.css";
-@import "old/headers.css";
-@import "old/buttons.css";
-@import "old/post.css";
-@import "old/comments.css";
-@import "old/media-queries.css";
+@import "organisms/summary.css";
+@import "organisms/logo.css";

@@ -1,0 +1,97 @@
+/* -----------------------------------------------------------------------------
+summary organism
+----------------------------------------------------------------------------- */
+
+:root {
+    --thumbnail-s: 150px;
+}
+
+[i-o-summary] {
+    position: relative;
+    padding-left: calc(var(--thumbnail-s) + var(--rootFontSize));
+    min-height: var(--thumbnail-s);
+}
+
+[i-o-summary-title] {
+    margin-bottom: 0.75rem;
+    line-height: calc(var(--leading-s) * 1.25);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+[i-o-summary] a:not(:hover) {
+    color: inherit;
+}
+
+/* -----------------------------------------------------------------------------
+photo part
+----------------------------------------------------------------------------- */
+
+[i-o-summary-photo] {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--a-c-whiteSmoke);
+    width: var(--thumbnail-s);
+    height: var(--thumbnail-s);
+    overflow: hidden;
+    color: inherit;
+}
+
+[i-o-summary-photo]:hover {
+    opacity: 0.9;
+    color: inherit;
+}
+
+[i-o-summary-photo]:active {
+    opacity: 0.8;
+    color: inherit;
+}
+
+[i-o-summary-photo] img {
+    display: block;
+}
+
+/* fallback abbr for no photo */
+[i-o-summary-photo] span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.1;
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: 700;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* -----------------------------------------------------------------------------
+meta table part
+----------------------------------------------------------------------------- */
+
+[i-o-summary-meta] {
+    width: 100%;
+}
+
+[i-o-summary-meta] th {
+    line-height: var(--leading-s);
+    white-space: nowrap;
+    color: var(--a-c-nobel);
+    font-size: 0.75rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+[i-o-summary-meta] th,
+[i-o-summary-meta] td {
+    vertical-align: top;
+    text-align: left;
+}
+
+[i-o-summary-meta] td {
+    padding-left: 0.25rem;
+
+    /* make it take as much space as possible */
+    width: 100%;
+}

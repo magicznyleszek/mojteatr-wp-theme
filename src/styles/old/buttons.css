@@ -1,6 +1,6 @@
 input,
 textarea#comment {
-    border-radius: 0.618em;
+    border-radius: var(--global-br);
     color: var(--a-c-dimGray);
     font-size: 0.734em;
     font-family: "AntykwaPoltawskiegoRegular", serif;

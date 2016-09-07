@@ -22,7 +22,7 @@ Template Name: Custom Index Spektakle
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
 
     <div id="center">
-        <h1>Spektakle</h1>
+        <!-- <h1>Spektakle</h1> -->
 
         <?php $prev_archiwalne = null; ?>
         <?php while($mypod->fetch()) : ?>
@@ -30,6 +30,16 @@ Template Name: Custom Index Spektakle
                 // set variables
                 $permalink= $mypod->field('permalink');
                 $pod_tytul= $mypod->field('tytul');
+
+                $tytul_words = explode(' ', $pod_tytul);
+                $tytul_abbr = '';
+                $count = 0;
+                foreach ($tytul_words as $word) {
+                    if ($count < 3) {
+                        $tytul_abbr .= $word[0];
+                    }
+                    ++$count;
+                }
 
                 $pod_rezyser= $mypod->field('rezyser');
                 $has_rezyser= $pod_rezyser != '';
@@ -60,74 +70,82 @@ Template Name: Custom Index Spektakle
                 }
             ?>
 
-            <article class="<?php if($has_zdjecie): ?>has-photo<?php endif; ?>">
+            <article i-o-summary i-o-section="main">
                 <!-- photo -->
-                <?php if($has_zdjecie): ?>
-                <a href="<?php echo $permalink; ?>">
+                <a href="<?php echo $permalink; ?>" i-o-summary-photo>
+                    <?php if($has_zdjecie): ?>
                     <img
                         src="<?php echo $pod_zdjecie_thumb[0]; ?>"
                         title="<?php echo $pod_zdjecie['post_title']; ?>"
                         alt="<?php echo $pod_zdjecie['post_name']; ?>"
                     >
+                    <?php else: ?>
+                    <span><?php echo $tytul_abbr; ?></span>
+                    <?php endif; ?>
                 </a>
-                <?php endif; ?>
 
                 <!-- title -->
-                <h1>
+                <div i-o-summary-title>
                     <a href="<?php echo $permalink; ?>">
                         <?php echo $pod_tytul; ?>
-                        <?php echo $pod_nazwisko; ?>
                     </a>
-                </h1>
+                </div>
 
                 <!-- meta -->
-                <ul>
+                <table i-o-summary-meta><tbody>
                     <?php if($has_rezyser): ?>
-                        <li>
-                            <strong>Reżyser:</strong>
-                            <?php echo $pod_rezyser; ?>
-                        </li>
+                    <tr>
+                        <th>Reżyseria:</th>
+                        <td><?php echo $pod_rezyser; ?></td>
+                    </tr>
                     <?php endif; ?>
+
                     <?php if($has_scenariusz): ?>
-                        <li>
-                            <strong>Scenariusz:</strong>
-                            <?php echo $pod_scenariusz; ?>
-                        </li>
+                    <tr i-o-summary-meta>
+                        <th>Scenariusz:</th>
+                        <td><?php echo $pod_scenariusz; ?></td>
+                    </tr>
                     <?php endif; ?>
+
+
                     <?php if($pod_czas_trwania > 0): ?>
-                    <li>
-                        <strong>Czas trwania:</strong>
-                        <?php echo $pod_czas_trwania; ?>
-                        <span>minut</span>
-                    </li>
+                    <tr>
+                        <th>Czas:</th>
+                        <td><?php echo $pod_czas_trwania.'&nbsp;minut'; ?></td>
+                    </tr>
                     <?php endif; ?>
-                    <li>
-                        <strong>Data premiery:</strong>
-                        <?php echo $data_premiery_pretty; ?>
-                    </li>
-                </ul>
 
-                <!-- all actors -->
-                <?php if(!empty($pod_aktorzy) && is_array($pod_aktorzy)): ?>
-                    <strong>Występują:</strong>
-                    <ul>
+                    <tr>
+                        <th>Premiera:</th>
+                        <td><?php echo $data_premiery_pretty; ?></td>
+                    </tr>
+
                     <?php
-                        foreach($pod_aktorzy as $pod_aktor) {
-                            $imie = get_post_meta($pod_aktor['ID'], 'imie', true);
-                            $nazwisko = get_post_meta($pod_aktor['ID'], 'nazwisko', true);
-                    ?>
-                        <li>
-                            <a href="<?php echo $pod_aktor['guid']; ?>">
-                                <?php echo $imie; ?>
-                                <?php echo $nazwisko; ?>
-                            </a>
-                        </li>
-                    <?php } ?>
-                    </ul>
-                <?php endif; ?>
-            </article>
+                        if(!empty($pod_aktorzy) && is_array($pod_aktorzy)):
+                            $all_aktorzy_links = '';
+                            $is_first = true;
+                            foreach($pod_aktorzy as $pod_aktor) {
+                                $imie = get_post_meta($pod_aktor['ID'], 'imie', true);
+                                $nazwisko = get_post_meta($pod_aktor['ID'], 'nazwisko', true);
+                                $full_name = $imie.'&nbsp;'.$nazwisko;
+                                $url = $pod_aktor['guid'];
 
-            <br><br>
+                                if (!$is_first) {
+                                    $all_aktorzy_links .= ', ';
+                                } else {
+                                    $is_first = false;
+                                }
+
+                                $all_aktorzy_links .= '<a href="'.$url.'">'.$full_name.'</a>';
+                            }
+                    ?>
+                    <tr>
+                        <th>Występują:</th>
+                        <td><?php echo $all_aktorzy_links; ?></td>
+                    </tr>
+                    <?php endif; ?>
+                </tbody></table>
+            </article>
 
             <?php
                 // keep archiwalne value for if check

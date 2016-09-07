@@ -1,0 +1,17 @@
+/* -----------------------------------------------------------------------------
+logo organism
+----------------------------------------------------------------------------- */
+
+[i-o-logo] {
+    display: block;
+    margin-bottom: calc(var(--leading-s) * 2);
+    text-align: center;
+}
+
+[i-o-logo]:hover {
+    opacity: 0.9;
+}
+
+[i-o-logo]:active {
+    opacity: 0.8;
+}

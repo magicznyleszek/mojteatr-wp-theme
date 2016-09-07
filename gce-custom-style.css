@@ -51,8 +51,7 @@
 }
 
 .gce-page-grid .gce-calendar .gce-change-month {
-    -moz-border-radius: 0.618em;
-    border-radius: 0.618em;
+    border-radius: var(--global-br);
     background: #F2F2F2;
     padding: 0.28em 0.734em 0.454em;
 }
@@ -60,8 +59,6 @@
 .gce-page-grid .gce-calendar .gce-change-month:hover {
     background: #b22424;
     color: #fff;
-    -webkit-transition-duration: 0.075s;
-    -moz-transition-duration: 0.075s;
     transition-duration: 0.075s;
 }
 
@@ -83,11 +80,8 @@
 }
 
 .qtip-wrapper {
-    -moz-box-shadow: 0 0 0.454em #c2c2c2;
-    -webkit-box-shadow: 0 0 0.454em #c2c2c2;
     box-shadow: 0 0 0.454em #c2c2c2;
-    -moz-border-radius: 0.618em;
-    border-radius: 0.618em;
+    border-radius: var(--global-br);
 }
 
 .gce-event-info {

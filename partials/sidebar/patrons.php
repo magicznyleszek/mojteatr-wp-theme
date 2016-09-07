@@ -1,4 +1,4 @@
-<div i-o-section class="menu-sidebar-container">
+<div i-o-section>
     <h2>Patronat</h2>
 
     <span>Naszym spektaklom patronują:</span>

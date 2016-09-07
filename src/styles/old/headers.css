@@ -20,7 +20,7 @@ h1.entry-title {
 }
 
 .sticky h1 a {
-    border-radius: 0.173em;
+    border-radius: var(--global-br);
     background: var(--a-c-fireBrick);
     padding: 0.554em 0.618em 0.454em;
     color: var(--a-c-white);

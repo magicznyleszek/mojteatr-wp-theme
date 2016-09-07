@@ -109,5 +109,10 @@
     <div id="page-wrap"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
 
 <header id="header">
-            <a href="<?php echo get_option('home'); ?>/"><img src="http://mojteatr.pl/wp-content/uploads/2011/08/mt_logo.png" id="logo" alt="<?php bloginfo('name'); ?>" /></a>
+    <a i-o-logo href="<?php echo get_option('home'); ?>/">
+        <img
+            src="http://mojteatr.pl/wp-content/uploads/2011/08/mt_logo.png"
+            alt="<?php bloginfo('name'); ?>"
+        >
+    </a>
 </header>

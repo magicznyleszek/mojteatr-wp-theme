@@ -5,13 +5,10 @@ headerBordered organism
 [i-o-headerBordered] {
     border-width: 1px 0;
     border-style: solid;
-    border-color: var(--a-c-silver);
-}
-
-[i-o-headerBordered]:not(:first-child) {
-    margin-top: var(--leading-s);
+    border-color: currentColor;
+    font-weight: 400;
 }
 
 [i-o-headerBordered]:not(:last-child) {
-    margin-bottom: var(--leading-s);
+    margin-bottom: calc(var(--leading-s) * 2);
 }
