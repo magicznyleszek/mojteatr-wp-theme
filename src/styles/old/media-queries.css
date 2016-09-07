@@ -1,36 +1,6 @@
-@media all and (min-width: 1250px) {
+@media all and (min-width: 1250px) and (max-width: 640px) {
     p {
         text-align: justify;
-    }
-}
-
-@media all and (max-width: 900px) {
-    #searchform {
-        border-top: 0.09em solid var(--a-c-silver);
-        border-bottom: 0.09em solid var(--a-c-silver);
-        padding: 1em 0;
-        max-width: none;
-    }
-    #searchform input {
-        max-width: 8.139em;
-        min-width: 6.854em;
-        margin: 0 auto;
-    }
-}
-
-@media all and (max-width: 640px) {
-    h1 {
-        font-size: 1.188em;
-    }
-    .sticky h1 {
-        font-size: 1em;
-    }
-    p {
-        text-align: justify;
-    }
-    #commentform label {
-        display: block;
-        margin-left: 0.454em;
     }
 }
 

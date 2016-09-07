@@ -57,43 +57,32 @@ media queries
 ----------------------------------------------------------------------------- */
 
 @media all and (max-width: 900px) {
-    #header {
-        padding: 1.618em 0 2.618em;
-        text-align: center;
-    }
-    #center {
-        width: 50%;
-    }
     #sidebar {
-        margin-top: 2.618em;
-        padding: 0;
         clear: both;
+        margin-top: calc(var(--leading-s) * 2);
         width: 100%;
-        max-width: none;
+    }
+
+    #center {
+        padding-right: 0;
+        padding-left: var(--leading-s);
+        width: 80%;
+    }
+
+    #searchform {
+        max-width: 200px;
     }
 }
 
-@media all and (max-width: 640px) {
-    #header {
-        padding: 1.188em 0 0.618em;
-        text-align: center;
-    }
-    #center,
+@media all and (max-width: 800px) {
     #left {
-        float: none;
-        margin: 0;
-        padding: 1.188em 2.618em 0;
-        max-width: none;
-        width: auto;
+        clear: both;
+        margin-bottom: calc(var(--leading-s) * 2);
+        width: 100%;
     }
-    #sidebar {
-        margin-top: 2.618em;
-    }
-}
 
-@media all and (max-width: 480px) {
-    #center,
-    #left {
-        padding: 1.188em 1.188em 0;
+    #center {
+        padding-left: 0;
+        width: 100%;
     }
 }

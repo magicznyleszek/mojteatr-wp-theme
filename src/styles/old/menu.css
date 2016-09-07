@@ -21,7 +21,7 @@ WP menu styles
 .menu-item a {
     display: block;
     padding: 0.75rem;
-    color: inherit;
+    color: inherit !important;
 }
 
 .menu-item:hover,
@@ -45,7 +45,7 @@ WP menu styles
 media queries
 ----------------------------------------------------------------------------- */
 
-@media all and (max-width: 640px) {
+@media all and (max-width: 800px) {
     .menu-item {
         display: inline-block;
         margin-top: 5px;
@@ -58,7 +58,7 @@ media queries
     }
 }
 
-@media all and (min-width: 641px) {
+@media all and (min-width: 801px) {
     .menu-item:not(:first-child) {
         margin-top: 1px;
     }

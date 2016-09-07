@@ -1,7 +1,7 @@
 <div i-o-section>
     <h2>Patronat</h2>
 
-    <span>Naszym spektaklom patronują:</span>
+    <span>Naszym spektaklom patronują:</span><br>
 
     <a href="http://www.wtk.pl/">
         <img src="http://mojteatr.pl/wp-content/uploads/2011/10/wtk_logo.jpg" />

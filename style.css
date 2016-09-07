@@ -295,42 +295,32 @@ WP layout
 media queries
 ----------------------------------------------------------------------------- */
 @media all and (max-width: 900px) {
-    #header {
-        padding: 1.618em 0 2.618em;
-        text-align: center;
-    }
-    #center {
-        width: 50%;
-    }
     #sidebar {
-        margin-top: 2.618em;
-        padding: 0;
         clear: both;
+        margin-top: 3rem;
         width: 100%;
-        max-width: none;
+    }
+
+    #center {
+        padding-right: 0;
+        padding-left: 1.5rem;
+        width: 80%;
+    }
+
+    #searchform {
+        max-width: 200px;
     }
 }
-@media all and (max-width: 640px) {
-    #header {
-        padding: 1.188em 0 0.618em;
-        text-align: center;
-    }
-    #center,
+@media all and (max-width: 800px) {
     #left {
-        float: none;
-        margin: 0;
-        padding: 1.188em 2.618em 0;
-        max-width: none;
-        width: auto;
+        clear: both;
+        margin-bottom: 3rem;
+        width: 100%;
     }
-    #sidebar {
-        margin-top: 2.618em;
-    }
-}
-@media all and (max-width: 480px) {
-    #center,
-    #left {
-        padding: 1.188em 1.188em 0;
+
+    #center {
+        padding-left: 0;
+        width: 100%;
     }
 }
 /* -----------------------------------------------------------------------------
@@ -357,7 +347,7 @@ WP menu styles
     display: block;
     padding: 12px;
     padding: 0.75rem;
-    color: inherit;
+    color: inherit !important;
 }
 .menu-item:hover,
 .current-menu-item {
@@ -376,7 +366,7 @@ WP menu styles
 /* -----------------------------------------------------------------------------
 media queries
 ----------------------------------------------------------------------------- */
-@media all and (max-width: 640px) {
+@media all and (max-width: 800px) {
     .menu-item {
         display: inline-block;
         margin-top: 5px;
@@ -388,7 +378,7 @@ media queries
         padding-bottom: 0.25rem;
     }
 }
-@media all and (min-width: 641px) {
+@media all and (min-width: 801px) {
     .menu-item:not(:first-child) {
         margin-top: 1px;
     }
@@ -608,37 +598,9 @@ ol.commentlist li.odd {
 ol.commentlist li.parent {
     border-left: 5px solid rgb(51, 51, 51);
 }
-@media all and (min-width: 1250px) {
+@media all and (min-width: 1250px) and (max-width: 640px) {
     p {
         text-align: justify;
-    }
-}
-@media all and (max-width: 900px) {
-    #searchform {
-        border-top: 0.09em solid rgb(194, 194, 194);
-        border-bottom: 0.09em solid rgb(194, 194, 194);
-        padding: 1em 0;
-        max-width: none;
-    }
-    #searchform input {
-        max-width: 8.139em;
-        min-width: 6.854em;
-        margin: 0 auto;
-    }
-}
-@media all and (max-width: 640px) {
-    h1 {
-        font-size: 1.188em;
-    }
-    .sticky h1 {
-        font-size: 1em;
-    }
-    p {
-        text-align: justify;
-    }
-    #commentform label {
-        display: block;
-        margin-left: 0.454em;
     }
 }
 @media all and (max-width: 420px) {
