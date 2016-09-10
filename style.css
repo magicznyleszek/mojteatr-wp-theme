@@ -737,15 +737,23 @@ logo organism
 ----------------------------------------------------------------------------- */
 [i-o-logo] {
     display: block;
-    margin-bottom: 48px;
-    margin-bottom: 3rem;
+    margin: 0 auto 48px;
+    margin: 0 auto 3rem;
+    width: 225px;
+    height: 150px;
     text-align: center;
+    color: rgb(51, 51, 51);
+}
+[i-o-logo] svg {
+    width: 225px;
+    height: 150px;
+    fill: currentColor;
 }
 [i-o-logo]:hover {
-    opacity: 0.9;
+    color: rgb(179, 36, 36);
 }
 [i-o-logo]:active {
-    opacity: 0.8;
+    color: rgb(204, 41, 41);
 }
 /* -----------------------------------------------------------------------------
 picture organism

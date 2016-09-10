@@ -2,16 +2,30 @@
 logo organism
 ----------------------------------------------------------------------------- */
 
+:root {
+    --logo-h: 150px;
+    --logo-w: calc(var(--logo-h) * 1.5);
+}
+
 [i-o-logo] {
     display: block;
-    margin-bottom: calc(var(--leading-s) * 2);
+    margin: 0 auto calc(var(--leading-s) * 2);
+    width: var(--logo-w);
+    height: var(--logo-h);
     text-align: center;
+    color: var(--a-c-charcoal);
+}
+
+[i-o-logo] svg {
+    width: var(--logo-w);
+    height: var(--logo-h);
+    fill: currentColor;
 }
 
 [i-o-logo]:hover {
-    opacity: 0.9;
+    color: var(--a-c-fireBrick);
 }
 
 [i-o-logo]:active {
-    opacity: 0.8;
+    color: var(--a-c-persianRed);
 }
