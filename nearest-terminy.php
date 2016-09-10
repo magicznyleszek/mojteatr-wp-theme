@@ -24,7 +24,12 @@
 ?>
     <section i-o-section="main bordered">
         <table i-o-termins>
-            <caption>Najbliższe terminy</caption>
+            <caption>
+                Najbliższe terminy
+                <a href="http://mojteatr.pl/terminy">
+                    <small>(więcej&hellip;)</small>
+                </a>
+            </caption>
 
             <thead>
                 <tr>
