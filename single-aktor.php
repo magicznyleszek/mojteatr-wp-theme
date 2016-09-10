@@ -31,7 +31,7 @@
             id="post-<?php the_ID(); ?>"
             <?php post_class() ?>
         >
-            <h1>
+            <h1 i-o-section="main">
                 <a
                     href="<?php echo $permalink; ?>"
                     title="<?php echo $full_name; ?>"
@@ -42,33 +42,48 @@
 
             <!-- photo -->
             <?php if($has_zdjecie): ?>
-            <img
-                src="<?php echo $pod_zdjecie_large[0]; ?>"
-                title="<?php echo $pod_zdjecie['post_title']; ?>"
-                alt="<?php echo $pod_zdjecie['post_name']; ?>"
-            >
+            <section i-o-section>
+                <img
+                    i-o-picture
+                    src="<?php echo $pod_zdjecie_large[0]; ?>"
+                    title="<?php echo $pod_zdjecie['post_title']; ?>"
+                    alt="<?php echo $pod_zdjecie['post_name']; ?>"
+                >
+            </section>
             <?php endif; ?>
+
+            <!-- meta -->
+            <section i-o-section="main">
+                <table i-o-summary-meta><tbody>
+                    <?php if(!empty($pod_spektakle) && is_array($pod_spektakle)): ?>
+                    <!-- all spektakle list -->
+                    <tr>
+                        <th>Spektakle:</th>
+
+                        <td>
+                        <?php
+                            foreach($pod_spektakle as $pod_spektakl) {
+                                $spektakl_tytul = get_post_meta($pod_spektakl['ID'], 'tytul', true);
+                                $spektakl_url = $pod_aktor['guid'];
+                        ?>
+                            <div>
+                                <a href="<?php echo $spektakl_url; ?>">
+                                    <?php echo $spektakl_tytul; ?>
+                                </a>
+                            </div>
+                        <?php } ?>
+                        </td>
+                    </tr>
+                    <?php endif; ?>
+                </tbody></table>
+            </section>
 
             <!-- full description -->
-            <?php echo $pod_opis; ?>
-
-            <!-- all spectacles -->
-            <?php if(!empty($pod_spektakle) && is_array($pod_spektakle)): ?>
-                <h2>Spektakle:</h2>
-                <?php foreach($pod_spektakle as $pod_spektakl) { ?>
-                    <?php
-                        $tytul = get_post_meta($pod_spektakl['ID'], 'tytul', true);
-                    ?>
-                    <a href="<?php echo $pod_spektakl['guid']; ?>">
-                        <?php echo $tytul; ?>
-                    </a>
-                <?php } ?>
-            <?php endif; ?>
-
+            <section i-o-section="main">
+                <?php echo $pod_opis; ?>
+            </section>
         </article>
-
     <?php endwhile; endif; ?>
-
 </div>
 
 <?php get_sidebar(); ?>
