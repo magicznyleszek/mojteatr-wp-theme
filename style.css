@@ -634,6 +634,9 @@ body {
     font-size: 16px;
     font-weight: 400;
 }
+* {
+    box-sizing: border-box;
+}
 a {
     text-decoration: none;
     color: rgb(179, 36, 36);
@@ -808,6 +811,12 @@ section organism
     margin-bottom: 48px;
     margin-bottom: 3rem;
 }
+[i-o-section~="bordered"] {
+    border: 1px solid currentColor;
+    border-radius: 0.25rem;
+    padding: 12px;
+    padding: 0.75rem;
+}
 /* -----------------------------------------------------------------------------
 summary organism
 ----------------------------------------------------------------------------- */
@@ -903,6 +912,14 @@ termins organism
     border-collapse: separate;
     border-spacing: 1px;
 }
+[i-o-termins] caption {
+    padding: 4px;
+    padding: 0.25rem;
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    font-size: 1.25rem;
+}
 [i-o-termins] td {
     border-radius: 0.25rem;
     padding: 4px 8px;
@@ -967,13 +984,9 @@ ticketsPlease organism
     display: inline-block;
     border-radius: 0.25rem;
     background-color: rgb(255, 255, 255);
-    padding: 2px 8px 4px;
-    padding: 0.125rem 0.5rem 0.25rem;
-    height: 20px;
-    height: 1.25rem;
+    padding: 2px 8px 0;
+    padding: 0.125rem 0.5rem 0;
     text-transform: uppercase;
-    line-height: 22px;
-    line-height: 1.375rem;
     font-size: 12px;
     font-size: 0.75rem;
     font-weight: 400;

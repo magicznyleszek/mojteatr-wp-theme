@@ -31,10 +31,8 @@ ticketsPlease organism
     display: inline-block;
     border-radius: var(--global-br);
     background-color: var(--a-c-white);
-    padding: 0.125rem 0.5rem 0.25rem;
-    height: calc(var(--leading-s) - 0.25rem);
+    padding: 0.125rem 0.5rem 0;
     text-transform: uppercase;
-    line-height: calc(var(--leading-s) - 0.125rem);
     font-size: 0.75rem;
     font-weight: 400;
 }

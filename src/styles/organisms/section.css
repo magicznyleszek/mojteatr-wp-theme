@@ -9,3 +9,9 @@ section organism
 [i-o-section~="main"]:not(:last-child) {
     margin-bottom: calc(var(--leading-s) * 2);
 }
+
+[i-o-section~="bordered"] {
+    border: 1px solid currentColor;
+    border-radius: var(--global-br);
+    padding: calc(var(--leading-s) * 0.5);
+}

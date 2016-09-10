@@ -22,16 +22,17 @@
     // display only if there is something to show
     if ($mypod->total() > 0 && $NEAREST_TERMINY_ENABLED):
 ?>
-    <section>
-        <h1>Najbliższe terminy spektakli</h1>
+    <section i-o-section="main bordered">
+        <table i-o-termins>
+            <caption>Najbliższe terminy spektakli</caption>
 
-        <table>
             <thead>
                 <tr>
-                    <td>Data</td>
-                    <td>Spektakl</td>
+                    <td i-o-termins-column="date">Data</td>
+                    <td i-o-termins-column="content">Spektakl</td>
                 </tr>
             </thead>
+
             <tbody>
                 <?php while($mypod->fetch()) : ?>
                     <?php
@@ -49,15 +50,17 @@
                         $spektakl_permalink = get_permalink($spektakl_pod_id);
                     ?>
                     <tr>
-                        <td>
+                        <td i-o-termins-column="date">
                             <?php echo $data_wystawienia_pretty; ?>
                         </td>
-                        <td>
+                        <td i-o-termins-column="content">
                             <a href="<?php echo $spektakl_permalink ?>">
                                 <?php echo $spektakl_tytul; ?>
                             </a>
                             <?php if ($pod_komentarz != ''): ?>
-                                <small><?php echo $pod_komentarz; ?></small>
+                                <span i-o-termins-comment>
+                                    <?php echo $pod_komentarz; ?>
+                                </span>
                             <?php endif; ?>
                         </td>
                     </tr>

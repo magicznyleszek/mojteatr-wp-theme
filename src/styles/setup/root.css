@@ -16,6 +16,10 @@ body {
     font-weight: var(--rootFontWeight);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 a {
     text-decoration: none;
     color: var(--a-c-fireBrick);

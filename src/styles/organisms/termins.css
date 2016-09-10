@@ -8,6 +8,13 @@ termins organism
     border-spacing: 1px;
 }
 
+[i-o-termins] caption {
+    padding: 0.25rem;
+    width: 100%;
+    text-align: left;
+    font-size: 1.25rem;
+}
+
 [i-o-termins] td {
     border-radius: var(--global-br);
     padding: 0.25rem 0.5rem;
