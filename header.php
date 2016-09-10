@@ -5,8 +5,7 @@
 <!--[if gt IE 9]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
 <!-- the "no-js" class is for Modernizr. -->
 
-<head id="www-sitename-com" data-template-set="html5-reset-wordpress-theme" profile="http://gmpg.org/xfn/11">
-
+<head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
@@ -20,15 +19,15 @@
     <title>
            <?php
               if (function_exists('is_tag') && is_tag()) {
-                 single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
+                 single_tag_title("Archiwum taga: &quot;"); echo '&quot; - '; }
               elseif (is_archive()) {
-                 wp_title(''); echo ' Archive - '; }
+                 wp_title(''); echo ' Archiwum - '; }
               elseif (is_search()) {
-                 echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; }
+                 echo 'Wyszukiwanie: &quot;'.wp_specialchars($s).'&quot; - '; }
               elseif (!(is_404()) && (is_single()) || (is_page())) {
                  wp_title(''); echo ' - '; }
               elseif (is_404()) {
-                 echo 'Not Found - '; }
+                 echo 'Nie znaleziono - '; }
               if (is_home()) {
                  bloginfo('name'); echo ' - '; bloginfo('description'); }
               else {
@@ -40,15 +39,15 @@
 
     <meta name="title" content="<?php
               if (function_exists('is_tag') && is_tag()) {
-                 single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
+                 single_tag_title("Archiwum taga: &quot;"); echo '&quot; - '; }
               elseif (is_archive()) {
-                 wp_title(''); echo ' Archive - '; }
+                 wp_title(''); echo ' Archiwum - '; }
               elseif (is_search()) {
-                 echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; }
+                 echo 'Wyszukiwanie: &quot;'.wp_specialchars($s).'&quot; - '; }
               elseif (!(is_404()) && (is_single()) || (is_page())) {
                  wp_title(''); echo ' - '; }
               elseif (is_404()) {
-                 echo 'Not Found - '; }
+                 echo 'Nie znaleziono - '; }
               if (is_home()) {
                  bloginfo('name'); echo ' - '; bloginfo('description'); }
               else {
@@ -59,31 +58,18 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <meta name="google-site-verification" content="">
-    <!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
 
     <meta name="author" content="Mój Teatr">
-    <meta name="Copyright" content="Copyright Mój Teatr 2011. All Rights Reserved.">
+    <meta name="Copyright" content="Copyright Mój Teatr 2016. All Rights Reserved.">
 
     <!-- Dublin Core Metadata : http://dublincore.org/ -->
     <meta name="DC.title" content="Mój teatr">
     <meta name="DC.subject" content="Theatre from Poznań, Poland.">
     <meta name="DC.creator" content="Leszek Pietrzak">
 
-    <!--  Mobile Viewport meta tag
-    j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
-    device-width : Occupy full width of the screen in its current orientation
-    initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-    maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
-    <!-- This is the traditional favicon.
-         - size: 16x16 or 32x32
-         - transparency is OK
-         - see wikipedia for info on browser support: http://mky.be/favicon/ -->
-
-    <!-- CSS: screen, mobile & print are all in the same file -->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?v=2">
 
     <link rel="stylesheet" href="http://mojteatr.pl/webfontkit-stylesheet.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/libs/baguetteBox.min.css">
@@ -101,14 +87,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-    <div id="page-wrap"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
-
-<header id="header">
-    <a i-o-logo href="<?php echo get_option('home'); ?>/">
-        <img
-            src="http://mojteatr.pl/wp-content/uploads/2011/08/mt_logo.png"
-            alt="<?php bloginfo('name'); ?>"
-        >
-    </a>
-</header>
+    <div id="page-wrap">
+        <header id="header">
+            <a i-o-logo href="<?php echo get_option('home'); ?>/">
+                <img
+                    src="http://mojteatr.pl/wp-content/uploads/2011/08/mt_logo.png"
+                    alt="<?php bloginfo('name'); ?>"
+                >
+            </a>
+        </header>
