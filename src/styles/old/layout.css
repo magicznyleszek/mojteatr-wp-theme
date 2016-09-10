@@ -39,10 +39,6 @@ WP layout
     color: var(--a-c-silver);
 }
 
-.navigation {
-    width: 100%;
-}
-
 #searchform {
     margin: 0 auto;
 }

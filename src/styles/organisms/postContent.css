@@ -1,10 +1,8 @@
 /* -----------------------------------------------------------------------------
-headerBordered organism
+postContent organism
 ----------------------------------------------------------------------------- */
 
-[i-o-headerBordered] {
-    border-width: 1px 0;
-    border-style: solid;
-    border-color: currentColor;
-    font-weight: 400;
+[i-o-postContent] img {
+    display: block;
+    border-radius: var(--global-br);
 }

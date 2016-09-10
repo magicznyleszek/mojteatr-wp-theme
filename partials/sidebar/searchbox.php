@@ -1,4 +1,5 @@
 <section i-o-section>
-    <h2>Wyszukiwarka</h2>
+    <h4>Wyszukiwarka</h4>
+
     <?php include (TEMPLATEPATH . '/searchform.php'); ?>
 </section>

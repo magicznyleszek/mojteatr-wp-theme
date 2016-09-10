@@ -1,5 +1,5 @@
 <div i-o-section>
-    <h2>Patronat</h2>
+    <h4>Patronat</h4>
 
     <span>Naszym spektaklom patronują:</span><br>
 

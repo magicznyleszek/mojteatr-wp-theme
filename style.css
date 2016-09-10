@@ -281,9 +281,6 @@ WP layout
     text-align: center;
     color: rgb(194, 194, 194);
 }
-.navigation {
-    width: 100%;
-}
 #searchform {
     margin: 0 auto;
 }
@@ -390,17 +387,13 @@ h1 {
     font-size: 2rem;
     font-weight: 700;
 }
-#sidebar h1 {
-    color: rgb(179, 36, 36);
-}
-h1 a,
-h1.entry-title {
+h1 a {
     display: block;
     color: rgb(51, 51, 51);
 }
 .sticky h1 {
-    line-height: 118.8%;
-    font-size: 1.188em;
+    font-size: 24px;
+    font-size: 1.5rem;
 }
 .sticky h1 a {
     border-radius: 0.25rem;
@@ -412,18 +405,11 @@ h1.entry-title {
     background: rgb(204, 41, 41);
 }
 h2 {
-    text-align: center;
     line-height: 48px;
     line-height: 3rem;
     font-size: 24px;
     font-size: 1.5rem;
     font-style: italic;
-}
-#sidebar h2 {
-    line-height: inherit;
-    font-size: 16px;
-    font-size: 1rem;
-    font-style: normal;
 }
 h3 {
     margin: 1.618em 0 0.734em;
@@ -662,9 +648,6 @@ a:active {
     text-shadow: none;
     color: rgb(51, 51, 51);
 }
-a:link {
-    -webkit-tap-highlight-color: rgb(252, 215, 0);
-}
 ins {
     background-color: rgb(252, 215, 0);
     text-decoration: none;
@@ -717,6 +700,9 @@ button organism
 /* -----------------------------------------------------------------------------
 button colors
 ----------------------------------------------------------------------------- */
+[i-o-button~="fireBrick"] a {
+    color: inherit;
+}
 [i-o-button~="fireBrick"] {
     background-color: rgb(179, 36, 36);
     color: rgb(255, 255, 255);
@@ -745,15 +731,6 @@ button sizes
 [i-o-button~="full"] {
     display: block;
     width: 100%;
-}
-/* -----------------------------------------------------------------------------
-headerBordered organism
------------------------------------------------------------------------------ */
-[i-o-headerBordered] {
-    border-width: 1px 0;
-    border-style: solid;
-    border-color: currentColor;
-    font-weight: 400;
 }
 /* -----------------------------------------------------------------------------
 logo organism
@@ -801,6 +778,13 @@ pictureLink organism
     overflow: hidden;
 }
 /* -----------------------------------------------------------------------------
+postContent organism
+----------------------------------------------------------------------------- */
+[i-o-postContent] img {
+    display: block;
+    border-radius: 0.25rem;
+}
+/* -----------------------------------------------------------------------------
 section organism
 ----------------------------------------------------------------------------- */
 [i-o-section]:not(:last-child) {
@@ -828,10 +812,10 @@ summary organism
 [i-o-summary-title] {
     margin-bottom: 12px;
     margin-bottom: 0.75rem;
-    line-height: 30px;
-    line-height: 1.875rem;
-    font-size: 32px;
-    font-size: 2rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 400;
 }
 [i-o-summary] a:not(:hover) {

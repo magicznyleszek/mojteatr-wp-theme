@@ -3,57 +3,51 @@
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
 
     <div id="center">
-
         <?php if (have_posts()) : ?>
-
              <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 
              <?php /* If this is a category archive */ if (is_category()) { ?>
-                <!--<h2>Archive for the &bdquo;<?php single_cat_title(); ?>&rdquo; Category</h2>-->
+                <!--<h1 i-o-section>Archive for the &bdquo;<?php single_cat_title(); ?>&rdquo; Category</h1>-->
 
             <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-                <h2>Posty otagowane jako &bdquo;<?php single_tag_title(); ?>&rdquo;</h2>
+                <h1 i-o-section>Posty otagowane jako &bdquo;<?php single_tag_title(); ?>&rdquo;</h1>
 
             <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-                <h2>Archive for <?php the_time('F jS, Y'); ?></h2>
+                <h1 i-o-section>Archiwum: <?php the_time('F jS, Y'); ?></h1>
 
             <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-                <h2>Archive for <?php the_time('F, Y'); ?></h2>
+                <h1 i-o-section>Archiwum: <?php the_time('F, Y'); ?></h1>
 
             <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-                <h2 class="pagetitle">Archive for <?php the_time('Y'); ?></h2>
+                <h1 i-o-section>Archiwum: <?php the_time('Y'); ?></h1>
 
             <?php /* If this is an author archive */ } elseif (is_author()) { ?>
-                <h2 class="pagetitle">Author Archive</h2>
+                <h1 i-o-section>Archiwum autora</h1>
 
             <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-                <h2 class="pagetitle">Blog Archives</h2>
+                <h1 i-o-section>Archiwum</h1>
 
             <?php } ?>
 
             <?php include (TEMPLATEPATH . '/partials/nav_pagination.php' ); ?>
 
             <?php while (have_posts()) : the_post(); ?>
+                <article i-o-section <?php post_class() ?>>
+                    <h4><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
 
-                <article <?php post_class() ?>>
-
-                    <h1><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-
-                    <div class="entry">
-                        <?php the_content(); ?>
+                    <div>
+                        <?php the_excerpt(); ?>
                     </div>
 
-                    <div class="postmetadata"><?php the_tags("Tagi: "," &middot; "," &nbsp; "); ?> <!-- Dodane <?php echo str_replace(array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"), array("stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia"), get_the_date()); ?> o <?php the_time() ?> --></div>
-
+                    <small><?php the_tags("Tagi: "," &middot; "," &nbsp; "); ?></small>
                 </article>
-
             <?php endwhile; ?>
 
             <?php include (TEMPLATEPATH . '/partials/nav_pagination.php' ); ?>
 
     <?php else : ?>
 
-        <h2>Brak elementów do wyświetlenia.</h2>
+        <h1 i-o-section>Brak elementów do wyświetlenia.</h1>
 
     <?php endif; ?>
 

@@ -6,7 +6,7 @@
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-                <h1>
+                <h1 i-o-section>
                     <a
                         href="<?php the_permalink() ?>"
                         title="<?php the_title(); ?>"
@@ -15,13 +15,13 @@
                     </a>
                 </h1>
 
-                <div class="entry">
+                <div i-o-section i-o-postContent>
                     <?php the_content(); ?>
                 </div>
 
-                <div class="postmetadata">
+                <small>
                     <?php the_tags("Tagi: "," &middot; "," &nbsp; "); ?>
-                </div>
+                </small>
             </article>
         <?php endwhile; ?>
         <?php else : ?>

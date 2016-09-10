@@ -14,8 +14,8 @@ summary organism
 
 [i-o-summary-title] {
     margin-bottom: 0.75rem;
-    line-height: calc(var(--leading-s) * 1.25);
-    font-size: 2rem;
+    line-height: var(--leading-s);
+    font-size: 1.75rem;
     font-weight: 400;
 }
 

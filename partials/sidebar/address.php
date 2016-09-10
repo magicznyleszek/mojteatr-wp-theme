@@ -1,5 +1,5 @@
 <section i-o-section>
-    <h2>Adres</h2>
+    <h4>Adres</h4>
 
     Gorczyczewskiego 2/1A<br>
     60-554 Poznań<br>

@@ -15,7 +15,7 @@ Template Name: Custom Index Aktorzy
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
 
     <div id="center">
-        <h1 i-o-section="main">Aktorzy</h1>
+        <!-- <h1 i-o-section="main">Aktorzy</h1> -->
 
         <?php while($mypod->fetch()) : ?>
             <?php

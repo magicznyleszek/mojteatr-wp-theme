@@ -41,6 +41,10 @@ button organism
 button colors
 ----------------------------------------------------------------------------- */
 
+[i-o-button~="fireBrick"] a {
+    color: inherit;
+}
+
 [i-o-button~="fireBrick"] {
     background-color: var(--a-c-fireBrick);
     color: var(--a-c-white);

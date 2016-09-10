@@ -45,9 +45,6 @@ a:active {
     color: var(--a-c-charcoal);
 }
 
-a:link {
-    -webkit-tap-highlight-color: var(--a-c-schoolBusYellow);
-}
 
 ins {
     background-color: var(--a-c-schoolBusYellow);

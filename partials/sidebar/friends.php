@@ -10,7 +10,7 @@
 ?>
 
 <div i-o-section>
-    <h2>Przyjaciele</h2>
+    <h4>Przyjaciele</h4>
     <?php
         if ($has_menu) {
             foreach ((array) $menu_items as $key => $menu_item) {

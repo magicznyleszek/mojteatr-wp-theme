@@ -1,5 +1,5 @@
 <section i-o-section>
-    <h2>Kontakt</h2>
+    <h4>Kontakt</h4>
 
     <div i-o-section>
         Informacje:<br>

@@ -23,9 +23,11 @@ Template Name: Custom Index Terminy
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
 
     <div id="center">
-        <h1 i-o-section="main">Aktualne terminy spektakli</h1>
+        <!-- <h1 i-o-section="main">Aktualne terminy spektakli</h1> -->
 
         <table i-o-termins>
+            <caption>Aktualne terminy spektakli</caption>
+
             <thead>
                 <tr>
                     <td i-o-termins-column="date">Data</td>

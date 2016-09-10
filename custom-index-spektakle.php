@@ -21,7 +21,7 @@ Template Name: Custom Index Spektakle
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
 
     <div id="center">
-        <h1 i-o-section="main">Spektakle</h1>
+        <!-- <h1 i-o-section="main">Spektakle</h1> -->
 
         <?php $prev_archiwalne = null; ?>
         <?php while($mypod->fetch()) : ?>
@@ -63,9 +63,9 @@ Template Name: Custom Index Spektakle
             <?php
                 // display subtitle of archiwalne group
                 if ($prev_archiwalne == null || $prev_archiwalne != 0 && $pod_archiwalne == 0) {
-                    echo "<h2 i-o-headerBordered i-o-section=\"main\">Aktualne</h2>";
+                    echo "<div i-o-section=\"main bordered\">Aktualne</div>";
                 } elseif ($prev_archiwalne == null || $prev_archiwalne != 1 && $pod_archiwalne == 1) {
-                    echo "<h2 i-o-headerBordered i-o-section=\"main\">Archiwalne</h2>";
+                    echo "<div i-o-section=\"main bordered\">Archiwalne</div>";
                 }
             ?>
 

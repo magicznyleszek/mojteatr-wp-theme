@@ -7,13 +7,11 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
         <article class="post" id="post-<?php the_ID(); ?>">
+            <h1 i-o-section><?php the_title(); ?></h1>
 
-            <h1><?php the_title(); ?></h1>
-
-            <div class="entry">
+            <div i-o-section i-o-postContent>
                 <?php the_content(); ?>
             </div>
-
         </article>
 
         <!-- <?php comments_template(); ?> -->

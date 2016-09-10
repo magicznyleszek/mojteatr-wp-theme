@@ -4,19 +4,13 @@ h1 {
     font-weight: 700;
 }
 
-#sidebar h1 {
-    color: var(--a-c-fireBrick);
-}
-
-h1 a,
-h1.entry-title {
+h1 a {
     display: block;
     color: var(--a-c-charcoal);
 }
 
 .sticky h1 {
-    line-height: 118.8%;
-    font-size: 1.188em;
+    font-size: 1.5rem;
 }
 
 .sticky h1 a {
@@ -31,16 +25,9 @@ h1.entry-title {
 }
 
 h2 {
-    text-align: center;
     line-height: calc(var(--leading-s) * 2);
     font-size: 1.5rem;
     font-style: italic;
-}
-
-#sidebar h2 {
-    line-height: inherit;
-    font-size: 1rem;
-    font-style: normal;
 }
 
 h3 {
