@@ -7,32 +7,6 @@
     list-style: circle;
 }
 
-.postmetadata {
-    padding: 1em 0.107em 0.618em;
-    color: var(--a-c-silver);
-    font-size: 0.734em;
-}
-
-.postmetadata:hover {
-    color: var(--a-c-charcoal);
-}
-
-.postmetadata a {
-    color: var(--a-c-silver);
-}
-
-.postmetadata:hover a {
-    color: var(--a-c-fireBrick);
-}
-
-.postmetadata:hover a:hover {
-    color: var(--a-c-persianRed);
-}
-
-.post + .post {
-    margin-top: 1.618em;
-}
-
 p + p {
     margin-top: 0.618em;
 }
