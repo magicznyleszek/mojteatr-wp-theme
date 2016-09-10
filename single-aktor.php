@@ -64,7 +64,7 @@
                         <?php
                             foreach($pod_spektakle as $pod_spektakl) {
                                 $spektakl_tytul = get_post_meta($pod_spektakl['ID'], 'tytul', true);
-                                $spektakl_url = $pod_aktor['guid'];
+                                $spektakl_url = $pod_spektakl['guid'];
                         ?>
                             <div>
                                 <a href="<?php echo $spektakl_url; ?>">
