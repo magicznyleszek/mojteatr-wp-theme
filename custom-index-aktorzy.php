@@ -61,31 +61,23 @@ Template Name: Custom Index Aktorzy
                     </a>
                 </div>
 
-                <table i-o-summary-meta><tbody>
-                    <!-- all spektakle list -->
+                <?php if(!empty($pod_spektakle) && is_array($pod_spektakle)): ?>
+                <!-- all spektakle list -->
+                <section i-o-section="main">
+                    <div i-o-summary-meta-label>Spektakle:</div>
                     <?php
-                        if(!empty($pod_spektakle) && is_array($pod_spektakle)):
-                            $all_spektakle_links = '';
-                            $is_first = true;
-                            foreach($pod_spektakle as $pod_spektakl) {
-                                $tytul = get_post_meta($pod_spektakl['ID'], 'tytul', true);
-                                $url = $pod_spektakl['guid'];
-
-                                if (!$is_first) {
-                                    $all_spektakle_links .= ', ';
-                                } else {
-                                    $is_first = false;
-                                }
-
-                                $all_spektakle_links .= '<a href="'.$url.'">'.$tytul.'</a>';
-                            }
+                        foreach($pod_spektakle as $pod_spektakl) {
+                            $spektakl_tytul = get_post_meta($pod_spektakl['ID'], 'tytul', true);
+                            $spektakl_url = $pod_spektakl['guid'];
                     ?>
-                    <tr>
-                        <th>Spektakle:</th>
-                        <td><?php echo $all_spektakle_links; ?></td>
-                    </tr>
-                    <?php endif; ?>
-                </tbody></table>
+                        <div>
+                            <a href="<?php echo $spektakl_url; ?>">
+                                <?php echo $spektakl_tytul; ?>
+                            </a>
+                        </div>
+                    <?php } ?>
+                </section>
+                <?php endif; ?>
             </article>
         <?php endwhile; ?>
     </div>

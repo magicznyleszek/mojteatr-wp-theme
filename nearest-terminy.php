@@ -1,11 +1,11 @@
 <?php
-    $NEAREST_TERMINY_ENABLED = false;
+    $NEAREST_TERMINY_ENABLED = true;
 
     // get data
     $mypod = pods('termin');
     $data_dzis = date('Y-m-d');
     $params = array(
-        'data-wystawienia DESC',
+        'orderby'=>'data-wystawienia ASC',
         'where'=> 'DATE(data-wystawienia.meta_value) >= "'.$data_dzis.'"',
         'limit'=> 2
     );
@@ -24,7 +24,7 @@
 ?>
     <section i-o-section="main bordered">
         <table i-o-termins>
-            <caption>Najbliższe terminy spektakli</caption>
+            <caption>Najbliższe terminy</caption>
 
             <thead>
                 <tr>

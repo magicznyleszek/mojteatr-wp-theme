@@ -822,8 +822,8 @@ summary organism
     margin-bottom: 0.75rem;
     line-height: 24px;
     line-height: 1.5rem;
-    font-size: 28px;
-    font-size: 1.75rem;
+    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 [i-o-summary] a:not(:hover) {
@@ -874,7 +874,7 @@ meta table part
 [i-o-summary-meta] {
     width: 100%;
 }
-[i-o-summary-meta] th {
+[i-o-summary-meta-label] {
     line-height: 24px;
     line-height: 1.5rem;
     white-space: nowrap;

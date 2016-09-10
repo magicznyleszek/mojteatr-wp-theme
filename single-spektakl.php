@@ -115,14 +115,14 @@
                 <table i-o-summary-meta><tbody>
                     <?php if($has_rezyser): ?>
                     <tr>
-                        <th>Reżyseria:</th>
+                        <th i-o-summary-meta-label>Reżyseria:</th>
                         <td><?php echo $pod_rezyser; ?></td>
                     </tr>
                     <?php endif; ?>
 
                     <?php if($has_scenariusz): ?>
                     <tr i-o-summary-meta>
-                        <th>Scenariusz:</th>
+                        <th i-o-summary-meta-label>Scenariusz:</th>
                         <td><?php echo $pod_scenariusz; ?></td>
                     </tr>
                     <?php endif; ?>
@@ -130,13 +130,13 @@
 
                     <?php if($pod_czas_trwania > 0): ?>
                     <tr>
-                        <th>Czas:</th>
+                        <th i-o-summary-meta-label>Czas:</th>
                         <td><?php echo $pod_czas_trwania.'&nbsp;minut'; ?></td>
                     </tr>
                     <?php endif; ?>
 
                     <tr>
-                        <th>Premiera:</th>
+                        <th i-o-summary-meta-label>Premiera:</th>
                         <td><?php echo $data_premiery_pretty; ?></td>
                     </tr>
 
@@ -161,7 +161,7 @@
                             }
                     ?>
                     <tr>
-                        <th>Występują:</th>
+                        <th i-o-summary-meta-label>Występują:</th>
                         <td><?php echo $all_aktorzy_links; ?></td>
                     </tr>
                     <?php endif; ?>
@@ -169,7 +169,7 @@
                     <?php if(!empty($pod_recenzje) && is_array($pod_recenzje)): ?>
                     <!-- reviews -->
                     <tr>
-                        <th>Recenzje:</th>
+                        <th i-o-summary-meta-label>Recenzje:</th>
 
                         <td>
                         <?php foreach($pod_recenzje as $pod_recenzja) { ?>

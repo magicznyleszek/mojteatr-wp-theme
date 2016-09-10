@@ -15,7 +15,7 @@ summary organism
 [i-o-summary-title] {
     margin-bottom: 0.75rem;
     line-height: var(--leading-s);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -75,7 +75,7 @@ meta table part
     width: 100%;
 }
 
-[i-o-summary-meta] th {
+[i-o-summary-meta-label] {
     line-height: var(--leading-s);
     white-space: nowrap;
     color: var(--a-c-nobel);

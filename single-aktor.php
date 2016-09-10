@@ -52,31 +52,23 @@
             </section>
             <?php endif; ?>
 
-            <!-- meta -->
+            <?php if(!empty($pod_spektakle) && is_array($pod_spektakle)): ?>
+            <!-- all spektakle list -->
             <section i-o-section="main">
-                <table i-o-summary-meta><tbody>
-                    <?php if(!empty($pod_spektakle) && is_array($pod_spektakle)): ?>
-                    <!-- all spektakle list -->
-                    <tr>
-                        <th>Spektakle:</th>
-
-                        <td>
-                        <?php
-                            foreach($pod_spektakle as $pod_spektakl) {
-                                $spektakl_tytul = get_post_meta($pod_spektakl['ID'], 'tytul', true);
-                                $spektakl_url = $pod_spektakl['guid'];
-                        ?>
-                            <div>
-                                <a href="<?php echo $spektakl_url; ?>">
-                                    <?php echo $spektakl_tytul; ?>
-                                </a>
-                            </div>
-                        <?php } ?>
-                        </td>
-                    </tr>
-                    <?php endif; ?>
-                </tbody></table>
+                <div i-o-summary-meta-label>Spektakle:</div>
+                <?php
+                    foreach($pod_spektakle as $pod_spektakl) {
+                        $spektakl_tytul = get_post_meta($pod_spektakl['ID'], 'tytul', true);
+                        $spektakl_url = $pod_spektakl['guid'];
+                ?>
+                    <div>
+                        <a href="<?php echo $spektakl_url; ?>">
+                            <?php echo $spektakl_tytul; ?>
+                        </a>
+                    </div>
+                <?php } ?>
             </section>
+            <?php endif; ?>
 
             <!-- full description -->
             <section i-o-section="main">

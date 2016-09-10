@@ -7,8 +7,10 @@ Template Name: Custom Index Spektakle
     // get data
     $mypod = pods('spektakl');
     $params = array(
-        'title ASC',
-        'orderby'=>'archiwalne.meta_value'
+        'orderby' => array(
+            'archiwalne.meta_value ASC',
+            'data-premiery DESC'
+        )
     );
     $mypod->find($params);
 
@@ -94,14 +96,14 @@ Template Name: Custom Index Spektakle
                 <table i-o-summary-meta><tbody>
                     <?php if($has_rezyser): ?>
                     <tr>
-                        <th>Reżyseria:</th>
+                        <th i-o-summary-meta-label>Reżyseria:</th>
                         <td><?php echo $pod_rezyser; ?></td>
                     </tr>
                     <?php endif; ?>
 
                     <?php if($has_scenariusz): ?>
                     <tr i-o-summary-meta>
-                        <th>Scenariusz:</th>
+                        <th i-o-summary-meta-label>Scenariusz:</th>
                         <td><?php echo $pod_scenariusz; ?></td>
                     </tr>
                     <?php endif; ?>
@@ -109,13 +111,13 @@ Template Name: Custom Index Spektakle
 
                     <?php if($pod_czas_trwania > 0): ?>
                     <tr>
-                        <th>Czas:</th>
+                        <th i-o-summary-meta-label>Czas:</th>
                         <td><?php echo $pod_czas_trwania.'&nbsp;minut'; ?></td>
                     </tr>
                     <?php endif; ?>
 
                     <tr>
-                        <th>Premiera:</th>
+                        <th i-o-summary-meta-label>Premiera:</th>
                         <td><?php echo $data_premiery_pretty; ?></td>
                     </tr>
 
@@ -140,7 +142,7 @@ Template Name: Custom Index Spektakle
                             }
                     ?>
                     <tr>
-                        <th>Występują:</th>
+                        <th i-o-summary-meta-label>Występują:</th>
                         <td><?php echo $all_aktorzy_links; ?></td>
                     </tr>
                     <?php endif; ?>

@@ -8,7 +8,7 @@ Template Name: Custom Index Terminy
     $mypod = pods('termin');
     $data_dzis = date('Y-m-d');
     $params = array(
-        'data-wystawienia DESC',
+        'orderby'=>'data-wystawienia ASC',
         'where'=> 'DATE(data-wystawienia.meta_value) >= "'.$data_dzis.'"'
     );
     $mypod->find($params);
@@ -26,7 +26,7 @@ Template Name: Custom Index Terminy
         <!-- <h1 i-o-section="main">Aktualne terminy spektakli</h1> -->
 
         <table i-o-termins>
-            <caption>Aktualne terminy spektakli</caption>
+            <caption>Repertuar</caption>
 
             <thead>
                 <tr>
