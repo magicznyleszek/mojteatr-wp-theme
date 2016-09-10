@@ -86,10 +86,10 @@
             <?php post_class() ?>
         >
             <?php if ($pod_archiwalne == 1): ?>
-                <small>archiwalny</small>
+                <div i-o-section>Archiwalny</div>
             <?php endif; ?>
 
-            <h1>
+            <h1 i-o-section="main">
                 <a
                     href="<?php echo $permalink; ?>"
                     title="<?php echo $pod_tytul; ?>"
@@ -100,79 +100,100 @@
 
             <!-- photo -->
             <?php if($has_zdjecie): ?>
-            <img
-                src="<?php echo $pod_zdjecie_large[0]; ?>"
-                title="<?php echo $pod_zdjecie['post_title']; ?>"
-                alt="<?php echo $pod_zdjecie['post_name']; ?>"
-            >
+            <section i-o-section>
+                <img
+                    i-o-picture
+                    src="<?php echo $pod_zdjecie_large[0]; ?>"
+                    title="<?php echo $pod_zdjecie['post_title']; ?>"
+                    alt="<?php echo $pod_zdjecie['post_name']; ?>"
+                >
+            </section>
             <?php endif; ?>
 
             <!-- meta -->
-            <ul>
-                <?php if($has_rezyser): ?>
-                    <li>
-                        <strong>Reżyser:</strong>
-                        <?php echo $pod_rezyser; ?>
-                    </li>
-                <?php endif; ?>
-                <?php if($has_scenariusz): ?>
-                    <li>
-                        <strong>Scenariusz:</strong>
-                        <?php echo $pod_scenariusz; ?>
-                    </li>
-                <?php endif; ?>
-                <li>
-                    <strong>Czas trwania:</strong>
-                    <?php echo $pod_czas_trwania; ?>
-                </li>
-                <li>
-                    <strong>Data premiery:</strong>
-                    <?php echo $data_premiery_pretty; ?>
-                </li>
-            </ul>
+            <section i-o-section="main">
+                <table i-o-summary-meta><tbody>
+                    <?php if($has_rezyser): ?>
+                    <tr>
+                        <th>Reżyseria:</th>
+                        <td><?php echo $pod_rezyser; ?></td>
+                    </tr>
+                    <?php endif; ?>
 
-            <!-- all actors -->
-            <?php if(!empty($pod_aktorzy) && is_array($pod_aktorzy)): ?>
-                <strong>Występują:</strong>
-                <ul>
-                <?php
-                    foreach($pod_aktorzy as $pod_aktor) {
-                        $imie = get_post_meta($pod_aktor['ID'], 'imie', true);
-                        $nazwisko = get_post_meta($pod_aktor['ID'], 'nazwisko', true);
-                ?>
-                    <li>
-                        <a href="<?php echo $pod_aktor['guid']; ?>">
-                            <?php echo $imie; ?>
-                            <?php echo $nazwisko; ?>
-                        </a>
-                    </li>
-                <?php } ?>
-                </ul>
-            <?php endif; ?>
+                    <?php if($has_scenariusz): ?>
+                    <tr i-o-summary-meta>
+                        <th>Scenariusz:</th>
+                        <td><?php echo $pod_scenariusz; ?></td>
+                    </tr>
+                    <?php endif; ?>
+
+
+                    <?php if($pod_czas_trwania > 0): ?>
+                    <tr>
+                        <th>Czas:</th>
+                        <td><?php echo $pod_czas_trwania.'&nbsp;minut'; ?></td>
+                    </tr>
+                    <?php endif; ?>
+
+                    <tr>
+                        <th>Premiera:</th>
+                        <td><?php echo $data_premiery_pretty; ?></td>
+                    </tr>
+
+                    <!-- all aktorzy list -->
+                    <?php
+                        if(!empty($pod_aktorzy) && is_array($pod_aktorzy)):
+                            $all_aktorzy_links = '';
+                            $is_first = true;
+                            foreach($pod_aktorzy as $pod_aktor) {
+                                $imie = get_post_meta($pod_aktor['ID'], 'imie', true);
+                                $nazwisko = get_post_meta($pod_aktor['ID'], 'nazwisko', true);
+                                $full_name = $imie.'&nbsp;'.$nazwisko;
+                                $url = $pod_aktor['guid'];
+
+                                if (!$is_first) {
+                                    $all_aktorzy_links .= ', ';
+                                } else {
+                                    $is_first = false;
+                                }
+
+                                $all_aktorzy_links .= '<a href="'.$url.'">'.$full_name.'</a>';
+                            }
+                    ?>
+                    <tr>
+                        <th>Występują:</th>
+                        <td><?php echo $all_aktorzy_links; ?></td>
+                    </tr>
+                    <?php endif; ?>
+
+                    <?php if(!empty($pod_recenzje) && is_array($pod_recenzje)): ?>
+                    <!-- reviews -->
+                    <tr>
+                        <th>Recenzje:</th>
+
+                        <td>
+                        <?php foreach($pod_recenzje as $pod_recenzja) { ?>
+                            <div>
+                                <a href="<?php echo $pod_recenzja->url; ?>">
+                                    <?php echo $pod_recenzja->title; ?>
+                                </a>
+                            </div>
+                        <?php } ?>
+                        </td>
+                    </tr>
+                    <?php endif; ?>
+                </tbody></table>
+            </section>
 
             <!-- full description -->
-            <?php echo $pod_opis; ?>
+            <section i-o-section="main">
+                <?php echo $pod_opis; ?>
+            </section>
 
-            <!-- reviews -->
-            <?php if(!empty($pod_recenzje) && is_array($pod_recenzje)): ?>
-                <h2>Recenzje:</h2>
-                <ul>
-                <?php
-                    foreach($pod_recenzje as $pod_recenzja) {
-                ?>
-                    <li>
-                        <a href="<?php echo $pod_recenzja->url; ?>">
-                            <?php echo $pod_recenzja->title; ?>
-                        </a>
-                    </li>
-                <?php } ?>
-                </ul>
-            <?php endif; ?>
-
-            <!-- gallery -->
             <?php if(!empty($pod_galeria) && is_array($pod_galeria)): ?>
-                <h2>Galeria:</h2>
-                <ul>
+            <!-- gallery -->
+            <section i-o-section>
+                <div class="gallery">
                 <?php
                     foreach($pod_galeria as $pod_galeria_zdjecie) {
                         $pod_galeria_zdjecie_large = wp_get_attachment_image_src(
@@ -184,24 +205,28 @@
                             'medium'
                         );
                 ?>
-                    <li>
-                        <a href="<?php echo $pod_galeria_zdjecie_large[0]; ?>">
-                            <img
-                                src="<?php echo $pod_galeria_zdjecie_med[0]; ?>"
-                                title="<?php echo $pod_galeria_zdjecie['post_title']; ?>"
-                                alt="<?php echo $pod_galeria_zdjecie['post_name']; ?>"
-                            >
-                        </a>
-                    </li>
+                    <a
+                        i-o-pictureLink
+                        href="<?php echo $pod_galeria_zdjecie_large[0]; ?>"
+                    >
+                        <img
+                            src="<?php echo $pod_galeria_zdjecie_med[0]; ?>"
+                            title="<?php echo $pod_galeria_zdjecie['post_title']; ?>"
+                            alt="<?php echo $pod_galeria_zdjecie['post_name']; ?>"
+                        >
+                    </a>
                 <?php } ?>
-                </ul>
+                </div>
+            </section>
             <?php endif; ?>
         </article>
-
     <?php endwhile; endif; ?>
-
 </div>
 
 <?php get_sidebar(); ?>
+
+<script type="text/javascript">
+    baguetteBox.run('.gallery');
+</script>
 
 <?php get_footer(); ?>

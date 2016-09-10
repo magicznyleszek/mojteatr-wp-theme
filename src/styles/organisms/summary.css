@@ -16,7 +16,7 @@ summary organism
     margin-bottom: 0.75rem;
     line-height: calc(var(--leading-s) * 1.25);
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 [i-o-summary] a:not(:hover) {

@@ -16,6 +16,8 @@
 @import "organisms/button.css";
 @import "organisms/headerBordered.css";
 @import "organisms/logo.css";
+@import "organisms/picture.css";
+@import "organisms/pictureLink.css";
 @import "organisms/section.css";
 @import "organisms/summary.css";
 @import "organisms/termins.css";

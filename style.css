@@ -388,7 +388,7 @@ h1 {
     line-height: 1.5rem;
     font-size: 32px;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 700;
 }
 #sidebar h1 {
     color: rgb(179, 36, 36);
@@ -502,27 +502,24 @@ textarea#comment {
 p + p {
     margin-top: 0.618em;
 }
-p {
-    text-align: left;
-}
-p iframe,
-p img {
+.entry p iframe,
+.entry p img {
     margin-top: 0.618em;
     border: 0.09em solid rgb(194, 194, 194);
     padding: 0.734em;
 }
-p iframe {
+.entry p iframe {
     width: 60%;
     min-width: 13.168em;
     max-width: 21.306em;
     height: 11.089em;
 }
-p img {
+.entry p img {
     width: 60%;
     min-width: 13.168em;
     max-width: 29.03em;
 }
-p .signature {
+.entry p .signature {
     display: block;
     padding-left: 1.188em;
     color: rgb(102, 102, 102);
@@ -755,10 +752,6 @@ headerBordered organism
     border-color: currentColor;
     font-weight: 400;
 }
-[i-o-headerBordered]:not(:last-child) {
-    margin-bottom: 48px;
-    margin-bottom: 3rem;
-}
 /* -----------------------------------------------------------------------------
 logo organism
 ----------------------------------------------------------------------------- */
@@ -773,6 +766,36 @@ logo organism
 }
 [i-o-logo]:active {
     opacity: 0.8;
+}
+/* -----------------------------------------------------------------------------
+picture organism
+----------------------------------------------------------------------------- */
+[i-o-picture] {
+    display: block;
+    border-radius: 0.25rem;
+}
+/* -----------------------------------------------------------------------------
+pictureLink organism
+----------------------------------------------------------------------------- */
+[i-o-pictureLink] {
+    display: block;
+}
+[i-o-pictureLink]:not(:last-child) {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}
+[i-o-pictureLink]:hover {
+    opacity: 0.9;
+    color: inherit;
+}
+[i-o-pictureLink]:active {
+    opacity: 0.8;
+    color: inherit;
+}
+[i-o-pictureLink] img {
+    display: block;
+    border-radius: 0.25rem;
+    overflow: hidden;
 }
 /* -----------------------------------------------------------------------------
 section organism
@@ -800,7 +823,7 @@ summary organism
     line-height: 1.875rem;
     font-size: 32px;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 [i-o-summary] a:not(:hover) {
     color: inherit;

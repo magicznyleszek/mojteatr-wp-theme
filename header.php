@@ -82,19 +82,15 @@
          - transparency is OK
          - see wikipedia for info on browser support: http://mky.be/favicon/ -->
 
-    <link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/_/img/apple-touch-icon.png">
-    <!-- The is the icon for iOS's Web Clip.
-         - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
-         - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
-         - Transparency is not recommended (iOS will put a black BG behind the icon) -->
-
     <!-- CSS: screen, mobile & print are all in the same file -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
     <link rel="stylesheet" href="http://mojteatr.pl/webfontkit-stylesheet.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/libs/baguetteBox.min.css">
 
     <!-- all our JS is at the bottom of the page, except for Modernizr. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/libs/baguetteBox.min.js"></script>
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 

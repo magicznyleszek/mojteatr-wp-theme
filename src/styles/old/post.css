@@ -37,31 +37,27 @@ p + p {
     margin-top: 0.618em;
 }
 
-p {
-    text-align: left;
-}
-
-p iframe,
-p img {
+.entry p iframe,
+.entry p img {
     margin-top: 0.618em;
     border: 0.09em solid var(--a-c-silver);
     padding: 0.734em;
 }
 
-p iframe {
+.entry p iframe {
     width: 60%;
     min-width: 13.168em;
     max-width: 21.306em;
     height: 11.089em;
 }
 
-p img {
+.entry p img {
     width: 60%;
     min-width: 13.168em;
     max-width: 29.03em;
 }
 
-p .signature {
+.entry p .signature {
     display: block;
     padding-left: 1.188em;
     color: var(--a-c-dimGray);

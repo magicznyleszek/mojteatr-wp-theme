@@ -1,0 +1,27 @@
+/* -----------------------------------------------------------------------------
+pictureLink organism
+----------------------------------------------------------------------------- */
+
+[i-o-pictureLink] {
+    display: block;
+}
+
+[i-o-pictureLink]:not(:last-child) {
+    margin-bottom: calc(var(--leading-s) * 1);
+}
+
+[i-o-pictureLink]:hover {
+    opacity: 0.9;
+    color: inherit;
+}
+
+[i-o-pictureLink]:active {
+    opacity: 0.8;
+    color: inherit;
+}
+
+[i-o-pictureLink] img {
+    display: block;
+    border-radius: var(--global-br);
+    overflow: hidden;
+}
