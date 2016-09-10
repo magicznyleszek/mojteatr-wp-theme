@@ -837,6 +837,7 @@ photo part
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 0.25rem;
     background-color: rgb(242, 242, 242);
     width: 150px;
     height: 150px;

@@ -18,7 +18,6 @@ Template Name: Custom Index Spektakle
         return strftime($date_format, strtotime($date_string));
     }
 ?>
-
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
 
     <div id="center">
@@ -120,6 +119,7 @@ Template Name: Custom Index Spektakle
                         <td><?php echo $data_premiery_pretty; ?></td>
                     </tr>
 
+                    <!-- all aktorzy list -->
                     <?php
                         if(!empty($pod_aktorzy) && is_array($pod_aktorzy)):
                             $all_aktorzy_links = '';

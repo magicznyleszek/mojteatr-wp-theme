@@ -32,6 +32,7 @@ photo part
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: var(--global-br);
     background-color: var(--a-c-whiteSmoke);
     width: var(--thumbnail-s);
     height: var(--thumbnail-s);
