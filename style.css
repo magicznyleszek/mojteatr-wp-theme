@@ -647,17 +647,20 @@ a:hover {
 a:active {
     color: rgb(230, 46, 46);
 }
-::-moz-selection,
 ::-moz-selection {
-    background: rgb(51, 51, 51);
+    background: rgb(194, 194, 194);
     text-shadow: none;
-    color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
 }
-::selection,
-::-moz-selection {
-    background: rgb(51, 51, 51);
+::selection {
+    background: rgb(194, 194, 194);
     text-shadow: none;
-    color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+}
+::-moz-selection {
+    background: rgb(194, 194, 194);
+    text-shadow: none;
+    color: rgb(51, 51, 51);
 }
 a:link {
     -webkit-tap-highlight-color: rgb(252, 215, 0);
@@ -744,59 +747,6 @@ button sizes
     width: 100%;
 }
 /* -----------------------------------------------------------------------------
-section organism
------------------------------------------------------------------------------ */
-[i-o-section]:not(:last-child) {
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem;
-}
-[i-o-section~="main"]:not(:last-child) {
-    margin-bottom: 48px;
-    margin-bottom: 3rem;
-}
-/* -----------------------------------------------------------------------------
-ticketsPlease organism
------------------------------------------------------------------------------ */
-[i-o-ticketsPlease] {
-    display: inline-block;
-    border-radius: 0.25rem;
-    background-color: currentColor;
-    padding: 16px;
-    padding: 1rem;
-    text-align: center;
-    color: rgb(179, 36, 36);
-}
-[i-o-ticketsPlease]:hover {
-    color: rgb(204, 41, 41);
-}
-[i-o-ticketsPlease]:active {
-    color: rgb(230, 46, 46);
-}
-[i-o-ticketsPlease-title] {
-    display: block;
-    margin-bottom: 8px;
-    margin-bottom: 0.5rem;
-    line-height: 1;
-    color: rgb(255, 255, 255);
-    font-size: 32px;
-    font-size: 2rem;
-}
-[i-o-ticketsPlease-action] {
-    display: inline-block;
-    border-radius: 0.25rem;
-    background-color: rgb(255, 255, 255);
-    padding: 2px 8px 4px;
-    padding: 0.125rem 0.5rem 0.25rem;
-    height: 20px;
-    height: 1.25rem;
-    text-transform: uppercase;
-    line-height: 22px;
-    line-height: 1.375rem;
-    font-size: 12px;
-    font-size: 0.75rem;
-    font-weight: 400;
-}
-/* -----------------------------------------------------------------------------
 headerBordered organism
 ----------------------------------------------------------------------------- */
 [i-o-headerBordered] {
@@ -806,6 +756,32 @@ headerBordered organism
     font-weight: 400;
 }
 [i-o-headerBordered]:not(:last-child) {
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
+}
+/* -----------------------------------------------------------------------------
+logo organism
+----------------------------------------------------------------------------- */
+[i-o-logo] {
+    display: block;
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+[i-o-logo]:hover {
+    opacity: 0.9;
+}
+[i-o-logo]:active {
+    opacity: 0.8;
+}
+/* -----------------------------------------------------------------------------
+section organism
+----------------------------------------------------------------------------- */
+[i-o-section]:not(:last-child) {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}
+[i-o-section~="main"]:not(:last-child) {
     margin-bottom: 48px;
     margin-bottom: 3rem;
 }
@@ -897,17 +873,85 @@ meta table part
     width: 100%;
 }
 /* -----------------------------------------------------------------------------
-logo organism
+termins organism
 ----------------------------------------------------------------------------- */
-[i-o-logo] {
+[i-o-termins] {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+[i-o-termins] td {
+    border-radius: 0.25rem;
+    padding: 4px 8px;
+    padding: 0.25rem 0.5rem;
+    vertical-align: top;
+    text-align: left;
+}
+[i-o-termins] thead td {
+    background-color: rgb(242, 242, 242);
+    line-height: 24px;
+    line-height: 1.5rem;
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+[i-o-termins] tbody tr:hover {
+    background-color: rgb(249, 249, 249);
+}
+[i-o-termins-column~="date"] {
+    white-space: nowrap;
+}
+[i-o-termins-column~="content"] {
+    /* make it take as much space as possible */
+    width: 100%;
+}
+[i-o-termins-comment] {
     display: block;
-    margin-bottom: 48px;
-    margin-bottom: 3rem;
+    color: rgb(153, 153, 153);
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+/* -----------------------------------------------------------------------------
+ticketsPlease organism
+----------------------------------------------------------------------------- */
+[i-o-ticketsPlease] {
+    display: inline-block;
+    border-radius: 0.25rem;
+    background-color: currentColor;
+    padding: 16px;
+    padding: 1rem;
     text-align: center;
+    color: rgb(179, 36, 36);
 }
-[i-o-logo]:hover {
-    opacity: 0.9;
+[i-o-ticketsPlease]:hover {
+    color: rgb(204, 41, 41);
 }
-[i-o-logo]:active {
-    opacity: 0.8;
+[i-o-ticketsPlease]:active {
+    color: rgb(230, 46, 46);
+}
+[i-o-ticketsPlease-title] {
+    display: block;
+    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    font-size: 2rem;
+}
+[i-o-ticketsPlease-action] {
+    display: inline-block;
+    border-radius: 0.25rem;
+    background-color: rgb(255, 255, 255);
+    padding: 2px 8px 4px;
+    padding: 0.125rem 0.5rem 0.25rem;
+    height: 20px;
+    height: 1.25rem;
+    text-transform: uppercase;
+    line-height: 22px;
+    line-height: 1.375rem;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 400;
 }

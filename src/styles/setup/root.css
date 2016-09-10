@@ -29,11 +29,16 @@ a:active {
     color: var(--a-c-alizarin);
 }
 
-::selection,
-::-moz-selection {
-    background: var(--a-c-charcoal);
+::selection {
+    background: var(--a-c-silver);
     text-shadow: none;
-    color: var(--a-c-white);
+    color: var(--a-c-charcoal);
+}
+
+::-moz-selection {
+    background: var(--a-c-silver);
+    text-shadow: none;
+    color: var(--a-c-charcoal);
 }
 
 a:link {

@@ -1,0 +1,44 @@
+/* -----------------------------------------------------------------------------
+termins organism
+----------------------------------------------------------------------------- */
+
+[i-o-termins] {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+
+[i-o-termins] td {
+    border-radius: var(--global-br);
+    padding: 0.25rem 0.5rem;
+    vertical-align: top;
+    text-align: left;
+}
+
+[i-o-termins] thead td {
+    background-color: var(--a-c-whiteSmoke);
+    line-height: var(--leading-s);
+    color: var(--a-c-dimGray);
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+[i-o-termins] tbody tr:hover {
+    background-color: color(var(--a-c-whiteSmoke) tint(50%));
+}
+
+[i-o-termins-column~="date"] {
+    white-space: nowrap;
+}
+
+[i-o-termins-column~="content"] {
+    /* make it take as much space as possible */
+    width: 100%;
+}
+
+[i-o-termins-comment] {
+    display: block;
+    color: var(--a-c-nobel);
+    font-size: 0.75rem;
+    font-style: italic;
+}

@@ -23,15 +23,16 @@ Template Name: Custom Index Terminy
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
 
     <div id="center">
-        <h1>Aktualne terminy spektakli</h1>
+        <h1 i-o-section="main">Aktualne terminy spektakli</h1>
 
-        <table>
+        <table i-o-termins>
             <thead>
                 <tr>
-                    <td>Data</td>
-                    <td>Spektakl</td>
+                    <td i-o-termins-column="date">Data</td>
+                    <td i-o-termins-column="content">Spektakl</td>
                 </tr>
             </thead>
+
             <tbody>
                 <?php while($mypod->fetch()) : ?>
                     <?php
@@ -49,15 +50,17 @@ Template Name: Custom Index Terminy
                         $spektakl_permalink = get_permalink($spektakl_pod_id);
                     ?>
                     <tr>
-                        <td>
+                        <td i-o-termins-column="date">
                             <?php echo $data_wystawienia_pretty; ?>
                         </td>
-                        <td>
+                        <td i-o-termins-column="content">
                             <a href="<?php echo $spektakl_permalink ?>">
                                 <?php echo $spektakl_tytul; ?>
                             </a>
                             <?php if ($pod_komentarz != ''): ?>
-                                <small><?php echo $pod_komentarz; ?></small>
+                                <span i-o-termins-comment>
+                                    <?php echo $pod_komentarz; ?>
+                                </span>
                             <?php endif; ?>
                         </td>
                     </tr>
