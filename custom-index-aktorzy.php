@@ -69,7 +69,7 @@ Template Name: Custom Index Aktorzy
                             $is_first = true;
                             foreach($pod_spektakle as $pod_spektakl) {
                                 $tytul = get_post_meta($pod_spektakl['ID'], 'tytul', true);
-                                $url = $pod_aktor['guid'];
+                                $url = $pod_spektakl['guid'];
 
                                 if (!$is_first) {
                                     $all_spektakle_links .= ', ';
