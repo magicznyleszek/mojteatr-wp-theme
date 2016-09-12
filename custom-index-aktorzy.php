@@ -9,7 +9,7 @@ Template Name: Custom Index Aktorzy
     $params = array(
         'orderby' => array(
             'wyrozniony.meta_value' => 'DESC',
-            'nazwisko' => 'ASC'
+            'nazwisko.meta_value' => 'ASC'
         )
     );
     $mypod->find($params);
