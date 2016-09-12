@@ -7,8 +7,10 @@ Template Name: Custom Index Aktorzy
     // get data
     $mypod = pods('aktor');
     $params = array(
-        'nazwisko ASC',
-        'orderby'=>array('wyrozniony.meta_value' => 'DESC', 'nazwisko' => 'ASC')
+        'orderby' => array(
+            'wyrozniony.meta_value' => 'DESC',
+            'nazwisko' => 'ASC'
+        )
     );
     $mypod->find($params);
 ?>
