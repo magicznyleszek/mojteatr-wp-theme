@@ -8,8 +8,8 @@ Template Name: Custom Index Aktorzy
     $mypod = pods('aktor');
     $params = array(
         'orderby' => array(
-            'wyrozniony.meta_value' => 'DESC',
-            'nazwisko.meta_value' => 'ASC'
+            'wyrozniony DESC',
+            'nazwisko ASC'
         )
     );
     $mypod->find($params);
@@ -22,17 +22,18 @@ Template Name: Custom Index Aktorzy
         <?php while($mypod->fetch()) : ?>
             <?php
                 // set variables
-                $permalink= $mypod->field('permalink');
+                $permalink = $mypod->field('permalink');
+                $wyrozniony = $mypod->field('wyrozniony');
 
-                $pod_imie= $mypod->field('imie');
-                $pod_nazwisko= $mypod->field('nazwisko');
+                $pod_imie = $mypod->field('imie');
+                $pod_nazwisko = $mypod->field('nazwisko');
                 $full_name = $pod_imie . ' ' . $pod_nazwisko;
 
                 $full_name_abbr = $pod_imie[0].$pod_nazwisko[0];
 
-                $pod_spektakle= $mypod->field('spektakle');
+                $pod_spektakle = $mypod->field('spektakle');
 
-                $pod_zdjecie= $mypod->field('zdjecie');
+                $pod_zdjecie = $mypod->field('zdjecie');
                 $pod_zdjecie_thumb = wp_get_attachment_image_src(
                     $pod_zdjecie['ID'],
                     'thumbnail'
@@ -40,6 +41,7 @@ Template Name: Custom Index Aktorzy
                 $has_zdjecie = $pod_zdjecie_thumb[0] != '';
             ?>
             <article i-o-summary i-o-section="main">
+                <!-- Aktor wyrozniony: <?php echo $wyrozniony; ?> -->
                 <!-- photo -->
                 <a href="<?php echo $permalink; ?>" i-o-summary-photo>
                     <?php if($has_zdjecie): ?>
