@@ -6,10 +6,10 @@ Template Name: Custom Index Terminy
 
     // get data
     $mypod = pods('termin');
-    $data_dzis = date('Y-m-d');
+    $data_dzis = date('Y-m-d H:i:s');
     $params = array(
-        'orderby'=>'data-wystawienia ASC',
-        'where'=> 'DATE(data-wystawienia.meta_value) >= "'.$data_dzis.'"'
+        'orderby' => 'data-wystawienia ASC',
+        'limit' => -1
     );
     $mypod->find($params);
 
@@ -50,7 +50,11 @@ Template Name: Custom Index Terminy
                         $spektakl_pod = pods('spektakl', $spektakl_pod_id);
                         $spektakl_tytul = $spektakl_pod->display('tytul');
                         $spektakl_permalink = get_permalink($spektakl_pod_id);
+
+                        $timestamp_termin = strtotime($pod_data_wystawienia);
+                        $timestamp_dzis = strtotime($data_dzis);
                     ?>
+                    <?php if ($timestamp_termin >= $timestamp_dzis): ?>
                     <tr>
                         <td i-o-termins-column="date">
                             <?php echo $data_wystawienia_pretty; ?>
@@ -66,6 +70,7 @@ Template Name: Custom Index Terminy
                             <?php endif; ?>
                         </td>
                     </tr>
+                    <?php endif; ?>
                 <?php endwhile; ?>
             </tbody>
         </table>
