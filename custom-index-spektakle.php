@@ -10,7 +10,8 @@ Template Name: Custom Index Spektakle
         'orderby' => array(
             'archiwalne.meta_value ASC',
             'data-premiery DESC'
-        )
+        ),
+        'limit' => -1
     );
     $mypod->find($params);
 

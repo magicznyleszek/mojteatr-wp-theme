@@ -10,7 +10,8 @@ Template Name: Custom Index Aktorzy
         'orderby' => array(
             'wyrozniony DESC',
             'nazwisko ASC'
-        )
+        ),
+        'limit' => -1
     );
     $mypod->find($params);
 ?>
