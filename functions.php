@@ -40,18 +40,28 @@
         $termin_slug = 'termin';
         $spektakl_slug = 'spektakl';
         $data_wystawienia_field_name = 'pods_meta_data-wystawienia';
+        $nie_spektakl_tytul_field_name = 'pods_meta_nie_spektakl_tytul';
         $spektakl_field_name = 'pods_meta_spektakl';
         $tytul_field_name = 'tytul';
 
         if ($data['post_type'] == $termin_slug) {
             // find spektakl data and it's tytul value
             $spektakl_pod_id = $postarr[$spektakl_field_name];
-            $spektakl_pod = pods($spektakl_slug, $spektakl_pod_id);
-            $spektakl_tytul = $spektakl_pod->display($tytul_field_name);
 
-            $data_wystawienia = $postarr[$data_wystawienia_field_name];
+            // if there is no spektakl id, then its not standard termin
+            if ($spektakl_pod_id == '') {
+                $data_wystawienia = $postarr[$data_wystawienia_field_name];
+                $nie_spektakl_tytul = $postarr[$nie_spektakl_tytul_field_name];
 
-            $data['post_title'] = $spektakl_tytul.' @ '.$data_wystawienia;
+                $data['post_title'] = $nie_spektakl_tytul.' @ '.$data_wystawienia;
+            } else {
+                $spektakl_pod = pods($spektakl_slug, $spektakl_pod_id);
+                $spektakl_tytul = $spektakl_pod->display($tytul_field_name);
+
+                $data_wystawienia = $postarr[$data_wystawienia_field_name];
+
+                $data['post_title'] = $spektakl_tytul.' @ '.$data_wystawienia;
+            }
         }
         return $data;
     }

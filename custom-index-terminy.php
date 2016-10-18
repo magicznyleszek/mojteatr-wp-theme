@@ -46,10 +46,17 @@ Template Name: Custom Index Terminy
 
                         // find spektakl data and it's tytul value
                         $pod_spektakl= $mypod->field('spektakl');
-                        $spektakl_pod_id = $pod_spektakl['pod_item_id'];
-                        $spektakl_pod = pods('spektakl', $spektakl_pod_id);
-                        $spektakl_tytul = $spektakl_pod->display('tytul');
-                        $spektakl_permalink = get_permalink($spektakl_pod_id);
+
+                        // check if its a standard spektakl
+                        if ($pod_spektakl) {
+                            $spektakl_pod_id = $pod_spektakl['pod_item_id'];
+                            $spektakl_pod = pods('spektakl', $spektakl_pod_id);
+                            $termin_title = $spektakl_pod->display('tytul');
+                            $termin_url = get_permalink($spektakl_pod_id);
+                        } else {
+                            $termin_title = $mypod->field('nie_spektakl_tytul');
+                            $termin_url = $mypod->field('nie_spektakl_url');
+                        }
 
                         $timestamp_termin = strtotime($pod_data_wystawienia);
                         $timestamp_dzis = strtotime($data_dzis);
@@ -60,8 +67,8 @@ Template Name: Custom Index Terminy
                             <?php echo $data_wystawienia_pretty; ?>
                         </td>
                         <td i-o-termins-column="content">
-                            <a href="<?php echo $spektakl_permalink ?>">
-                                <?php echo $spektakl_tytul; ?>
+                            <a href="<?php echo $termin_url ?>">
+                                <?php echo $termin_title; ?>
                             </a>
                             <?php if ($pod_komentarz != ''): ?>
                                 <span i-o-termins-comment>
