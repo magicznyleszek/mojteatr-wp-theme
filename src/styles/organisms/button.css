@@ -75,3 +75,24 @@ button sizes
     display: block;
     width: 100%;
 }
+
+/* -----------------------------------------------------------------------------
+tooltip
+----------------------------------------------------------------------------- */
+
+[i-o-button] {
+    position: relative;
+}
+
+[i-o-button-tooltip] {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 0.5rem;
+    background: var(--a-c-whiteSmoke);
+}
+
+[i-o-button]:href [i-o-button-tooltip] {
+    display: block;
+}

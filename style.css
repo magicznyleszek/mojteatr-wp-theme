@@ -713,6 +713,24 @@ button sizes
     width: 100%;
 }
 /* -----------------------------------------------------------------------------
+tooltip
+----------------------------------------------------------------------------- */
+[i-o-button] {
+    position: relative;
+}
+[i-o-button-tooltip] {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 8px;
+    padding: 0.5rem;
+    background: rgb(242, 242, 242);
+}
+[i-o-button]:href [i-o-button-tooltip] {
+    display: block;
+}
+/* -----------------------------------------------------------------------------
 logo organism
 ----------------------------------------------------------------------------- */
 [i-o-logo] {
