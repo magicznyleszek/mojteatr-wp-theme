@@ -654,7 +654,6 @@ button organism
     height: 20px;
     height: 1.25rem;
     box-sizing: border-box;
-    overflow: hidden;
     vertical-align: top;
     text-align: center;
     text-decoration: none;
@@ -719,16 +718,25 @@ tooltip
     position: relative;
 }
 [i-o-button-tooltip] {
-    display: none;
+    pointer-events: none;
+    display: block;
     position: absolute;
     top: 100%;
     right: 0;
+    margin-top: 1px;
+    margin-top: 0.0625rem;
+    border-radius: 0.25rem;
     padding: 8px;
     padding: 0.5rem;
-    background: rgb(242, 242, 242);
+    width: 160px;
+    width: 10rem;
+    background: rgb(102, 102, 102);
+    color: rgb(255, 255, 255);
+    white-space: normal;
+    white-space: initial;
 }
-[i-o-button]:href [i-o-button-tooltip] {
-    display: block;
+[i-o-button]:not(:hover) [i-o-button-tooltip] {
+    display: none;
 }
 /* -----------------------------------------------------------------------------
 logo organism

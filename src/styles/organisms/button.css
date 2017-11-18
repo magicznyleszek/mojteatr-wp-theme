@@ -13,7 +13,6 @@ button organism
     padding: 0.125rem 0.5rem 0.25rem;
     height: calc(var(--leading-s) - 0.25rem);
     box-sizing: border-box;
-    overflow: hidden;
     vertical-align: top;
     text-align: center;
     text-decoration: none;
@@ -85,14 +84,20 @@ tooltip
 }
 
 [i-o-button-tooltip] {
-    display: none;
+    pointer-events: none;
+    display: block;
     position: absolute;
     top: 100%;
     right: 0;
+    margin-top: 0.0625rem;
+    border-radius: var(--global-br);
     padding: 0.5rem;
-    background: var(--a-c-whiteSmoke);
+    width: 10rem;
+    background: var(--a-c-dimGray);
+    color: var(--a-c-white);
+    white-space: initial;
 }
 
-[i-o-button]:href [i-o-button-tooltip] {
-    display: block;
+[i-o-button]:not(:hover) [i-o-button-tooltip] {
+    display: none;
 }
