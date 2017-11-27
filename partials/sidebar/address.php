@@ -9,16 +9,8 @@
         target="_blank"
         title="Zobacz Teatr na mapie"
     >
-        MAPA: Teatr
+        MAPA
     </a>
 
-    <a
-        i-o-button
-        href="https://goo.gl/maps/nMeC4mF9Xsn"
-        target="_blank"
-        title="Zobacz parking na mapie"
-    >
-        MAPA: Parking
-        <span i-o-button-tooltip>Ponieważ przy ul. Gorczyczewskiego jest mało miejsc parkingowych, nasi widzowie często korzystają z płatnego parkingu przy Centrum Stomatologii (wjazd od ul. Rokietnickiej)</span>
-    </a>
+    <a i-o-button href="<?php echo get_page_link(5427); ?>">Parking</a>
 </section>
