@@ -31,7 +31,7 @@ Template Name: Custom Index Terminy
             <thead>
                 <tr>
                     <td i-o-termins-column="date">Data</td>
-                    <td i-o-termins-column="content">Spektakl</td>
+                    <td i-o-termins-column="content">Wydarzenie</td>
                 </tr>
             </thead>
 
