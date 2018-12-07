@@ -76,6 +76,7 @@
 
     <!-- all our JS is at the bottom of the page, except for Modernizr. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://ewejsciowki.pl/embedded_static/embedded.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/libs/baguetteBox.min.js"></script>
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

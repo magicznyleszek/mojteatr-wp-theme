@@ -1,7 +1,7 @@
 <section i-o-section>
     <a
         i-o-ticketsPlease
-        href="https://mojteatr.bilety24.pl/index/index"
+        href="https://ewejsciowki.pl/embedded/repertuar/52"
         target="_blank"
         title="Kup online"
     >
