@@ -3,8 +3,8 @@
 
     <div i-o-section>
         Informacje:<br>
-        Joanna Nawrocka<br>
-        +48 604 111 755<br>
+        Hanna Kostołowska<br>
+        +48 667 341 705<br>
         <a href="mailto:biuro@mojteatr.pl">biuro@mojteatr.pl</a>
     </div>
 
