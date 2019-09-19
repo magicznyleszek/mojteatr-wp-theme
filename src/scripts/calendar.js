@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
 
                 <div i-o-calendar-controls class="clndr-controls">
                     <div i-o-calendar-control="prev" class="clndr-previous-button">&larr;</div>
-                    <div i-o-calendar-month class="month"><%= month %></div>
+                    <div i-o-calendar-month class="month"><%= month %> <small><%= year %></small></div>
                     <div i-o-calendar-control="next" class="clndr-next-button">&rarr;</div>
                 </div>
 

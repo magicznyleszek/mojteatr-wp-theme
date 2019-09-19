@@ -96,6 +96,10 @@ calendar organism
     font-weight: 700;
 }
 
+[i-o-calendar-month] small {
+    font-weight: 400;
+}
+
 [i-o-calendar-grid] {
     display: grid;
     grid-gap: 1px;

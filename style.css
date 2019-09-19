@@ -825,6 +825,9 @@ calendar organism
 [i-o-calendar-month] {
     font-weight: 700;
 }
+[i-o-calendar-month] small {
+    font-weight: 400;
+}
 [i-o-calendar-grid] {
     display: -ms-grid;
     display: grid;
