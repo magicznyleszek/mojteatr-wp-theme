@@ -43,21 +43,23 @@ window.addEventListener('load', () => {
                 if (target.events.length === 0) {
                     return;
                 }
-                myCalendar.setExtras({
-                    selectedEvents: target.events,
-                    calendarModifiers: 'isPopupVisible'
-                });
+
+                let newExtras = myCalendar.options.extras;
+                newExtras.selectedEvents = target.events;
+                newExtras.calendarModifiers = 'isPopupVisible';
+                myCalendar.setExtras(newExtras);
+
                 $('#terminy-clndr').find('#terminy-clndr-close').click(() => {
-                    myCalendar.setExtras({
-                        selectedEvents: [],
-                        calendarModifiers: ''
-                    });
+                    let newExtras = myCalendar.options.extras;
+                    newExtras.selectedEvents = [];
+                    newExtras.calendarModifiers = '';
+                    myCalendar.setExtras(newExtras);
                 });
             },
             onMonthChange: (momentObj) => {
-                myCalendar.setExtras({
-                    isTodayVisible: momentObj.isSame(moment.now(), 'month')
-                });
+                let newExtras = myCalendar.options.extras;
+                newExtras.isTodayVisible = momentObj.isSame(moment.now(), 'month')
+                myCalendar.setExtras(newExtras);
             }
         },
         extras: {
