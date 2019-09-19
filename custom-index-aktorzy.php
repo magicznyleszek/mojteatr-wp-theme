@@ -68,6 +68,7 @@ Template Name: Custom Index Aktorzy
                     </a>
                 </div>
 
+                <!-- funkcja -->
                 <?php if($funkcja != ''): ?>
                 <div i-o-summary-subtitle>
                     <?php echo $funkcja; ?>
