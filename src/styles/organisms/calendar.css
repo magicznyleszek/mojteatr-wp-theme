@@ -6,6 +6,21 @@ calendar organism
     position: relative;
 }
 
+[i-o-calendar~="isPopupVisible"] [i-o-calendar-popup] {
+    visibility: visible;
+    opacity: 1;
+}
+
+[i-o-calendar~="isPopupVisible"] [i-o-calendar-controls],
+[i-o-calendar~="isPopupVisible"] [i-o-calendar-grid] {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* -----------------------------------------------------------------------------
+popup with events part
+----------------------------------------------------------------------------- */
+
 [i-o-calendar-popup] {
     position: absolute;
     z-index: 1;
@@ -18,17 +33,6 @@ calendar organism
     visibility: hidden;
     opacity: 0;
     background-color: var(--a-c-white);
-}
-
-[i-o-calendar~="isPopupVisible"] [i-o-calendar-popup] {
-    visibility: visible;
-    opacity: 1;
-}
-
-[i-o-calendar~="isPopupVisible"] [i-o-calendar-controls],
-[i-o-calendar~="isPopupVisible"] [i-o-calendar-grid] {
-    visibility: hidden;
-    opacity: 0;
 }
 
 [i-o-calendar-event] {
@@ -50,7 +54,7 @@ calendar organism
     color: var(--a-c-white);
 }
 
-[i-o-calendar-eventdate] {}
+/* [i-o-calendar-eventdate] {} */
 
 [i-o-calendar-eventtitle] {
     display: block;
@@ -60,6 +64,10 @@ calendar organism
 [i-o-calendar-eventcomment] {
     font-style: italic;
 }
+
+/* -----------------------------------------------------------------------------
+controls (header) part
+----------------------------------------------------------------------------- */
 
 [i-o-calendar-controls] {
     display: flex;
@@ -100,6 +108,24 @@ calendar organism
     font-weight: 400;
 }
 
+[i-o-calendar-todaybutton] {
+    margin-left: calc(var(--leading-s) * 0.5);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+[i-o-calendar-todaybutton]:hover {
+    opacity: 0.8;
+}
+
+[i-o-calendar-todaybutton]:active {
+    opacity: 0.6;
+}
+
+/* -----------------------------------------------------------------------------
+grid (days) part
+----------------------------------------------------------------------------- */
+
 [i-o-calendar-grid] {
     display: grid;
     grid-gap: 1px;
@@ -123,7 +149,7 @@ calendar organism
 }
 
 [i-o-calendar-cell].day.today {
-    box-shadow: 0 0 0 1px currentColor inset;
+    box-shadow: 0 0 0 1px currentColor;
 }
 
 [i-o-calendar-cell].day.event {

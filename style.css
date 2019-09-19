@@ -744,6 +744,18 @@ calendar organism
 [i-o-calendar] {
     position: relative;
 }
+[i-o-calendar~="isPopupVisible"] [i-o-calendar-popup] {
+    visibility: visible;
+    opacity: 1;
+}
+[i-o-calendar~="isPopupVisible"] [i-o-calendar-controls],
+[i-o-calendar~="isPopupVisible"] [i-o-calendar-grid] {
+    visibility: hidden;
+    opacity: 0;
+}
+/* -----------------------------------------------------------------------------
+popup with events part
+----------------------------------------------------------------------------- */
 [i-o-calendar-popup] {
     position: absolute;
     z-index: 1;
@@ -756,15 +768,6 @@ calendar organism
     visibility: hidden;
     opacity: 0;
     background-color: rgb(255, 255, 255);
-}
-[i-o-calendar~="isPopupVisible"] [i-o-calendar-popup] {
-    visibility: visible;
-    opacity: 1;
-}
-[i-o-calendar~="isPopupVisible"] [i-o-calendar-controls],
-[i-o-calendar~="isPopupVisible"] [i-o-calendar-grid] {
-    visibility: hidden;
-    opacity: 0;
 }
 [i-o-calendar-event] {
     display: block;
@@ -783,7 +786,7 @@ calendar organism
     background-color: rgb(204, 41, 41);
     color: rgb(255, 255, 255);
 }
-[i-o-calendar-eventdate] {}
+/* [i-o-calendar-eventdate] {} */
 [i-o-calendar-eventtitle] {
     display: block;
     font-weight: 700;
@@ -791,6 +794,9 @@ calendar organism
 [i-o-calendar-eventcomment] {
     font-style: italic;
 }
+/* -----------------------------------------------------------------------------
+controls (header) part
+----------------------------------------------------------------------------- */
 [i-o-calendar-controls] {
     display: -ms-flexbox;
     display: flex;
@@ -828,6 +834,21 @@ calendar organism
 [i-o-calendar-month] small {
     font-weight: 400;
 }
+[i-o-calendar-todaybutton] {
+    margin-left: 12px;
+    margin-left: 0.75rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+[i-o-calendar-todaybutton]:hover {
+    opacity: 0.8;
+}
+[i-o-calendar-todaybutton]:active {
+    opacity: 0.6;
+}
+/* -----------------------------------------------------------------------------
+grid (days) part
+----------------------------------------------------------------------------- */
 [i-o-calendar-grid] {
     display: -ms-grid;
     display: grid;
@@ -849,7 +870,7 @@ calendar organism
     opacity: 0.5;
 }
 [i-o-calendar-cell].day.today {
-    box-shadow: 0 0 0 1px currentColor inset;
+    box-shadow: 0 0 0 1px currentColor;
 }
 [i-o-calendar-cell].day.event {
     cursor: pointer;

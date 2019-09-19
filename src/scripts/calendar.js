@@ -18,7 +18,13 @@ window.addEventListener('load', () => {
 
                 <div i-o-calendar-controls class="clndr-controls">
                     <div i-o-calendar-control="prev" class="clndr-previous-button">&larr;</div>
-                    <div i-o-calendar-month class="month"><%= month %> <small><%= year %></small></div>
+                    <div i-o-calendar-month>
+                        <%= month %>
+                        <small><%= year %></small>
+                        <% if (!extras.isTodayVisible) { %>
+                            <small i-o-calendar-todaybutton class="clndr-today-button">dzisiaj</small>
+                        <% } %>
+                    </div>
                     <div i-o-calendar-control="next" class="clndr-next-button">&rarr;</div>
                 </div>
 
@@ -37,7 +43,6 @@ window.addEventListener('load', () => {
                 if (target.events.length === 0) {
                     return;
                 }
-                console.debug('click', target, myCalendar);
                 myCalendar.setExtras({
                     selectedEvents: target.events,
                     calendarModifiers: 'isPopupVisible'
@@ -48,11 +53,17 @@ window.addEventListener('load', () => {
                         calendarModifiers: ''
                     });
                 });
+            },
+            onMonthChange: (momentObj) => {
+                myCalendar.setExtras({
+                    isTodayVisible: momentObj.isSame(moment.now(), 'month')
+                });
             }
         },
         extras: {
             selectedEvents: [],
-            calendarModifiers: ''
+            calendarModifiers: '',
+            isTodayVisible: true
         }
     });
 });
