@@ -34,6 +34,8 @@ Template Name: Custom Index Aktorzy
 
                 $pod_spektakle = $mypod->field('spektakle');
 
+                $funkcja = $mypod->field('funkcja');
+
                 $pod_zdjecie = $mypod->field('zdjecie');
                 $pod_zdjecie_thumb = wp_get_attachment_image_src(
                     $pod_zdjecie['ID'],
@@ -65,6 +67,12 @@ Template Name: Custom Index Aktorzy
                         <?php echo $full_name; ?>
                     </a>
                 </div>
+
+                <?php if($funkcja != ''): ?>
+                <div i-o-summary-subtitle>
+                    <?php echo $funkcja; ?>
+                </div>
+                <?php endif; ?>
 
                 <?php if(!empty($pod_spektakle) && is_array($pod_spektakle)): ?>
                 <!-- all spektakle list -->

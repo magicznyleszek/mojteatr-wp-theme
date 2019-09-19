@@ -19,6 +19,10 @@ summary organism
     font-weight: 400;
 }
 
+[i-o-summary-subtitle] {
+    margin-bottom: 0.75rem;
+}
+
 [i-o-summary] a:not(:hover) {
     color: inherit;
 }
