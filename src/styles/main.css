@@ -14,6 +14,7 @@
 @import "atoms.css";
 @import "setup/root.css";
 @import "organisms/button.css";
+@import "organisms/calendar.css";
 @import "organisms/logo.css";
 @import "organisms/picture.css";
 @import "organisms/pictureLink.css";

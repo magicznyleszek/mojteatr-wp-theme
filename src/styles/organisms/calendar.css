@@ -1,0 +1,136 @@
+/* -----------------------------------------------------------------------------
+calendar organism
+----------------------------------------------------------------------------- */
+
+[i-o-calendar] {
+    position: relative;
+}
+
+[i-o-calendar-popup] {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    border-radius: var(--global-br);
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--a-c-white);
+}
+
+[i-o-calendar~="isPopupVisible"] [i-o-calendar-popup] {
+    visibility: visible;
+    opacity: 1;
+}
+
+[i-o-calendar~="isPopupVisible"] [i-o-calendar-controls],
+[i-o-calendar~="isPopupVisible"] [i-o-calendar-grid] {
+    visibility: hidden;
+    opacity: 0;
+}
+
+[i-o-calendar-event] {
+    display: block;
+    margin: 1px 0;
+    border-radius: var(--global-br);
+    padding: calc(var(--leading-s) * 0.5);
+    background-color: var(--a-c-whiteSmoke);
+    color: var(--a-c-charcoal);
+}
+
+[i-o-calendar-event]:hover {
+    background-color: var(--a-c-fireBrick);
+    color: var(--a-c-white);
+}
+
+[i-o-calendar-event]:active {
+    background-color: var(--a-c-persianRed);
+    color: var(--a-c-white);
+}
+
+[i-o-calendar-eventdate] {}
+
+[i-o-calendar-eventtitle] {
+    display: block;
+    font-weight: 700;
+}
+
+[i-o-calendar-eventcomment] {
+    font-style: italic;
+}
+
+[i-o-calendar-controls] {
+    display: flex;
+    justify-content: space-between;
+    border-radius: var(--global-br);
+    background-color: var(--a-c-fireBrick);
+    color: var(--a-c-white);
+}
+
+[i-o-calendar-controls] [i-o-calendar-control],
+[i-o-calendar-controls] [i-o-calendar-month] {
+    padding-top: calc(var(--leading-s) * 0.5);
+    padding-bottom: calc(var(--leading-s) * 0.5);
+}
+
+[i-o-calendar-control] {
+    display: inline-block;
+    border-radius: var(--global-br);
+    padding: 0 var(--leading-s);
+    cursor: pointer;
+    background-color: var(--a-c-fireBrick);
+    color: var(--a-c-white);
+}
+
+[i-o-calendar-control]:hover {
+    background-color: var(--a-c-persianRed);
+}
+
+[i-o-calendar-control]:active {
+    background-color: var(--a-c-alizarin);
+}
+
+[i-o-calendar-month] {
+    font-weight: 700;
+}
+
+[i-o-calendar-grid] {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 1px;
+}
+
+[i-o-calendar-cell] {
+    border-radius: var(--global-br);
+    background-color: var(--a-c-whiteSmoke);
+    text-align: center;
+}
+
+[i-o-calendar-cell~="header"] {
+    background-color: var(--a-c-silver);
+}
+
+[i-o-calendar-cell].day.adjacent-month {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+[i-o-calendar-cell].day.today {
+    box-shadow: 0 0 0 1px currentColor inset;
+}
+
+[i-o-calendar-cell].day.event {
+    cursor: pointer;
+    color: var(--a-c-fireBrick);
+}
+
+[i-o-calendar-cell].day.event:hover {
+    color: var(--a-c-persianRed);
+}
+
+[i-o-calendar-cell].day.event:active {
+    color: var(--a-c-alizarin);
+}

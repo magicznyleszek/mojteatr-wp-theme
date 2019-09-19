@@ -2,7 +2,7 @@
     <?php include(TEMPLATEPATH . '/menu.php' ); ?>
 
     <div id="center">
-        <?php include(TEMPLATEPATH . '/nearest-terminy.php' ); ?>
+        <?php include(TEMPLATEPATH . '/partials/nearest-terminy.php' ); ?>
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article i-o-section="main" <?php post_class() ?> id="post-<?php the_ID(); ?>">

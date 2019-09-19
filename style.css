@@ -433,8 +433,7 @@ input[type=text]:focus,
 textarea#comment:hover,
 textarea#comment:focus {
     border-color: rgb(102, 102, 102);
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 input[type=text],
 textarea#comment {
@@ -452,14 +451,12 @@ textarea#comment {
 .button:hover,
 #submit:hover {
     background: rgb(179, 36, 36);
-    -webkit-transition-duration: 0.075s;
-            transition-duration: 0.075s;
+    transition-duration: 0.075s;
 }
 .button:hover,
 #submit:hover {
     color: rgb(255, 255, 255);
-    -webkit-transition-duration: 0.15s;
-            transition-duration: 0.15s;
+    transition-duration: 0.15s;
 }
 .entry {
     padding: 1em 0.09em 0;
@@ -742,6 +739,126 @@ tooltip
     display: none;
 }
 /* -----------------------------------------------------------------------------
+calendar organism
+----------------------------------------------------------------------------- */
+[i-o-calendar] {
+    position: relative;
+}
+[i-o-calendar-popup] {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    border-radius: 0.25rem;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgb(255, 255, 255);
+}
+[i-o-calendar~="isPopupVisible"] [i-o-calendar-popup] {
+    visibility: visible;
+    opacity: 1;
+}
+[i-o-calendar~="isPopupVisible"] [i-o-calendar-controls],
+[i-o-calendar~="isPopupVisible"] [i-o-calendar-grid] {
+    visibility: hidden;
+    opacity: 0;
+}
+[i-o-calendar-event] {
+    display: block;
+    margin: 1px 0;
+    border-radius: 0.25rem;
+    padding: 12px;
+    padding: 0.75rem;
+    background-color: rgb(242, 242, 242);
+    color: rgb(51, 51, 51);
+}
+[i-o-calendar-event]:hover {
+    background-color: rgb(179, 36, 36);
+    color: rgb(255, 255, 255);
+}
+[i-o-calendar-event]:active {
+    background-color: rgb(204, 41, 41);
+    color: rgb(255, 255, 255);
+}
+[i-o-calendar-eventdate] {}
+[i-o-calendar-eventtitle] {
+    display: block;
+    font-weight: 700;
+}
+[i-o-calendar-eventcomment] {
+    font-style: italic;
+}
+[i-o-calendar-controls] {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    border-radius: 0.25rem;
+    background-color: rgb(179, 36, 36);
+    color: rgb(255, 255, 255);
+}
+[i-o-calendar-controls] [i-o-calendar-control],
+[i-o-calendar-controls] [i-o-calendar-month] {
+    padding-top: 12px;
+    padding-top: 0.75rem;
+    padding-bottom: 12px;
+    padding-bottom: 0.75rem;
+}
+[i-o-calendar-control] {
+    display: inline-block;
+    border-radius: 0.25rem;
+    padding: 0 24px;
+    padding: 0 1.5rem;
+    cursor: pointer;
+    background-color: rgb(179, 36, 36);
+    color: rgb(255, 255, 255);
+}
+[i-o-calendar-control]:hover {
+    background-color: rgb(204, 41, 41);
+}
+[i-o-calendar-control]:active {
+    background-color: rgb(230, 46, 46);
+}
+[i-o-calendar-month] {
+    font-weight: 700;
+}
+[i-o-calendar-grid] {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 1px;
+    -ms-grid-columns: (1fr)[7];
+        grid-template-columns: repeat(7, 1fr);
+    margin-top: 1px;
+}
+[i-o-calendar-cell] {
+    border-radius: 0.25rem;
+    background-color: rgb(242, 242, 242);
+    text-align: center;
+}
+[i-o-calendar-cell~="header"] {
+    background-color: rgb(194, 194, 194);
+}
+[i-o-calendar-cell].day.adjacent-month {
+    pointer-events: none;
+    opacity: 0.5;
+}
+[i-o-calendar-cell].day.today {
+    box-shadow: 0 0 0 1px currentColor inset;
+}
+[i-o-calendar-cell].day.event {
+    cursor: pointer;
+    color: rgb(179, 36, 36);
+}
+[i-o-calendar-cell].day.event:hover {
+    color: rgb(204, 41, 41);
+}
+[i-o-calendar-cell].day.event:active {
+    color: rgb(230, 46, 46);
+}
+/* -----------------------------------------------------------------------------
 logo organism
 ----------------------------------------------------------------------------- */
 [i-o-logo] {
@@ -873,8 +990,7 @@ photo part
     text-transform: uppercase;
     font-size: 100px;
     font-weight: 700;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     pointer-events: none;
 }
 /* -----------------------------------------------------------------------------
