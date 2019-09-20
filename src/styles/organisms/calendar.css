@@ -149,18 +149,19 @@ grid (days) part
 }
 
 [i-o-calendar-cell].day.today {
-    box-shadow: 0 0 0 1px currentColor;
+    box-shadow: 0 0 0 1px var(--a-c-charcoal);
 }
 
 [i-o-calendar-cell].day.event {
     cursor: pointer;
-    color: var(--a-c-fireBrick);
+    background-color: var(--a-c-fireBrick);
+    color: var(--a-c-white);
 }
 
 [i-o-calendar-cell].day.event:hover {
-    color: var(--a-c-persianRed);
+    background-color: var(--a-c-persianRed);
 }
 
 [i-o-calendar-cell].day.event:active {
-    color: var(--a-c-alizarin);
+    background-color: var(--a-c-alizarin);
 }
