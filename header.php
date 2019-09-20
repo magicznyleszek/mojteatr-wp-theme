@@ -69,7 +69,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?v=4">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?v=5">
 
     <link rel="stylesheet" href="http://mojteatr.pl/webfontkit-stylesheet.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/libs/baguetteBox.min.css">
