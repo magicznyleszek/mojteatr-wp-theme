@@ -883,6 +883,15 @@ grid (days) part
 [i-o-calendar-cell].day.event:active {
     background-color: rgb(230, 46, 46);
 }
+[i-o-calendar-cell].day.event.past {
+    background-color: rgb(102, 102, 102);
+}
+[i-o-calendar-cell].day.event.past:hover {
+    background-color: rgb(117, 117, 117);
+}
+[i-o-calendar-cell].day.event.past:active {
+    background-color: rgb(133, 133, 133);
+}
 /* -----------------------------------------------------------------------------
 logo organism
 ----------------------------------------------------------------------------- */
