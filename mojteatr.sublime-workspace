@@ -1,0 +1,1159 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"getTranscr",
+				"getTranscriptDraft"
+			],
+			[
+				"get",
+				"getDefaultSelectedTranslation"
+			],
+			[
+				"In",
+				"InlineMessage"
+			],
+			[
+				"k-",
+				"k-inline-message"
+			],
+			[
+				"date",
+				"dateModified"
+			],
+			[
+				"overfl",
+				"overflow-y"
+			],
+			[
+				"overf",
+				"overflow-y"
+			],
+			[
+				"violet",
+				"palevioletred"
+			],
+			[
+				"Surv",
+				"SurveyRow"
+			],
+			[
+				"lang",
+				"lanugageCode"
+			],
+			[
+				"fo",
+				"for"
+			],
+			[
+				"assetc",
+				"AssetContent"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pretter",
+				"JsPrettier: Format Code"
+			],
+			[
+				"toggle",
+				"LSP: Toggle Diagnostics Panel"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"toggle diagnost",
+				"LSP: Toggle Diagnostics Panel"
+			],
+			[
+				"diag",
+				"LSP: Toggle Diagnostics Panel"
+			],
+			[
+				"diagnos",
+				"LSP: Toggle Diagnostics Panel"
+			],
+			[
+				"prettier",
+				"JsPrettier: Format Code"
+			],
+			[
+				"jsoin",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"diagon",
+				"LSP: Toggle Diagnostics Panel"
+			],
+			[
+				"lsp",
+				"LSP: Goto Diagnostic"
+			],
+			[
+				"blame",
+				"Github: Blame"
+			],
+			[
+				"convert spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"diagnost",
+				"LSP: Toggle Diagnostics Panel"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"markdonw",
+				"Set Syntax: Markdown"
+			],
+			[
+				"reindend",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"prett",
+				"JsPrettier: Format Code"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"blam",
+				"Github: Blame"
+			],
+			[
+				"linter",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"snake",
+				"Convert Case: snake_case"
+			],
+			[
+				"uppercase",
+				"Convert Case: Upper Case"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"sync",
+				"Sync Settings: Upload"
+			],
+			[
+				"removepac",
+				"Package Control: Remove Package"
+			],
+			[
+				"sidebar",
+				"Side Bar: Disable Syncing"
+			],
+			[
+				"project",
+				"Project: Edit Project"
+			],
+			[
+				"sync side",
+				"Side Bar: Enable Syncing"
+			],
+			[
+				"installpac",
+				"Package Control: Install Package"
+			],
+			[
+				"remove pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"installpa",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"next",
+				"Open next file in folder"
+			],
+			[
+				"reveal",
+				"Package Control: Remove Channel"
+			],
+			[
+				"remove packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"focus",
+				"Focus File on Sidebar"
+			],
+			[
+				"foc",
+				"Focus File on Sidebar"
+			],
+			[
+				"install pacak",
+				"Package Control: Install Package"
+			],
+			[
+				"list pack",
+				"Package Control: List Packages"
+			],
+			[
+				"install packa",
+				"Package Control: Install Package"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"focis",
+				"Focus File on Sidebar"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"syncsett",
+				"Sync Settings: Create and Upload"
+			],
+			[
+				"editusersett",
+				"Sync Settings: Edit User Settings"
+			],
+			[
+				"lit packa",
+				"Package Control: List Packages"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"install pack",
+				"Package Control: Install Package"
+			],
+			[
+				"path",
+				"Copy Path Relative to Project"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"linter lin",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"show all",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"edit proj",
+				"Project: Edit Project"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"select color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"package control install",
+				"Package Control: Install Package"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"remove package",
+				"Package Control: Remove Package"
+			],
+			[
+				"package control remove package",
+				"Package Control: Remove Package"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 154.0,
+		"history":
+		[
+			"reveal_in_side_bar"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/leszek/Sites/mamp/mojteatrclone/wp-content/themes/mojteatr"
+	],
+	"file_history":
+	[
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/singleProcessingHeader.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/envStore.ts",
+		"/Users/leszek/Sites/kobo/kpi/package.json",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/processingActions.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/common/koboDropdown.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/constants.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/singleProcessingSubmissionDetails.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/singleProcessingStore.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/dataInterface.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/common/audioPlayer.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/common/button.tsx",
+		"/Users/leszek/Sites/kobo/kpi/Dockerfile",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/formGallery/formGallery.component.scss",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/formGallery/formGallery.component.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/formGallery/formGallery.reducer.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/formGallery/formGallery.selectors.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/scss/components/_kobo.form-view.scss",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/assetUtils.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/submissions/submissionDataTable.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/xlform/src/view.icons.coffee",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/xlform/src/model.configs.coffee",
+		"/Users/leszek/Sites/kobo/kpi/webpack/webpack.common.js",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/common/modal.scss",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/xlform/src/view.utils.coffee",
+		"/Users/leszek/Sites/kobo/kpi/.prettierrc.js",
+		"/Users/leszek/Sites/kobo/kpi/README.md",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/submissions/tableUtils.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/submissions/submissionDataTable.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/submissions/submissionDataTable.scss",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/xlform/src/model.row.coffee",
+		"/Users/leszek/Sites/kobo/kpi/src/formpack/src/formpack/utils/replace_aliases.py",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/common/textBox.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/apiTokenDisplay.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/permissions/sharingForm.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/support/helpBubble.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/support/helpBubbleStore.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/support/helpBubble.scss",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/support/intercomHandler.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/support/helpBubbleTrigger.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/support/supportHelpBubble.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/drawer.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/common/koboSelect.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/transcriptTabContent.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/translationsTabContent.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/editorMixins/cascadeMixin.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/permissions/permConfig.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/account/mfaModals.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/global.d.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/templatesList.es6",
+		"/Users/leszek/Sites/kobo/kpi/node_modules/typescript/lib/lib.dom.d.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/support/intercomHelpBubble.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/library/myLibraryStore.ts",
+		"/Users/leszek/Sites/kobo/kpi/node_modules/@types/intercom-web/index.d.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/common/icon.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/bem.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/bemComponents.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/support/helpBubbleClose.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/helpBubbles.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/app.es6",
+		"/Users/leszek/Sites/kobo/kpi/.editorconfig",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/singleProcessingPreview.tsx",
+		"/Users/leszek/Sites/kobo/kpi/kpi.sublime-project",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/designSystem/languageSelectorDemo.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/languages/languageSelector.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/actions/help.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/helpBubbles.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/singleProcessingRoute.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/mixins.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/protector/workProtector.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/processingBody.scss",
+		"/Users/leszek/Sites/kobo/kpi/kpi/tests/utils/mock.py",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/actions.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/header/searchBoxStore.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/assetStore.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/submissions/tableUtils.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/projectDownloads/projectExportsCreator.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/processingUtils.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/processingUtils.tests.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/submissions/submissionUtils.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/submissions/submissionUtils.tests.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/actions/exportsActions.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/submissions/submissionUtils.mocks.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/assetUtils.tests.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/submissions/table.es6",
+		"/Users/leszek/Sites/kobo/kpi/test/index.js",
+		"/Users/leszek/Sites/kobo/kpi/test/tests.html",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/singleProcessingSubmissionDetails.scss",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/scss/components/_kobo.simple-table.scss",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/projectDownloads/projectExportsList.es6",
+		"/Users/leszek/Sites/kobo/kobocat/Dockerfile",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/formSubScreens.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/processing/singleProcessingContent.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/projectDownloads/exportsStore.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/xlform/src/view.surveyApp.coffee",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/scss/components/_kobo.navigation.scss",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/submissions/table.scss",
+		"/Users/leszek/Sites/kobo/kpi/test.txt",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/library/assetsTable.scss",
+		"/Users/leszek/Sites/kobo/kpi/static/kobologo.svg",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/img/kobologo.svg",
+		"/Users/leszek/Sites/kobo/kobotoolbox.github.io/dev-docs.sublime-project",
+		"/Users/leszek/Sites/kobo/refresh-frontend-files.sh",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/common/button.scss",
+		"/Users/leszek/Sites/kobo/kpi/kpi/templates/index.html",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/header.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/designSystem/buttonDemo.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/scss/_variables.scss",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/scss/sizes.scss",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/formSummary.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/formGallery/formGallery.actions.ts",
+		"/Users/leszek/Sites/kobo/kpi/.gitignore",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/assetrow.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/alertify.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/xlform/src/view.row.coffee",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/common/audioPlayer.scss",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/common/inlineMessage.scss",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/common/inlineMessage.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/utils.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/dataInterface.d.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/router/allRoutes.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/designSystem/designSystemApp.tsx",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/designSystem/inlineMessageDemo.tsx",
+		"/Users/leszek/Sites/kobo/kpi/dependencies/pip/dev_requirements.txt",
+		"/Users/leszek/Sites/kobo/kpi/kpi/models/import_export_task.py",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/submissions/tableConstants.ts",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/modalForms/formMedia.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/formLanding.es6",
+		"/Users/leszek/Sites/kobo/kpi/jsapp/js/components/library/assetActionButtons.es6"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 119.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 150.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 150.0
+	},
+	"output.diagnostics":
+	{
+		"height": 150.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.language servers":
+	{
+		"height": 0.0
+	},
+	"output.loghighlight":
+	{
+		"height": 132.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.references":
+	{
+		"height": 150.0
+	},
+	"pinned_build_system": "",
+	"project": "mojteatr.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"dockerf",
+				"Dockerfile"
+			],
+			[
+				"packjs",
+				"package.json"
+			],
+			[
+				"packjson",
+				"package.json"
+			],
+			[
+				"envstore",
+				"jsapp/js/envStore.ts"
+			],
+			[
+				"buttontsx",
+				"jsapp/js/components/common/button.tsx"
+			],
+			[
+				"audioplayer",
+				"jsapp/js/components/common/audioPlayer.tsx"
+			],
+			[
+				"constts",
+				"jsapp/js/constants.ts"
+			],
+			[
+				"singlerocee",
+				"jsapp/js/components/processing/singleProcessingHeader.tsx"
+			],
+			[
+				"dockerfile",
+				"Dockerfile"
+			],
+			[
+				"utilsts",
+				"jsapp/js/components/formGallery/utils.ts"
+			],
+			[
+				"formgallredyc",
+				"jsapp/js/components/formGallery/formGallery.reducer.ts"
+			],
+			[
+				"gallery",
+				"jsapp/js/components/formGallery/formGallery.component.scss"
+			],
+			[
+				"form-viscss",
+				"jsapp/scss/components/_kobo.form-view.scss"
+			],
+			[
+				"view.icons.coffee",
+				"jsapp/xlform/src/view.icons.coffee"
+			],
+			[
+				"assutilsts",
+				"jsapp/js/assetUtils.ts"
+			],
+			[
+				"submidatata",
+				"jsapp/js/components/submissions/submissionDataTable.es6"
+			],
+			[
+				"common",
+				"webpack/webpack.common.js"
+			],
+			[
+				"pckjs",
+				"package.json"
+			],
+			[
+				"webckacomm",
+				"webpack/webpack.common.js"
+			],
+			[
+				".md",
+				"README.md"
+			],
+			[
+				"utils es6",
+				"jsapp/js/components/submissions/tableUtils.es6"
+			],
+			[
+				"prettier",
+				".prettierrc.js"
+			],
+			[
+				"submissionDataTable",
+				"jsapp/js/components/submissions/submissionDataTable.tsx"
+			],
+			[
+				"assetut",
+				"jsapp/js/assetUtils.ts"
+			],
+			[
+				"constats",
+				"jsapp/js/constants.ts"
+			],
+			[
+				"textbox",
+				"jsapp/js/components/common/textBox.tsx"
+			],
+			[
+				"sharingfomr",
+				"jsapp/js/components/permissions/sharingForm.es6"
+			],
+			[
+				"constatnsts",
+				"jsapp/js/constants.ts"
+			],
+			[
+				"datainter",
+				"jsapp/js/dataInterface.ts"
+			],
+			[
+				"helpbubb",
+				"jsapp/js/components/support/helpBubble.scss"
+			],
+			[
+				"transtabcont",
+				"jsapp/js/components/processing/transcriptTabContent.tsx"
+			],
+			[
+				"globad",
+				"jsapp/js/global.d.ts"
+			],
+			[
+				"interface",
+				"jsapp/js/dataInterface.ts"
+			],
+			[
+				"globaldts",
+				"jsapp/js/global.d.ts"
+			],
+			[
+				"icontsx",
+				"jsapp/js/components/common/icon.tsx"
+			],
+			[
+				"bemts",
+				"jsapp/js/bem.ts"
+			],
+			[
+				"bemcom",
+				"jsapp/js/bemComponents.ts"
+			],
+			[
+				"butttsx",
+				"jsapp/js/components/common/button.tsx"
+			],
+			[
+				"editorc",
+				".editorconfig"
+			],
+			[
+				"sublimeproj",
+				"kpi.sublime-project"
+			],
+			[
+				"singlstre",
+				"jsapp/js/components/processing/singleProcessingStore.ts"
+			],
+			[
+				"langseldemo",
+				"jsapp/js/designSystem/languageSelectorDemo.tsx"
+			],
+			[
+				"languageselectsx",
+				"jsapp/js/components/languages/languageSelector.tsx"
+			],
+			[
+				"transctab",
+				"jsapp/js/components/processing/transcriptTabContent.tsx"
+			],
+			[
+				"processstore",
+				"jsapp/js/components/processing/singleProcessingStore.ts"
+			],
+			[
+				"processingactions",
+				"jsapp/js/components/processing/processingActions.ts"
+			],
+			[
+				"processinbodyscss",
+				"jsapp/js/components/processing/processingBody.scss"
+			],
+			[
+				"processinactin",
+				"jsapp/js/components/processing/processingActions.ts"
+			],
+			[
+				"mockpy",
+				"kpi/tests/utils/mock.py"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"actionses",
+				"jsapp/js/actions.es6"
+			],
+			[
+				"storets",
+				"jsapp/js/components/header/searchBoxStore.ts"
+			],
+			[
+				"actionsts",
+				"jsapp/js/components/processing/processingActions.ts"
+			],
+			[
+				"assetstorets",
+				"jsapp/js/assetStore.ts"
+			],
+			[
+				"subutitest",
+				"jsapp/js/components/submissions/submissionUtils.tests.es6"
+			],
+			[
+				"procesutils",
+				"jsapp/js/components/processing/processingUtils.ts"
+			],
+			[
+				"actiexport",
+				"jsapp/js/actions/exportsActions.es6"
+			],
+			[
+				"exporcreat",
+				"jsapp/js/components/projectDownloads/projectExportsCreator.es6"
+			],
+			[
+				"tablees6",
+				"jsapp/js/components/submissions/table.es6"
+			],
+			[
+				"tests",
+				"test/tests.html"
+			],
+			[
+				"processingutils",
+				"jsapp/js/components/processing/singleProcessingSubmissionDetails.scss"
+			],
+			[
+				"assetStore",
+				"jsapp/js/assetStore.ts"
+			],
+			[
+				"exportscrea",
+				"jsapp/js/components/projectDownloads/projectExportsCreator.es6"
+			],
+			[
+				"simpletable",
+				"jsapp/scss/components/_kobo.simple-table.scss"
+			],
+			[
+				"constantts",
+				"jsapp/js/constants.ts"
+			],
+			[
+				"exports",
+				"jsapp/js/actions/exportsActions.es6"
+			],
+			[
+				"singlpreotsx",
+				"jsapp/js/components/processing/singleProcessingContent.tsx"
+			],
+			[
+				"buttonscss",
+				"jsapp/js/components/common/button.scss"
+			],
+			[
+				"subutilsts",
+				"jsapp/js/components/submissions/submissionUtils.ts"
+			],
+			[
+				"selectorsts",
+				"jsapp/js/components/formGallery/formGallery.selectors.ts"
+			],
+			[
+				"reducer",
+				"jsapp/js/components/formGallery/formGallery.reducer.ts"
+			],
+			[
+				"formgalltsx",
+				"jsapp/js/components/formGallery/formGallery.component.tsx"
+			],
+			[
+				"button demo",
+				"jsapp/js/designSystem/buttonDemo.tsx"
+			],
+			[
+				"galleryscss",
+				"jsapp/js/components/formGallery/formGallery.component.scss"
+			],
+			[
+				"sizes",
+				"jsapp/scss/sizes.scss"
+			],
+			[
+				"variablescss",
+				"jsapp/scss/_variables.scss"
+			],
+			[
+				"assetutils",
+				"jsapp/js/assetUtils.ts"
+			],
+			[
+				"summary",
+				"jsapp/js/components/formSummary.es6"
+			],
+			[
+				"compotesx",
+				"jsapp/js/components/formGallery/formGallery.component.tsx"
+			],
+			[
+				"gitig",
+				".gitignore"
+			],
+			[
+				"reducerts",
+				"jsapp/js/components/formGallery/formGallery.reducer.ts"
+			],
+			[
+				"formgallcompots",
+				"jsapp/js/components/formGallery/formGallery.component.tsx"
+			],
+			[
+				"datain",
+				"jsapp/js/dataInterface.ts"
+			],
+			[
+				"formgalselec",
+				"jsapp/js/components/formGallery/formGallery.selectors.ts"
+			],
+			[
+				"formgallac",
+				"jsapp/js/components/formGallery/formGallery.actions.ts"
+			],
+			[
+				"formsubscree",
+				"jsapp/js/components/formSubScreens.es6"
+			],
+			[
+				"alertifyts",
+				"jsapp/js/alertify.ts"
+			],
+			[
+				"sinprostore",
+				"jsapp/js/components/processing/singleProcessingStore.ts"
+			],
+			[
+				"audioplar",
+				"jsapp/js/components/common/audioPlayer.tsx"
+			],
+			[
+				"audiopla",
+				"jsapp/js/components/common/audioPlayer.scss"
+			],
+			[
+				"audipla",
+				"jsapp/js/components/common/audioPlayer.tsx"
+			],
+			[
+				"dataintts",
+				"jsapp/js/dataInterface.ts"
+			],
+			[
+				"datainterdts",
+				"jsapp/js/dataInterface.d.ts"
+			],
+			[
+				"allroutes",
+				"jsapp/js/router/allRoutes.es6"
+			],
+			[
+				"player",
+				"jsapp/js/components/common/audioPlayer.tsx"
+			],
+			[
+				"dev_req",
+				"dependencies/pip/dev_requirements.txt"
+			],
+			[
+				"import",
+				"kpi/models/import_export_task.py"
+			],
+			[
+				"mixinstsx",
+				"jsapp/js/mixins.tsx"
+			],
+			[
+				"singlproroute",
+				"jsapp/js/components/processing/singleProcessingRoute.tsx"
+			],
+			[
+				"tableconstants",
+				"jsapp/js/components/submissions/tableConstants.ts"
+			],
+			[
+				"devrequirementstxt",
+				"dependencies/pip/dev_requirements.txt"
+			],
+			[
+				"actionbutt",
+				"jsapp/js/components/library/assetActionButtons.es6"
+			],
+			[
+				"inlmess",
+				"jsapp/js/components/common/inlineMessage.tsx"
+			],
+			[
+				"inlmessscss",
+				"jsapp/js/components/common/inlineMessage.scss"
+			],
+			[
+				"projedowscss",
+				"jsapp/scss/components/_kobo.project-downloads.scss"
+			],
+			[
+				"button",
+				"jsapp/js/components/common/button.tsx"
+			],
+			[
+				"inlmesstsx",
+				"jsapp/js/components/common/inlineMessage.tsx"
+			],
+			[
+				"inlinems",
+				"jsapp/js/components/common/inlineMessage.scss"
+			],
+			[
+				"formmediascss",
+				"jsapp/js/components/modalForms/formMedia.scss"
+			],
+			[
+				"mfamodaltsx",
+				"jsapp/js/components/account/mfaModals.tsx"
+			],
+			[
+				"mfaactions",
+				"jsapp/js/actions/mfaActions.ts"
+			],
+			[
+				"secrur",
+				"jsapp/js/components/account/securityRoute.tsx"
+			],
+			[
+				"mfa",
+				"jsapp/js/actions/mfaActions.ts"
+			],
+			[
+				"formviewscss",
+				"jsapp/scss/components/_kobo.form-view.scss"
+			],
+			[
+				"coorsscss",
+				"jsapp/scss/_colors.scss"
+			],
+			[
+				"mixins",
+				"jsapp/scss/mixins.scss"
+			],
+			[
+				"dataintdts",
+				"jsapp/js/dataInterface.d.ts"
+			],
+			[
+				"mfamodalscss",
+				"jsapp/js/components/account/mfaModals.scss"
+			],
+			[
+				"mfamodalstsx",
+				"jsapp/js/components/account/mfaModals.tsx"
+			],
+			[
+				"mfatokenscss",
+				"jsapp/scss/stylesheets/partials/_mfa_token.scss"
+			],
+			[
+				"djangpy",
+				"src/django-digest/setup.py"
+			],
+			[
+				"mfahtml",
+				"kobo/apps/mfa/templates/mfa_token.html"
+			],
+			[
+				"packlo",
+				"package-lock.json"
+			],
+			[
+				"webcomm",
+				"webpack/webpack.common.js"
+			],
+			[
+				"prodjs",
+				"webpack/prod.config.js"
+			],
+			[
+				"webpackc",
+				"webpack/webpack.common.js"
+			],
+			[
+				"datainte",
+				"jsapp/js/dataInterface.ts"
+			],
+			[
+				"eslintrc",
+				".eslintrc.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"know",
+				"~/Dropbox/0-knowledge/knowledge.sublime-project"
+			],
+			[
+				"comm",
+				"~/Sites/kobo/kobo-common/kobo-common.sublime-project"
+			],
+			[
+				"",
+				"~/Sites/kobo/kobotoolbox.org/kobotoolbox.org.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 304.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 928.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 273.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
